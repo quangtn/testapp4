@@ -1,0 +1,19 @@
+<ul id="cards">
+{{#each days}}
+	{{#each events}}
+		{{#if isPlanEvent}}
+			{{> planEventCard}}
+		{{else}}
+			{{#if airline}}
+				{{> flightCard}}
+			{{else}}
+				{{#isHotelCheckOut type event_type}}
+					{{> hotelCheckOutCard}}
+				{{else}}
+					{{> hotelVehicleGenericCard}}
+				{{/isHotelCheckOut}}
+			{{/if}}
+		{{/if}}
+	{{/each}}
+{{/each}}
+</ul>

@@ -1,0 +1,63 @@
+{
+  "@name": "item",
+  "id": 2,
+  "type": "Generic",
+  "read_only": false,
+  "for_business": "true",
+  "num_following": 0,
+  "corporation": "TestCorpUS",
+  "start_time": {
+    "time": "2014-02-11T12:00:00",
+    "utc_time": "2014-02-11T22:00:00",
+    "tz_name": "Pacific/Honolulu",
+    "tz_offset": -36000
+  },
+  "end_time": {
+    "time": "2014-02-11T15:00:00",
+    "utc_time": "2014-02-12T01:00:00",
+    "tz_name": "Pacific/Honolulu",
+    "tz_offset": -36000
+  },
+  "generic_reservation": {
+    "type": "meeting",
+    "start_date": "2014-02-11T12:00:00",
+    "end_date": "2014-02-11T15:00:00",
+    "orig_location": {
+      "name": "Pitch Meeting",
+      "closest_airport": {
+        "iata_code": "HIK"
+      },
+      "address": {
+        "label": "The Royal Hawaii",
+        "city": "Honolulu",
+        "state_code": "HI",
+        "country_code": "US",
+        "general_location": "Honolulu, HI",
+        "country_name": "United States",
+        "label_lines": [
+          {
+            "@name": "line",
+            "part": "street",
+            "text": "2259 Kalakaua Ave"
+          },
+          {
+            "@name": "line",
+            "part": "name",
+            "text": "Pitch Meeting"
+          },
+          {
+            "@name": "line",
+            "part": "city",
+            "text": "Honolulu, HI"
+          }
+        ]
+      },
+      "geo_code": {
+        "latitude": 21.27874,
+        "longitude": -157.82856
+      }
+    },
+    "phones": []
+  },
+  "note": ""
+}

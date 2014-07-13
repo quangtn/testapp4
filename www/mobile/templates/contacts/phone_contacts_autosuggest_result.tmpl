@@ -1,0 +1,19 @@
+{{#if hasContext}}
+<form action="#import-contacts" id="import-contacts-form">
+	<ul class="contacts list-rows">
+	{{#each phoneContacts}}
+		<li class="contact list-row-flat list-row-fixed-height-med" data-id="{{id}}">
+			<input data-cid="{{cid}}" type="checkbox" class="list-row-flat-checkbox tc-checkbox"/>
+			<div class="list-row-main">
+				{{#if fullName}}
+				<p class="tc-label-medium text-ellipsis">{{fullName}}</p>
+				<p class="tc-sublabel text-ellipsis">{{email}}</p>
+				{{else}}
+				<p class="tc-label-medium text-ellipsis">{{email}}</p>
+				{{/if}}
+			</div>
+		</li>
+	{{/each}}
+	</ul>
+</form>
+{{/if}}

@@ -1,0 +1,39 @@
+			{{#if recentAirlines}}
+				<h2 class="component-subheader recentAirlines">{{t "RecentlySelected"}}</h2>
+				<ul id="YOUR" class="action-list recentAirlines">
+					{{#each_with_index recentAirlines}}
+					<li data-code="{{iata_code}}">
+						<div class="item-icon airline-icon airline-{{lowercase iata_code}}"></div>
+						<div class="item-label">
+							<abbr title="{{name}}">{{iata_code}}</abbr>
+						</div>
+					</li>
+					{{/each_with_index}}
+				</ul>
+			{{/if}}
+			{{#if allAirlines}}
+				{{#if recentAirlines}}
+				<h2 class="component-subheader allAirlines">{{t "AllAirlines"}}</h2>
+				{{/if}}
+				<ul id="ALL" class="action-list allAirlines">
+					{{#each_with_index allAirlines}}
+					<li data-code="{{iata_code}}">
+						<div class="item-icon airline-icon airline-{{lowercase iata_code}}"></div>
+						<div class="item-label">
+							<abbr title="{{name}}">{{iata_code}}</abbr>
+						</div>
+					</li>
+					{{/each_with_index}}
+				</ul>
+			{{/if}}
+			{{#unless allAirlines}}
+				{{#unless recentAirlines}}
+				<ul class="item-list" id="zero-results">
+					<li>
+						<div class="item-content">
+							<p class="help-text">{{t "SearchResultsZero"}}</p>
+						</div>
+					</li>
+				</ul>
+				{{/unless}}
+			{{/unless}}

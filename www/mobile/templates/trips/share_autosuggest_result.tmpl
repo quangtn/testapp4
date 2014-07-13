@@ -1,0 +1,29 @@
+{{#if hasContext}}
+<ul class="autosuggest-list">
+{{#if tripcaseContacts}}
+	{{#each tripcaseContacts}}
+	<li class="autosuggest-suggestion suggested-contact" data-email="{{email}}" data-gaaction="AutoFillContact">
+		{{#if fullName}}
+		<p class="tc-label-medium text-ellipsis">{{capitalize fullName}}</p>
+		<p class="text-ellipsis">{{email}}</p>
+		{{else}}
+		<p class="tc-label-medium text-ellipsis">{{email}}</p>
+		{{/if}}
+	</li>
+	{{/each}}
+{{/if}}
+{{#if phoneContacts}}
+	<li class="autosuggest-header">{{t "PhoneContacts"}}</li>
+	{{#each phoneContacts}}
+	<li class="autosuggest-suggestion suggested-contact" data-email="{{email}}" data-gaaction="AutoFillPhone">
+		{{#if fullName}}
+		<p class="tc-label-medium text-ellipsis">{{capitalize fullName}}</p>
+		<p class="text-ellipsis">{{email}}</p>
+		{{else}}
+		<p class="tc-label-medium text-ellipsis">{{email}}</p>
+		{{/if}}
+	</li>
+	{{/each}}
+{{/if}}
+</ul>
+{{/if}}

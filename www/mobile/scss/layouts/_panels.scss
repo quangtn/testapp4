@@ -1,0 +1,35 @@
+
+
+// Panel
+%panel {
+	@include flexbox;
+	@include flex-direction(column);
+	@include justify-content(center);
+}
+
+%panel-group {
+	margin-top: 10px;
+
+	&:first-child {
+		margin-top: 0;
+	}
+}
+
+// Panel Flat
+%panel-flat {
+	@include flexbox;
+	@include align-items(center);
+}
+
+%panel-flat-group {
+	margin-left: 10px;
+
+	&:first-child {
+		margin-left: 0;
+	}
+}
+
+// Panel Main Content
+%panel-main {
+	@include flex(1);
+}

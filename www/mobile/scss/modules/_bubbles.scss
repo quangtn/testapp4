@@ -1,0 +1,176 @@
+%bubble {
+	display: block;
+	margin: 10px 10px 10px 15px;
+	background-color: $bubble-background-color;
+	@include border-radius(5px);
+	@include box-shadow(0 2px 5px 0 $bubble-box-shadow-color);
+	color: $bubble-color;
+	text-decoration: none;
+	position: relative;
+
+	&:before {
+		content: '';
+		display: block;
+		height: 13px;
+		width: 13px;
+		background-color: $bubble-background-color;
+		-webkit-transform: rotate(45deg);
+		transform: rotate(45deg);
+		@include box-shadow(-2px 2px 1px 0 $bubble-before-box-shadow-color);
+		position: absolute;
+		left: -6px;
+		top: 20px;
+	}
+}
+
+%bubble-block {
+	min-height: 2em;
+	padding: 8px;
+	position: relative;
+}
+
+%bubble-head {
+	margin-bottom: 3px;
+	color: $bubble-head-color;
+	font-weight: normal;
+	font-size: 12px;
+	text-transform: uppercase;
+}
+
+%bubble-tags {
+	@extend %tags;
+	float: left; /* shame */
+	max-width: 100%; /* shame */
+
+	[class*="bubble-tag"][class*="flight"] { @extend %flight-tag; }
+	[class*="bubble-tag"][class*="business"] { @extend %business-tag; }
+}
+
+%bubble-header {
+	clear: both; /* shame */
+	// padding: 0 0 7px 0;
+	// margin-bottom: 10px;
+	// border-bottom: 1pt solid $bubble-divider-color;
+
+	& > *[class$="-title"] {
+		color: $bubble-title-color;
+		font-weight: bold;
+		font-size: 15px;
+		line-height: 18px;
+	}
+
+	& > *[class$="-title"] + *[class$="-sub-title"] {
+		color: $bubble-sub-title-color;
+		font-weight: normal;
+		font-size: 13px;
+	}
+}
+
+%bubble-body {
+	padding-top: 10px;
+	margin-top: 7px;
+	border-top: 1pt solid $bubble-divider-color;
+
+	[class*="flight"][class*="schedule"] { @extend %bubble-body__flight-schedule; }
+}
+
+%bubble-footer {
+	margin: 8px 0 0 0;
+	padding: 8px 0 0 0;
+	border-top: 1pt solid $bubble-divider-color;
+	color: $bubble-footer-color;
+	font-size: 13px;
+
+	&[class*=note] {
+		em {
+			margin-right: 0.5em;
+			color: $text-special-note-color;
+			font-weight: bold;
+			text-transform: capitalize;
+		}
+
+		p {
+			margin: 0;
+			padding: 0;
+			line-height: 1.3;
+		}
+	}
+}
+
+%bubble-body__flight-schedule {
+	width: 100%;
+	text-align: left;
+
+	.departure, .arrival {
+		text-transform: uppercase;
+
+		.schedule-header {
+			color: $text-body-light-color;
+			font-weight: normal;
+			font-size: 12px;
+			line-height: 10px;
+		}
+
+		.time, .airport-code, .term-gate {
+			width: 31.11111111111111%;
+			color: $text-body-color-dark-gray;
+			line-height: 1em;
+			font-size: 17px;
+			font-weight: bold;
+
+			&.canceled, &.delayed, &.alert {
+				color: $text-error-header-color;
+
+				&.canceled {
+					@extend .strikethrough;
+				}
+			}
+			&.early {
+				color: $text-success-color;
+			}
+
+			&:first-child, &.time {
+				width: 36%;
+				@extend .small-caps;
+			}
+
+			&:last-child {
+				width: 32.88888888888889%;
+			}
+		}
+	}
+
+	.departure + .arrival {
+		border-top: 15px solid $content-background-color;
+	}
+}
+
+%bubble-icon {
+	display: block;
+	position: absolute;
+	top: 3px;
+	left: -53px;
+	@extend .icons_timeline-icon;
+	@extend .icon_some_other_timeline_45px.icons_timeline-icon;
+
+	&[class$="--Air"] { @extend .icon_airplane_timeline_45px.icons_timeline-icon; }
+	&[class$="--Hotel"] { @extend .icon_hotel_timeline_45px.icons_timeline-icon; }
+	&[class$="--Lodging"] { @extend .icon_hotel_timeline_45px.icons_timeline-icon; }
+	&[class$="--Vehicle"] { @extend .icon_car_timeline_45px.icons_timeline-icon; }
+	&[class$="--Rail"] { @extend .icon_rail_timeline_45px.icons_timeline-icon; }
+	&[class$="--Activity"] { @extend .icon_activity_timeline_45px.icons_timeline-icon; }
+	&[class$="--Ground_transportation"] { @extend .icon_ground_transportation_timeline_45px.icons_timeline-icon; }
+	&[class$="--Cruise"] { @extend .icon_cruise_timeline_45px.icons_timeline-icon; }
+	&[class$="--Meeting"] { @extend .icon_meeting_timeline_45px.icons_timeline-icon; }
+	&[class$="--Attraction"] { @extend .icon_attraction_timeline_45px.icons_timeline-icon; }
+	&[class$="--Ferry"] { @extend .icon_ferry_timeline_45px.icons_timeline-icon; }
+	&[class$="--Food_drink"] { @extend .icon_food_timeline_45px.icons_timeline-icon; }
+}
+
+%bubble-bullet {
+	@extend .itin-marker-icon;
+	@extend .img_itin_marker.itin-marker-icon;
+	position: absolute;
+	left: -23px;
+	top: 22px;
+}

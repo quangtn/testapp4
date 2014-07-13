@@ -1,0 +1,354 @@
+
+.mytrips-page {
+	.list-panel {
+		.empty {
+			padding: 12px 15px 12px 88px;
+			background: $content-background-color url(../assets/images/icon_forward_email.png) 21px 30px no-repeat;
+			border-bottom: 1px solid $border-edge-color;
+			min-height: 67px;
+
+			.title {
+				font-size: $text-detail-medium-size;
+				font-weight: bold;
+				padding-bottom: 5px;
+			}
+
+			p {
+				color: $item-list-subtitle;
+				font-size: $text-detail-Xsmall-size;
+				line-height: 16px;
+
+				a, a:link, a:visited, a:active, a:hover {
+					color: $item-list-title;
+					font-weight: bold;
+					text-decoration: none;
+					cursor: pointer;
+				}
+			}
+		}
+
+		@include pixelDensity(1.5) {
+			$standardIcon: "assets/images/icon_forward_email.png";
+			$retinaIcon: "../assets/images/icon_forward_email_2x.png";
+			$iconWidth: image-width($standardIcon);
+			$iconHeight: image-height($standardIcon);
+
+			.empty {
+				@include background-size($iconWidth $iconHeight);
+				background-image: url($retinaIcon);
+			}
+		}
+		.trip-group {
+			display: -webkit-box;
+			-webkit-box-orient: horizontal;
+			-webkit-box-align: stretch;
+			-webkit-box-pack: justify;
+			-webkit-box-sizing: border-box;
+			background-color: $content-background-color;
+			border-bottom: 1px solid $border-edge-color;
+			padding: 10px 10px 8px 8px;
+			width: 100%;
+			position: relative;
+
+			.preview {
+				-webkit-box-flex: 0;
+				margin: 0px 15px 0px 0px;
+
+				img {
+					height: 65px;
+					width: 65px;
+				}
+			}
+
+			.destination-group {
+				display: block;
+				-webkit-box-flex: 1;
+
+				.title {
+					font-size: $text-detail-medium-size;
+					font-weight: bold;
+					overflow: hidden;
+					padding-bottom: 2px;
+					text-overflow: ellipsis;
+					white-space: nowrap;
+					padding-right: 15px;
+				}
+
+				.city-state {
+					color: $item-list-subtitle;
+					font-size: $text-detail-Xsmall-size;
+				}
+
+				.date {
+					display: block;
+					padding: 3px 0;
+					text-align: right;
+					text-transform: uppercase;
+					color: $item-list-subtitle;
+					font-size: $text-detail-Xsmall-size;
+				}
+			}
+
+			.next {
+				color: #284354;
+				float: right;
+				margin-top: 24px;
+				height: 13px;
+				width: 19px;
+			}
+
+			input[type=checkbox] {
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				width: 100%;
+				height: 100%;
+				background: url(../assets/images/btn_checkbox.png) 8px 17px no-repeat;
+				outline: none;
+				border: none;
+				border-radius: 0;
+				-webkit-appearance: none;
+
+				&:checked {
+					background-image: url(../assets/images/btn_checkbox_selected.png);
+				}
+			}
+
+			@include pixelDensity(1.5) {
+				input[type=checkbox] {
+					@include background-size(image-width('assets/images/btn_checkbox.png') image-height('assets/images/btn_checkbox.png'));
+					background-image: url(../assets/images/btn_checkbox_2x.png);
+
+					&:checked {
+						background-image: url(../assets/images/btn_checkbox_selected_2x.png);
+					}
+				}
+			}
+
+			&.manage-trip {
+				padding: 10px 10px 10px 8px;
+				-webkit-box-sizing: border-box;
+				min-height: 64px;
+
+				.destination-group {
+					-webkit-box-align: start;
+					-webkit-box-pack: center;
+					-webkit-box-orient: vertical;
+					-webkit-box-sizing: border-box;
+					padding-top: 3px;
+					padding-left: 36px;
+					.date {
+						text-align: left;
+						text-transform: none;
+						padding-bottom: 0;
+					}
+				}
+			}
+
+			&.confirm-trip {
+
+				.preview {
+					margin-right: 10px;
+				}
+
+				.title {
+					font-size: $text-detail-medium-size;
+					font-weight: bold;
+					overflow: hidden;
+					padding-bottom: 2px;
+					text-overflow: ellipsis;
+					white-space: nowrap;
+					padding-right: 15px;
+				}
+
+				.city-state {
+					padding: 3px 0;
+				}
+
+				.date {
+					text-align: left;
+					text-transform: none;
+				}
+			}
+
+			&.amex {
+				background-image: url(../assets/images/icon_amex_24px.png);
+				background-position: right bottom;
+				background-repeat: no-repeat;
+
+				@include pixelDensity(1.5) {
+					@include background-size(image-width('assets/images/icon_amex_24px.png') image-height('assets/images/icon_amex_24px.png'));
+					background-image: url(../assets/images/icon_amex_24px_2x.png);
+				}
+			}
+		}
+	}
+}
+
+.past-following-button {
+	background-color: $content-background-color-dark;
+	color: $color-dark-blue-link;
+	font-size: 13px;
+	font-weight: bold;
+	text-align: center;
+	padding: 10px 0;
+}
+
+
+.destination-group__panel {
+	position: relative;
+	line-height: 1.4;
+	min-height: 15px;
+	font-size: $text-detail-Xsmall-size;
+	color: $item-list-subtitle;
+}
+.destination-group__traveler {
+	@include ellipsis;
+	padding-right: 90px;
+}
+.destination-group__date {
+	position: absolute;
+	top: 0;
+	right: 0;
+	text-transform: uppercase;
+	margin-bottom: 3px;
+}
+
+
+.destination-group__tags {
+	@extend %tags;
+
+	[class*="tag"][class*="business"] {
+		@extend %business-tag;
+	}
+}
+
+.mytrips-trip-item-group {
+	background-color: $content-background-color;
+	border-bottom: 1px solid $border-edge-color;
+	height: 49px;
+	padding-left: 5px;
+	padding-top: 5px;
+
+	.general-icon {
+		float: left;
+	}
+
+	.title-group {
+		float: left;
+		padding-left: 11px;
+		padding-top: 7px;
+		width: 220px;
+
+		.title {
+			font-size: 16px;
+			font-weight: bold;
+			overflow: hidden;
+			padding-bottom: 2px;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+		}
+
+		.sub-title {
+			color: $item-list-subtitle;
+			font-size: 13px;
+		}
+	}
+}
+
+.mytrips-create-bar-panel {
+	background-color: $content-background-color-dark;
+	border-bottom: 1px solid $border-edge-color;
+	#create-trip {
+		border-bottom: 1px solid $border-edge-color;
+		float: left;
+		height: 44px;
+		width: 100%;
+	}
+
+	#manage-trips {
+		float: left;
+		height: 44px;
+		width: 100%;
+	}
+
+	.add {
+		color: #005986;
+		float: left;
+		margin-left: 27px;
+		margin-top: 6px;
+		width: 32px;
+		height: 32px;
+
+	}
+
+	.title {
+		float: left;
+		font-size: 18px;
+		font-weight: bold;
+		padding-left: 29px;
+		padding-top: 13px;
+		width: 204px;
+	}
+
+	.next {
+		color: #284354;
+		float: right;
+		margin-top: 16px;
+		height: 13px;
+		width: 19px;
+	}
+}
+
+.mytrips-manage-segmented-bar {
+	li {
+		border-color: $border-edge-color;
+	}
+
+	border-bottom: 1px solid #c4c4c4;
+}
+
+.mytrips-manage-segmented-button {
+	padding: 5px 0;
+	@include backgroundGradientLinear($gray-navbar-top-color, $gray-navbar-bottom-color);
+
+	.button-icon {
+		margin: 0 auto;
+	}
+
+	p {
+		color: $text-body-link-color;
+		font-size: 13px;
+		font-weight: bold;
+		text-align: center;
+		text-shadow: 0px -1px #ffffff;
+	}
+}
+
+.mytrips-summary-segmented-bar {
+	li {
+		border-color: #4f5b67;
+	}
+
+	border-bottom: 1px solid #000000;
+}
+
+.mytrips-summary-segmented-button {
+	height: 33px;
+	text-align: center;
+
+	p {
+		color: white;
+		font-size: 12px;
+		font-weight: bold;
+		padding-top: 10px;
+		text-shadow: 0px -1px #202020;
+	}
+	@include backgroundGradientLinear($light-bar-top-color, $light-bar-bottom-color);
+
+	&.selected {
+		@include backgroundGradientLinear($dark-bar-top-color, $dark-bar-bottom-color);
+	}
+}

@@ -1,0 +1,170 @@
+
+// TripCase Mobile Style Guide
+// http://dev1.labs.sabre.com:8500/tripcase/___redesign2011/styleguide/mobile_styleguide.html
+
+// Grayscale
+$color-black: 				#000;
+$color-super-dark-gray: 	#111;
+$color-dark-gray: 			#333;
+$color-medium-dark-gray: 	#666;
+$color-medium-gray: 		#999;
+$color-light-gray:			#bebebe;
+$color-lighter-gray:		#ccc;
+$color-super-light-gray:	#f0f0f0;
+$color-white:				#fff;
+
+// Blue
+$color-super-dark-blue-2: 	#13171b;
+$color-super-dark-blue: 	#1a2025;
+$color-dark-blue:			#252d34;
+$color-medium-dark-blue:	#323c46;
+$color-medium-blue:			#495766;
+$color-light-blue:			#64798c;
+$color-lighter-blue:		#e5ebf1;
+$color-dark-blue-link:		#004477;
+$color-light-blue-link:		#91b0cc;
+
+// Green
+$color-super-dark-green:	#38521B;
+$color-dark-green:			#496b23;
+$color-light-green:			#669135;
+
+// Red
+$color-super-dark-red:		#5a0000;
+$color-dark-red:			#820000;
+$color-medium-red:			#bb0000;
+$color-light-red:			#ff2525;
+$color-orange:				#c27129;
+
+
+$app-background-color: #495766;
+
+$text-body-color: #111;
+$text-body-color-dark-gray: #333;
+$text-body-light-color: #666;
+$text-body-light-color-on-dark: #fff;
+$text-body-link-color: #047;
+$text-body-subtitle-color: #999;
+
+$alert-color: #b00;
+$text-success-color: #669135;
+
+$text-error-header-color: #b00;
+$text-error-message-color: #666;
+$text-special-note-color: $color-orange;
+
+
+$input-prompt-background: #ebebeb;
+
+$content-background-color: #fff;
+$content-background-color-dark: #ebebeb;
+
+$layover-background-color: #333;
+
+
+$accept-button-border-color: #12161a;
+$accept-button-top-color: #64798c;
+$accept-button-bottom-color: #495766;
+$accept-button-hover-top-color: #495766;
+$accept-button-hover-bottom-color: #323c46;
+
+$phone-button-border-call: #496B23;
+$phone-button-top-color: #669135;
+$phone-button-bottom-color: #496B23;
+$phone-button-hover-top-color: #496B23;
+$phone-button-hover-bottom-color: #38521B;
+
+$warning-button-top-color: #bb0000;
+$warning-button-bottom-color: #820000;
+$warning-button-hover-top-color: #820000;
+$warning-button-hover-bottom-color: #5a0000;
+
+
+$green-button-border-call: #496B23;
+$green-button-top-color: #669135;
+$green-button-bottom-color: #496B23;
+$green-button-hover-top-color: #496B23;
+$green-button-hover-bottom-color: #38521B;
+
+$gray-button-border-call: #999;
+$gray-button-top-color: #fff;
+$gray-button-bottom-color: #ccc;
+$gray-button-hover-top-color: #ddd;
+$gray-button-hover-bottom-color: #aaa;
+
+$dark-blue-link-color: #004477;
+
+$border-edge-color: #ccc;
+$light-border-edge-color: #bebebe;
+$shadow-color: #909090;
+
+$dark-bar-top-color: #344047;
+$dark-bar-bottom-color: #252d34;
+
+$light-bar-top-color: #536470;
+$light-bar-bottom-color: #3A4951;
+
+$component-detail-top-color:#f0f8ff;
+$component-detail-bottom-color:#fff8dc;
+
+$gray-navbar-top-color: #ffffff;
+$gray-navbar-bottom-color: #ebebeb;
+
+$item-list-title: #000000;
+$item-list-subtitle: #666666;
+$item-list-button-label: #004477;
+
+
+$sidemenu-border-color: #323c46;
+$sidemenu-item-background-color: #252d34;
+$sidemenu-item-selected-background-color: #37424d;
+
+$sidemenu-feature-background-color1: #1a2025;
+$sidemenu-feature-background-color2: #252d34;
+
+$separator-bar-top-color: #495766;
+$separator-bar-bottom-color: #323c46;
+
+$shadow-color-darker: rgba(0, 0, 0, 0.75);
+$shadow-color-medium: rgba(0, 0, 0, 0.6);
+$shadow-color-lighter: rgba(0, 0, 0, 0.33);
+$shadow-color-lightest: rgba(0, 0, 0, 0.25);
+$border-input-color: #111;
+
+$search-panel-top-color: #495766;
+$search-panel-bottom-color: #323c46;
+
+$search-button-top-color: #ffffff;
+$search-button-bottom-color: #c0c0c0;
+
+$form-border: #C7C7C7;
+
+// BUBBLES
+// Bubble Color Default Configs
+
+$bubble-color: $text-body-color !default;
+$bubble-background-color: $content-background-color !default;
+$bubble-box-shadow-color: $shadow-color-medium !default;
+$bubble-before-box-shadow-color: $shadow-color-lightest !default;
+$bubble-divider-color: $border-edge-color !default;
+$bubble-title-color: $text-body-color !default;
+$bubble-sub-title-color: $text-body-light-color !default;
+$bubble-head-color: $text-body-light-color !default;
+$bubble-footer-color: $text-body-light-color !default;
+
+// TAGS
+// Background Color Defaults
+$tag-bg-color: $app-background-color !default;
+$flight-tag-bg-color: $tag-bg-color !default;
+$flight-tag-delayed-bg-color: $flight-tag-bg-color !default;
+$flight-tag-canceled-bg-color: $flight-tag-bg-color !default;
+$flight-tag-early-bg-color: $flight-tag-bg-color !default;
+$business-tag-bg-color: $tag-bg-color !default;
+
+// Font Color Defaults
+$tag-color: $text-body-light-color-on-dark !default;
+$flight-tag-color: $tag-color !default;
+$flight-tag-delayed-color: $flight-tag-color !default;
+$flight-tag-canceled-color: $flight-tag-color !default;
+$flight-tag-early-color: $flight-tag-color !default;
+$business-tag-color: $tag-color !default;

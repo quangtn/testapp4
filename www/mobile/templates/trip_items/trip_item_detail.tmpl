@@ -1,0 +1,100 @@
+<section class="confirmation">
+<dl>
+	<dt class="label">{{t "ConfirmationNumber"}}</dt>
+	<dd class="value word-wrap-text">{{if_not_blank confirmation_number "NotEntered"}}</dd>
+</dl>
+{{#if for_business}}
+<div class="tags">
+	<div class="tag--business">{{t "Business"}}</div>
+</div>
+{{/if}}
+</section>
+
+<section>
+	{{#if is_map_viable_for_start_location}}
+		<div class="map map-drop-down-button" data-segment="start">
+			<div class="button-icon btn_icon_map_25px"></div>
+		</div>
+	{{/if}}
+	<dl class="start-segment">
+		<dt class="label">{{labels.start}}</dt>
+		<dd class="value">
+			{{#with start_location}}
+				{{#if label}}<p class="address-line"><span>{{label}}</span></p>{{/if}}
+				{{#if address_lines}}
+					{{#each address_lines}}
+						<p class="address-line"><span>{{.}}</span></p>
+					{{/each}}
+				{{/if}}
+			{{/with}}
+		</dd>
+	</dl>
+	<dl class="date">
+		<dt class="label">{{t "Date"}}</dt>
+		<dd class="value">{{mediumDate start_date}}</dd>
+	</dl>
+	<dl class="time">
+		<dt class="label">{{t "Time"}}</dt>
+		<dd class="value">{{timeFromDateTime start_date}}</dd>
+	</dl>
+</section>
+<section>
+	{{#if is_map_viable_for_end_location}}
+		<div class="map map-drop-down-button" data-segment="end">
+			<div class="button-icon btn_icon_map_25px"></div>
+		</div>
+	{{/if}}
+	<dl class="end-segment">
+		<dt class="label">{{labels.end}}</dt>
+		<dd class="value">
+			{{#if end_location.label}}<p class="address-line"><span>{{end_location.label}}</span></p>{{/if}}
+			{{#if end_location.address_lines}}
+				{{#each end_location.address_lines}}
+					<p class="address-line"><span>{{.}}</span></p>
+				{{/each}}
+			{{/if}}
+		</dd>
+	</dl>
+	<dl class="date">
+		<dt class="label">{{t "Date"}}</dt>
+		<dd class="value">{{mediumDate end_date}}</dd>
+	</dl>
+	<dl class="time">
+		<dt class="label">{{t "Time"}}</dt>
+		<dd class="value">{{timeFromDateTime end_date}}</dd>
+	</dl>
+</section>
+
+<section>
+<dl>
+	<dt class="label">{{t "Note"}}</dt>
+	<dd class="word-wrap-text">{{if_not_blank note "NotEntered"}}</dd>
+</dl>
+</section>
+
+{{#if phone_numbers}}
+<section class="phones">
+	{{#each phone_numbers}}
+		<dl class="inline phone">
+			<dd>
+				<div class="phone-actionable phone-drop-down-button {{type}}">
+					<a href="tel:{{number}}" class="button-icon btn_icon_call_25px"></a>
+				</div>
+				<span class="phone-number">{{phone number type}}</span>
+			</dd>
+		</dl>
+	{{/each}}
+</section>
+{{/if}}
+
+{{#each detailMenuItems}}
+	<div id="{{id}}" class="detail-menu-item">
+		{{label}}
+		<div class="{{icon}} general-icon detail-menu-icon "></div>
+		<div class="detail-menu-next button-icon btn_arrow"></div>
+	</div>
+{{/each}}
+
+{{#if isWorldMate}}
+	<div id="worldmate" class="wm"></div>
+{{/if}}

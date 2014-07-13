@@ -1,0 +1,18 @@
+{{#each flights}}
+{{#if ../is_seat_maps}}
+<li class="flight-list-item-group {{#unless seat_map_url}}unavailable{{/unless}}" data-id="{{id}}" {{#if seat_map_url}}data-seat_map_url="{{seat_map_url}}"{{/if}}>
+{{else}}
+<li class="flight-list-item-group" data-id="{{id}}">
+{{/if}}
+	<div class="item-icon airline-icon airline-{{lowercase airline_code}}"></div>
+	<div class="item-content title-group">
+		{{airline_code}} {{t "Flight"}} {{flight_number}} {{t "From"}} {{departure_airport_code}}
+		<span class="item-subtext">{{t "Departs"}} {{timeFromDateTime scheduled_departure}} {{t "On"}} {{dateMonth scheduled_departure}}</span>
+		{{#if ../is_seat_maps}}
+			{{#unless seat_map_url}}
+				<span class="warning">{{t "SeatMapUnavailable"}}</span>
+			{{/unless}}
+		{{/if}}
+	</div>
+</li>
+{{/each}}

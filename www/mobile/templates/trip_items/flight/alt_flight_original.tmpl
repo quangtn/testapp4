@@ -1,0 +1,20 @@
+<div class="alt-flights">
+	<ul class="item-list">
+		<li>
+			<div class="item-content">
+				<span class="original-flight">{{original.departure_city}} ({{original.departure_airport}}) - {{original.arrival_city}} ({{original.arrival_airport}})</span>
+				<p class="item-subtext">{{original.airline_code}} {{original.flight_number}}, {{monDayYear original.scheduled_departure}}</p>
+			</div>
+		</li>
+	</ul>
+	<form id="airlineSelection" class="view-toggle">
+		<label>
+			<input type="radio" name="flightList" id="originalAirline" value="originalAirline" checked="checked" />
+			<span>{{t "OriginalAirline"}}</span>
+		</label>
+		<label>
+			<input type="radio" name="flightList" id="allAirlines" value="allAirlines" />
+			<span>{{t "AllAirlines"}}</span>
+		</label>
+	</form>
+</div>

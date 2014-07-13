@@ -1,0 +1,503 @@
+/*********************************************
+*
+* Share Itinerary / Preferences
+*
+*********************************************/
+// TODO@TRI: Clean up. Utilize SASS/Compass features
+
+.edit-trip-panel, .share-panel {
+	background-color:#fff;
+	-moz-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.75);
+	-webkit-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.75);
+}
+
+.button-sm {
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25), inset 0px 1px 0px rgba(255, 255, 255, 0.3);
+	font-size:12px;
+	font-weight:normal;
+}
+
+.button-sm-warning {
+	background: #bb0000;
+	background-image: linear-gradient(top, #bb0000 0%, #820000 100%);
+	background-image: -moz-linear-gradient(top, #bb0000 0%, #820000 100%);
+	background-image: -webkit-gradient(linear top, #bb0000 0%, #820000 100%);
+	background-image: -ms-linear-gradient(top, #bb0000 0%, #820000 100%);
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #bb0000), color-stop(1, #820000));
+	border: 1px solid #820000;
+	width:25px;
+	height:25px;
+	padding:2.5px 7.5px;
+ }
+
+
+.button-sm-warning:hover,
+.button-sm-warning:active,
+.button-lg-warning:hover,
+.button-lg-warning:active {
+	background: #820000;
+	background-image: linear-gradient(top, #820000 0%, #5a0000 100%);
+	background-image: -moz-linear-gradient(top, #820000 0%, #5a0000 100%);
+	background-image: -webkit-gradient(linear top, #820000 0%, #5a0000 100%);
+	background-image: -ms-linear-gradient(top, #820000 0%, #5a0000 100%);
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #820000), color-stop(1, #5a0000));
+	border: 1px solid #5a0000;
+}
+
+
+.compact-submit {
+	background: #64798C;
+	background-image: linear-gradient(top, #64798C 0%, #495766 100%);
+	background-image: -moz-linear-gradient(top, #64798C 0%, #495766 100%);
+	background-image: -webkit-gradient(linear top, #64798C 0%, #495766 100%);
+	background-image: -ms-linear-gradient(top, #64798C 0%, #495766 100%);
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #64798C), color-stop(1, #495766));
+	border: 1px solid #495766;
+	color: white;
+	height: 32px;
+	text-align:center;
+	text-shadow: 0 -1px 0 black;
+	width: 42px;
+	margin:10px;
+}
+
+.action-list li {
+	position:relative;
+	padding:13px 25px 13px 15px;
+	border-bottom:1px solid #CCC;
+	font-size:17px;
+	font-weight:bold;
+	word-wrap: break-word;
+	background: white url(../assets/images/btn_arrow.png) right center no-repeat;
+}
+
+.share-list ul.item-list, ul.action-list {
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-box-align: start;
+	-webkit-box-pack: start;
+	display: -moz-box;
+	-moz-box-orient: vertical;
+	-moz-box-align: start;
+	-moz-box-pack: start;
+	display: box;
+	box-orient: vertical;
+	box-align: start;
+	box-pack: start;
+	margin: 0;
+	padding: 0;
+	position: relative;
+}
+
+.share-list ul.item-list li, ul.action-list li {
+	display: -webkit-box;
+	-webkit-box-sizing: border-box;
+	-webkit-box-orient: horizontal;
+	-webkit-box-align: center;
+	-webkit-box-pack: justify;
+	-webkit-box-flex: 1;
+	display: -moz-box;
+	-moz-box-sizing: border-box;
+	-moz-box-orient: horizontal;
+	-moz-box-align: center;
+	-moz-box-pack: justify;
+	-moz-box-flex: 1;
+	display: box;
+	box-sizing: border-box;
+	box-orient: horizontal;
+	box-align: center;
+	box-pack: justify;
+	box-flex: 1;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	min-height: 44px;
+	border-bottom: 1px solid #CCC;
+	background-color: white;
+	position: relative;
+}
+
+
+
+
+.share-list form ul.item-list li, form ul.action-list li {
+	-webkit-box-align: stretch;
+	-moz-box-align: stretch;
+	box-align: stretch;
+}
+
+.share-list ul.action-list li {
+	background: white url(../assets/images/btn_arrow.png) right center no-repeat;
+}
+
+.share-list ul.item-list li .item-icon, ul.action-list li .item-icon {
+	display: block;
+	margin: 0px 0px 0px 6px;
+	padding: 0;
+	width: 45px;
+	height: 33px;
+	-webkit-box-flex: 0;
+	-moz-box-flex: 0;
+	box-flex: 0;
+	position: relative;
+}
+.share-list ul.item-list li .item-content, .share-list ul.item-list li .item-label, .share-list ul.action-list li .item-content, .share-list ul.action-list li .item-label {
+	font-size: 17px;
+	line-height: 20px;
+	font-weight: bold;
+}
+.share-list ul.item-list li .item-content, ul.action-list li .item-content {
+	display: block;
+	vertical-align: center;
+	-webkit-box-flex: 1;
+	-webkit-box-sizing: border-box;
+	-moz-box-flex: 1;
+	-moz-box-sizing: border-box;
+	box-flex: 1;
+	box-sizing: border-box;
+	margin: 8px 0px;
+	padding: 0px 8px 0px 8px;
+	position: relative;
+	white-space: normal;
+	overflow: hidden;
+}
+
+.share-list ul.item-list li .item-label, .share-list ul.action-list li .item-label {
+	display: block;
+	-webkit-box-pack: center;
+	-webkit-box-flex: 1;
+	-webkit-box-sizing: border-box;
+	-moz-box-pack: center;
+	-moz-box-flex: 1;
+	-moz-box-sizing: border-box;
+	box-pack: center;
+	box-flex: 1;
+	box-sizing: border-box;
+	margin: 0px;
+	padding: 0px 8px;
+	height: 43px;
+	line-height: 43px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.share-list ul.action-list li .item-content, .share-list ul.action-list li .item-label {
+	padding: 0px 30px 0px 15px;
+}
+
+.item-content .help-text {
+	padding: 7px 7px 7px 7px;
+	font-size: 13px;
+	line-height: 1.2em;
+	color: #666;
+}
+
+form ul.action-list li, form ul.item-list li {
+	background-color: white;
+	background-image: none;
+	padding: 0px;
+	position: relative;
+}
+
+form ul.action-list li label, form ul.item-list li label  {
+	display: -webkit-box;
+	display: -moz-box;
+	display: box;
+	margin: 0px;
+	padding: 0px 0px 0px 15px;
+	position: relative;
+	-webkit-box-orient: vertical;
+	-webkit-box-pack: center;
+	-webkit-box-align: start;
+	-webkit-box-flex: 0;
+	-webkit-box-flex-group: 1;
+	-webkit-box-sizing: border-box;
+	-moz-box-orient: vertical;
+	-moz-box-pack: center;
+	-moz-box-align: start;
+	-moz-box-flex: 0;
+	-moz-box-flex-group: 1;
+	-moz-box-sizing: border-box;
+	box-orient: vertical;
+	box-pack: center;
+	box-align: start;
+	box-flex: 0;
+	box-flex-group: 1;
+	box-sizing: border-box;
+	width: 70px;
+	background-color: rgb(235,235,235);
+	color: rgb(17,17,17);
+	font-size: 13px;
+	line-height: 15px;
+}
+
+form ul.action-list li input, form ul.item-list li input {
+	display: block;
+	margin: 0px;
+	padding: 0px 28px 0px 0px;
+	text-indent: 8px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	font-size: 17px;
+	line-height: 43px;
+	line-height: 44px;
+	text-align: start;
+	color: black;
+	-webkit-box-flex: 1;
+	-moz-box-flex: 1;
+	box-flex: 1;
+	-webkit-border-radius: 0px;
+	-webkit-box-shadow: none;
+	-webkit-box-sizing: border-box;
+	border-radius: 0px;
+	box-shadow: none;
+	border: none;
+	outline: none;
+	-webkit-appearance: none;
+	-webkit-border-image: none;
+	-webkit-box-shadow: none;
+	-webkit-rtl-ordering: logical;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	-webkit-user-select: text;
+}
+form ul.action-list li input {
+	background: white url(../assets/images/btn_arrow.png) right center no-repeat;
+}
+form ul.action-list li input:focus, form ul.item-list li input:focus {
+	@include box-shadow( 0px 0px 0px rgb(0, 0, 0));
+	@include border-radius(0px);
+	border-radius: 0px;
+	box-shadow: none;
+	border: none;
+	outline: none;
+	-webkit-appearance: none;
+	-webkit-border-image: none;
+	-webkit-box-shadow: none;
+	-webkit-rtl-ordering: logical;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	-webkit-user-select: text;
+}
+
+form ul.item-list li input[type=text] ~ button.button-sm, form ul.item-list li input[type=email] ~ button.button-sm {
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+form ul.item-list li input, form ul.item-list li input:focus {
+	line-height: normal;
+}
+
+/*** Preferences ***/
+
+div.share-preferences {
+	display: block;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	min-height: 100%;
+	position: relative;
+}
+.share-preferences form {
+	display: block;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	position: relative;
+	background-color: white;
+}
+.share-preferences form ul.item-list {
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-box-align: start;
+	-webkit-box-pack: start;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	position: relative;
+}
+.share-preferences form ul.item-list li {
+	display: -webkit-box;
+	-webkit-box-orient: horizontal;
+	-webkit-box-align: center;
+	-webkit-box-pack: justify;
+	-webkit-box-sizing: border-box;
+	-webkit-box-flex: 1;
+	margin: 0px;
+	padding: 0px;
+	margin: 0;
+	padding: 0;
+	min-height: 44px;
+	// border-top: 1px solid #CCC;
+	position: relative;
+	width: 100%;
+}
+.share-preferences form ul.item-list li:first-child {
+	border-top: none;
+}
+.share-preferences form ul.item-list li.deletable {
+	display: -webkit-box;
+	-webkit-box-flex: 1;
+	display: -moz-box;
+	-moz-box-flex: 1;
+	display: box;
+	box-flex: 1;
+	-webkit-box-orient: horizontal;
+	-webkit-box-align: center;
+	-webkit-box-pack: justify;
+	-moz-box-orient: horizontal;
+	-moz-box-align: center;
+	-moz-box-pack: justify;
+	box-orient: horizontal;
+	box-align: center;
+	box-pack: justify;
+	min-height: 44px;
+	background-color: #EBEBEB;
+}
+
+.share-preferences form ul.item-list li.deletable .item-content {
+	display: block;
+	font-size: 17px;
+	font-weight: bold;
+	line-height: 1.2em;
+	-webkit-box-flex: 1;
+	-moz-box-flex: 1;
+	box-flex: 1;
+	padding: 15px 8px 15px 15px;
+	margin: 0px;
+	position: relative;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.share-preferences form ul.item-list li.deletable .small.btn.warning {
+	margin: 0px 15px 0px 0px;
+	-webkit-box-flex: 0;
+	-moz-box-flex: 0;
+	box-flex: 0;
+}
+.share-preferences form ul.item-list li.checkable {
+	display: block;
+	position: relative;
+}
+.share-preferences form ul.item-list li.checkable input[type=checkbox] {
+	@include box-shadow( 0px 0px 0px rgb(0, 0, 0));
+	@include border-radius(0px);
+	display: block;
+	margin: 0px;
+	padding: 0px;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 10;
+	outline: none;
+	-webkit-appearance: none;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	-webkit-user-select: none;
+	background: transparent url(../assets/images/btn_checkbox.png) 15px center no-repeat;
+}
+.share-preferences form ul.item-list li.checkable input[type=checkbox]:focus {
+	@include box-shadow( 0px 0px 0px rgb(0, 0, 0));
+	@include border-radius(0px);
+	outline: none;
+	-webkit-appearance: none;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	-webkit-user-select: none;
+}
+.share-preferences form ul.item-list li.checkable input[type=checkbox]:checked {
+	@include box-shadow( 0px 0px 0px rgb(0, 0, 0));
+	@include border-radius(0px);
+	outline: none;
+	-webkit-appearance: none;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	-webkit-user-select: none;
+	background: transparent url(../assets/images/btn_checkbox_selected.png) 15px center no-repeat;
+}
+.share-preferences form ul.item-list li.checkable input[type=checkbox]:disabled {
+	background: rgba(255,255,255,0.67) url(../assets/images/loading_sm.gif) 15px center no-repeat;
+}
+.share-preferences form ul.item-list li.checkable .item-content {
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-box-align: stretch;
+	-webkit-box-pack: start;
+	padding: 8px 15px 8px 52px;
+	-webkit-box-sizing: border-box;
+	width: 100%;
+	font-size: 17px;
+	font-weight: bold;
+	line-height: 1.2em;
+	position: relative;
+}
+.share-preferences form ul.item-list li.checkable .item-content .subtext {
+	display: block;
+	margin: 0px;
+	padding: 0px 15px 0px 0px;
+	font-size: 14px;
+	line-height: 1.2em;
+	color: #666;
+}
+.share-preferences form ul.item-list li .help-text {
+	display: block;
+	margin: 0;
+	padding: 8px 15px;
+	color: #666;
+	font-size: 14px;
+	line-height: 1.5em;
+}
+.share-preferences form ul.item-list li.checkable .item-content .airport-name {
+	display: block;
+	margin: 0px;
+	padding: 0px;
+	width: 100%;
+	line-height: 20px;
+	height: 20px;
+	-webkit-box-flex: 0;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.share-preferences form ul.item-list li.checkable .item-content .airport-details {
+	display: block;
+	margin: 0;
+	padding: 0;
+	color: #666;
+	font-size: 15px;
+	font-weight: normal;
+	line-height: 1.5em;
+
+}
+.share-preferences form ul.item-list li.actions {
+	padding: 15px;
+	background-color: white;
+}
+.share-preferences form ul.item-list li.actions .submit {
+	display: block;
+}
+
+@include pixelDensity(1.5) {
+	.share-list ul.action-list li, .share-preferences ul.action-list li {
+		background: white url(../assets/images/btn_arrow_2x.png) right center no-repeat;
+		@include background-size(image-width('assets/images/btn_arrow.png') image-height('assets/images/btn_arrow.png'));
+	}
+	.share-list form ul.action-list li input, .share-preferences form ul.action-list li input {
+		background: white url(../assets/images/btn_arrow_2x.png) right center no-repeat;
+		@include background-size(image-width('assets/images/btn_arrow.png') image-height('assets/images/btn_arrow.png'));
+	}
+	.share-preferences form ul.item-list li.checkable input[type=checkbox] {
+		background: transparent url(../assets/images/btn_checkbox_2x.png) 10px center no-repeat;
+		@include background-size(image-width('assets/images/btn_checkbox.png') image-height('assets/images/btn_checkbox.png'));
+		&:checked {
+			background: transparent url(../assets/images/btn_checkbox_selected_2x.png) 10px center no-repeat;
+			@include background-size(image-width('assets/images/btn_checkbox_selected.png') image-height('assets/images/btn_checkbox_selected.png'));
+		}
+	}
+}

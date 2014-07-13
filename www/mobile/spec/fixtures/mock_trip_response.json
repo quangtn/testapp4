@@ -1,0 +1,944 @@
+{
+    "trip_event_relevance": [{
+        "relevant_at_epoch": 1362502200,
+        "event_index": 0,
+        "@name": "event"
+    }, {
+        "relevant_at_epoch": 1362531600,
+        "event_index": 1,
+        "@name": "event"
+    }, {
+        "relevant_at_epoch": 1362531600,
+        "event_index": 2,
+        "@name": "event"
+    }],
+    "default_dates_and_times": {
+        "generic_item_end_time": "2013-02-15T15:00:00",
+        "hotel_check_out_time": "2013-06-15T12:10:00",
+        "hotel_check_in_date": "2013-06-09",
+        "vehicle_drop_off_date": "2013-06-15",
+        "vehicle_pick_up_time": "2013-06-09T14:50:00",
+        "hotel_check_out_date": "2013-06-15",
+        "generic_item_start_date": "2013-06-15",
+        "hotel_check_in_time": "2013-06-09T14:50:00",
+        "vehicle_drop_off_time": "2013-06-15T13:10:00",
+        "generic_item_start_time": "2013-02-15T12:00:00",
+        "flight_departure_date": "2013-06-15",
+        "vehicle_pick_up_date": "2013-06-09",
+        "generic_item_end_date": "2013-06-15"
+    },
+    "sources": [{
+        "id": 11497,
+        "cancellable": false,
+        "name": "Record Locator",
+        "identifier": "HSWTFU",
+        "@name": "source"
+    }],
+    "social_clients": [{
+        "enabled": false,
+        "authorized": false,
+        "name": "Facebook",
+        "@name": "client"
+    }, {
+        "enabled": false,
+        "authorized": false,
+        "name": "Twitter",
+        "@name": "client"
+    }, {
+        "enabled": false,
+        "authorized": false,
+        "name": "Linkedin",
+        "@name": "client"
+    }],
+    "default_item_create_date": "2013-06-09",
+    "id": 19674,
+    "for_business": false,
+    "closest_image_mobi_xlarge": "http://www.tripcase.com/pictures/loc/destinations/destination_default_4-3_sz130.jpg",
+    "user_id": "1595",
+    "messages": [{
+        "icon_url": "http://dharma-connect.tripcase.com/assets/000/000/006/small.png",
+        "web_url": "http://dharma-connect.tripcase.com/messages/184/clickthrough?url=https%3A%2F%2Fcert-services.tripcase.com%2Fnew%2FreservationsPrint.html%3Fpnr%3DAL8IHD8JTFQ2%26name%3DHogue%26action%3DprintPreview%26nr%3Dtrue&key=e7d8a36&metrics[client]=browser&metrics[pk]=trip:1743",
+        "event_type": "start",
+        "trip_item_id": "75941",
+        "event_action": "GotoUrl",
+        "event_name": "display_svt_itin",
+        "body": {
+            "text": "Additional information is available for your trip JCTAZX."
+        },
+        "url": "http://dharma-connect.tripcase.com/messages/184/clickthrough?url=https%3A%2F%2Fcert-services.tripcase.com%2Fnew%2FreservationsPrint.html%3Fpnr%3DAL8IHD8JTFQ2%26name%3DHogue%26action%3DprintPreview%26nr%3Dtrue&key=e7d8a36&metrics[client]=browser&metrics[pk]=trip:1743",
+        "end_time": "2013-02-24T12:00:00Z",
+        "start_time": "2013-02-07T21:05:29Z",
+        "@name": "message"
+    }, {
+        "icon_url": "http://dharma-connect.tripcase.com/assets/000/000/089/small.png",
+        "event_type": "start",
+        "trip_item_id": "75943",
+        "event_action": "GoToTool",
+        "event_name": "seat_maps_pro",
+        "tool_name": "seat_maps",
+        "body": {
+            "text": "Where are you sitting? Look up your seat location or view open seats on most major airlines."
+        },
+        "end_time": "2013-02-22T12:00:00Z",
+        "start_time": "2013-02-07T21:05:29Z",
+        "@name": "message"
+    }, {
+        "icon_url": "http://dharma-connect.tripcase.com/assets/000/000/085/small.png",
+        "event_type": "start",
+        "trip_item_id": "75946",
+        "event_action": "GoToTool",
+        "event_name": "pro_weather",
+        "tool_name": "weather",
+        "body": {
+            "text": "VIEW the weather for your current destination."
+        },
+        "end_time": "2013-02-22T12:00:00Z",
+        "start_time": "2013-02-07T21:05:29Z",
+        "@name": "message"
+    }, {
+        "icon_url": "http://dharma-connect.tripcase.com/assets/000/000/006/small.png",
+        "event_type": "start",
+        "trip_item_id": "75947",
+        "event_name": "TripCase Thank You",
+        "body": {
+            "text": "Thank you for using TripCase, have a safe trip."
+        },
+        "start_time": "2013-02-07T21:05:29Z",
+        "@name": "message"
+    }, {
+        "icon_url": "http://dharma-connect.tripcase.com/assets/000/000/006/small.png",
+        "web_url": "http://dharma-connect.tripcase.com/messages/184/clickthrough?url=https%3A%2F%2Fcert-services.tripcase.com%2Fnew%2FreservationsPrint.html%3Fpnr%3DAL8IHD8JTFQ2%26name%3DHogue%26action%3DprintPreview%26nr%3Dtrue&key=e7d8a36&metrics[client]=browser&metrics[pk]=trip:1743",
+        "event_type": "start",
+        "trip_item_id": "75948",
+        "event_action": "GotoUrl",
+        "event_name": "display_svt_itin",
+        "body": {
+            "text": "Additional information is available for your trip JCTAZX."
+        },
+        "url": "http://dharma-connect.tripcase.com/messages/184/clickthrough?url=https%3A%2F%2Fcert-services.tripcase.com%2Fnew%2FreservationsPrint.html%3Fpnr%3DAL8IHD8JTFQ2%26name%3DHogue%26action%3DprintPreview%26nr%3Dtrue&key=e7d8a36&metrics[client]=browser&metrics[pk]=trip:1743",
+        "end_time": "2013-02-24T12:00:00Z",
+        "start_time": "2013-02-07T21:05:29Z",
+        "@name": "message"
+    }, {
+        "icon_url": "http://dharma-connect.tripcase.com/assets/000/000/001/small.png",
+        "event_type": "start",
+        "trip_item_id": "75942",
+        "event_name": "Online Checkin Timeleft",
+        "body": {
+            "text": "One big and shiny car awaits you - walk up and drive off"
+        },
+        "item": {
+            "id": 163,
+            "type": "Air"
+        },
+        "end_time": "2013-02-18T18:40:00Z",
+        "start_time": "2013-02-07T21:05:29Z",
+        "@name": "message"
+    }, {
+        "icon_url": "http://dharma-connect.tripcase.com/assets/000/000/001/small.png",
+        "event_type": "end",
+        "trip_item_id": "75941",
+        "event_name": "Online Checkin Timeleft",
+        "body": {
+            "text": "Did you gas this up or not? Click here for local filling stations."
+        },
+        "item": {
+            "id": 163,
+            "type": "Air"
+        },
+        "end_time": "2013-02-18T18:40:00Z",
+        "start_time": "2013-02-07T21:05:29Z",
+        "@name": "message"
+    }, {
+        "icon_url": "http://dharma-connect.tripcase.com/assets/000/000/003/small.png",
+        "web_url": "http://dharma-connect.tripcase.com/messages/224/clickthrough?url=http%3A%2F%2Fwww.vfmii.com%2Fexc%2Faspquery%3Fcommand%3Dinvoke%26ids%3D96102%26ipid%3D027055&key=beb8890&metrics[client]=browser&metrics[pk]=trip:1743",
+        "event_type": "start",
+        "trip_item_id": "75943",
+        "event_action": "GotoUrl",
+        "event_name": "vfml_player_message",
+        "body": {
+            "text": "View photos, videos, and more before your stay at Ritz Carlton Palm Beach."
+        },
+        "url": "http://dharma-connect.tripcase.com/messages/224/clickthrough?url=http%3A%2F%2Fwww.vfmii.com%2Fexc%2Faspquery%3Fcommand%3Dinvoke%26ids%3D96102%26ipid%3D027055&key=beb8890&metrics[client]=browser&metrics[pk]=trip:1743",
+        "start_time": "2013-02-07T21:05:29Z",
+        "@name": "message"
+    }, {
+        "icon_url": "http://dharma-connect.tripcase.com/assets/000/000/003/small.png",
+        "web_url": "http://dharma-connect.tripcase.com/messages/224/clickthrough?url=http%3A%2F%2Fwww.vfmii.com%2Fexc%2Faspquery%3Fcommand%3Dinvoke%26ids%3D96102%26ipid%3D027055&key=beb8890&metrics[client]=browser&metrics[pk]=trip:1743",
+        "event_type": "end",
+        "trip_item_id": "75946",
+        "event_action": "GotoUrl",
+        "event_name": "vfml_player_message",
+        "body": {
+            "text": "Steal some towels and we'll take your soul."
+        },
+        "url": "http://dharma-connect.tripcase.com/messages/224/clickthrough?url=http%3A%2F%2Fwww.vfmii.com%2Fexc%2Faspquery%3Fcommand%3Dinvoke%26ids%3D96102%26ipid%3D027055&key=beb8890&metrics[client]=browser&metrics[pk]=trip:1743",
+        "start_time": "2013-02-07T21:05:29Z",
+        "@name": "message"
+    }],
+    "end_time_utc": "2013-06-16T03:30:00",
+    "start_time_utc": "2013-06-09T14:50:00",
+    "items": [{
+        "itinerary_ref": {
+            "id": 0,
+            "type": "Record Locator",
+            "locator": "HSWTFU"
+        },
+        "num_following": 0,
+        "note": "",
+        "air_reservation": {
+            "seats": [{
+                "number": "06A",
+                "@name": "seat"
+            }],
+            "seat_map_url": "http://ctovm2418.dev.sabre.com/mapi/services/flight_seat_map?trip_item=75941",
+            "reservation_number": "HSWTFU",
+            "flight": {
+                "estimated_duration": 180,
+                "arrival_status": "",
+                "estimated_arrival": "2013-06-09T13:50:00",
+                "arrival_airport": {
+                    "general_location": "Antigua, AG",
+                    "latitude": 17.1083333333333,
+                    "state_code": "",
+                    "name": "V.C. Bird International Airport",
+                    "iata_code": "ANU",
+                    "longitude": -61.7638888888889,
+                    "city": "Antigua",
+                    "country_code": "AG"
+                },
+                "scheduled_arrival": "2013-06-09T13:50:00",
+                "departure_terminal": "",
+                "id": 75941,
+                "departure_airport": {
+                    "general_location": "Miami, FL",
+                    "latitude": 25.7925,
+                    "state_code": "FL",
+                    "name": "Miami International Airport",
+                    "iata_code": "MIA",
+                    "longitude": -80.2861111111111,
+                    "city": "Miami",
+                    "country_code": "US"
+                },
+                "sched_duration": 180,
+                "arrival_gate": "",
+                "estimated_departure": "2013-06-09T10:50:00",
+                "change_events": [],
+                "status_code": "S",
+                "scheduled_departure": "2013-06-09T10:50:00",
+                "alt_schedules_avail": true,
+                "baggage_claim": "",
+                "completed": false,
+                "airline": {
+                    "name": "American Airlines",
+                    "phones": [{
+                        "number": "800-433-7300",
+                        "@name": "phone"
+                    }, {
+                        "number": "121-111-1111",
+                        "type": "Agency",
+                        "@name": "phone"
+                    }],
+                    "iata_code": "AA"
+                },
+                "arrival_terminal": "",
+                "departure_status": "",
+                "cancelled": false,
+                "flight_number": 1907,
+                "aircraft": {
+                    "description": "Boeing 737-800",
+                    "iata_code": "738"
+                },
+                "departure_gate": "",
+                "extended_status_code": "S"
+            }
+        },
+        "id": 75941,
+        "type": "Air",
+        "end_time": {
+            "time": "2013-06-09T13:50:00",
+            "tz_offset": -14400,
+            "tz_name": "America/Antigua",
+            "utc_time": "2013-06-09T17:50:00"
+        },
+        "start_time": {
+            "time": "2013-06-09T10:50:00",
+            "tz_offset": -14400,
+            "tz_name": "America/New_York",
+            "utc_time": "2013-06-09T14:50:00"
+        },
+        "read_only": true,
+        "@name": "item"
+    }, {
+        "itinerary_ref": {
+            "id": 0,
+            "type": "Record Locator",
+            "locator": "HSWTFU"
+        },
+        "vehicle_reservation": {
+            "return_time": "2013-06-15T15:10:00",
+            "pickup_location": {
+                "vehicle_location": {
+                    "consolidated_operation_times": [{
+                        "end_day": "Sun",
+                        "closed": false,
+                        "start_day": "Mon",
+                        "end_time": "22:00:00",
+                        "start_time": "08:00:00",
+                        "@name": "operation_time"
+                    }],
+                    "shuttle_details": [{
+                        "content": "Pick up is available from hotels at no charge. . Shuttle service to and from the cruise terminal is available.  Customer must provide the name of the ship at the time of rental, or they can ask for the location at the ministry of information desk once they arrive. There is no charge.  Customer will need to provide a valid drivers license and credit card.  *see credit cards*",
+                        "information": "P",
+                        "@name": "shuttle"
+                    }],
+                    "general_information": ["Minimum rentals age - 21 drivers age 21-24 ... No charge", "Under age surcharge applies to under age 25 drivers. Prices range from 6.00 to 35.00 per day depending on the location selected.", "Must meet same rental requirements as renter.", "One way rentals may include capped mileage on rates designated for one way service. One way rentals must be booked in advance. Not all vehicles are available for one way service. Renters using their corporate account rate will receive their applicable mileage, whether capped or unlimited. One way rentals may be subject to a drop charge and when applicable, will be displayed upon confirmation.", "Vehicles must be returned with a full tank of gas or local refueling charges will apply."],
+                    "location": "ANU",
+                    "vendor": {
+                        "code": "ZR",
+                        "company_short_name": "DOLLAR",
+                        "name": "Dollar Rent-A-Car"
+                    },
+                    "phones": [{
+                        "number": "268-462-0362",
+                        "type": "",
+                        "@name": "phone"
+                    }],
+                    "location_code": "ANUANU",
+                    "geo_code": {
+                        "latitude": 17.08602,
+                        "longitude": -61.789421
+                    },
+                    "last_updated": "2013-02-15T17:00:00",
+                    "address": {
+                        "general_location": "St Johns, AG",
+                        "country_name": "Antigua and Barbuda",
+                        "postal_code": "00000",
+                        "label_lines": [{
+                            "text": "Anu  St Johns Coolidge Field",
+                            "part": "name",
+                            "@name": "line"
+                        }, {
+                            "text": "V C B International Airport",
+                            "part": "street",
+                            "@name": "line"
+                        }, {
+                            "text": "St Johns 00000, AG",
+                            "part": "city",
+                            "@name": "line"
+                        }],
+                        "city": "St Johns",
+                        "country_code": "AG"
+                    }
+                }
+            },
+            "pickup_time": "2013-06-09T13:50:00",
+            "vehicle_desc": "Compact Car",
+            "vendor": {
+                "code": "ZR",
+                "name": "Dollar Rent-A-Car",
+                "phones": [{
+                    "number": "1-800-800-4000",
+                    "@name": "phone"
+                }, {
+                    "number": "268-462-0362",
+                    "type": "Local",
+                    "@name": "phone"
+                }, {
+                    "number": "121-111-1111",
+                    "type": "Agency",
+                    "@name": "phone"
+                }]
+            },
+            "confirmation_code": "N2177624-"
+        },
+        "num_following": 0,
+        "note": "",
+        "id": 75943,
+        "type": "Vehicle",
+        "end_time": {
+            "time": "2013-06-15T15:10:00",
+            "tz_offset": -14400,
+            "tz_name": "America/Antigua",
+            "utc_time": "2013-06-15T19:10:00"
+        },
+        "start_time": {
+            "time": "2013-06-09T13:50:00",
+            "tz_offset": -14400,
+            "tz_name": "America/Antigua",
+            "utc_time": "2013-06-09T17:50:00"
+        },
+        "read_only": true,
+        "@name": "item"
+    }, {
+        "num_following": 0,
+        "note": "Oceanfront room on request",
+        "id": 75946,
+        "hotel_reservation": {
+            "end_date": "2013-06-15T12:10:00",
+            "cancellable": false,
+            "confirmation_number": "ABC123",
+            "start_date": "2013-06-09T14:50:00",
+            "hotel_property": {
+                "hotel_chain_code": "GZ",
+                "property_id": "144841",
+                "name": "The Villas at Sunset Lane",
+                "hotel_details": {
+                    "amenities": [{
+                        "description": "Fitness facility on site or within walking distance",
+                        "code": "FITNESS_FACILITY",
+                        "category": "Property",
+                        "@name": "amenity"
+                    }, {
+                        "description": "Swimming pool",
+                        "code": "SWIMMING_POOL",
+                        "category": "Property",
+                        "@name": "amenity"
+                    }, {
+                        "description": "Dining facility on site",
+                        "code": "DINING",
+                        "category": "Property",
+                        "@name": "amenity"
+                    }, {
+                        "description": "Dry cleaning services available",
+                        "code": "DRY_CLEANING",
+                        "category": "Property",
+                        "@name": "amenity"
+                    }, {
+                        "description": "Kitchenette available in some rooms",
+                        "code": "KITCHENETTE",
+                        "category": "Room ",
+                        "@name": "amenity"
+                    }, {
+                        "code": "FIRST_CLASS",
+                        "@name": "amenity"
+                    }],
+                    "num_rooms": 13,
+                    "check_out_time": "1200",
+                    "phones": [{
+                        "number": "1-268-562-7791",
+                        "type": "Local",
+                        "@name": "phone"
+                    }, {
+                        "number": "1-268-562 7791",
+                        "type": "Fax",
+                        "@name": "phone"
+                    }],
+                    "geo_code": {
+                        "confidence_factor": 7,
+                        "latitude": 17.1166,
+                        "longitude": -61.833302
+                    },
+                    "check_in_time": "1600",
+                    "num_floors": 1,
+                    "airport": {
+                        "code": "ANU"
+                    }
+                },
+                "multi_media_objects": [{
+                    "type": "Large",
+                    "update_date": "2011-09-29",
+                    "height": 300,
+                    "width": 300,
+                    "url": "http://m.travelpn.com/images/st_johns/hotel/1/144841/Beach_E_1.jpg",
+                    "@name": "image"
+                }, {
+                    "type": "Large",
+                    "update_date": "2011-09-29",
+                    "height": 300,
+                    "width": 300,
+                    "url": "http://m.travelpn.com/images/st_johns/hotel/1/144841/Guest_room_E_1.jpg",
+                    "@name": "image"
+                }, {
+                    "type": "Large",
+                    "update_date": "2011-09-29",
+                    "height": 300,
+                    "width": 300,
+                    "url": "http://m.travelpn.com/images/st_johns/hotel/1/144841/Recreation_E_1.jpg",
+                    "@name": "image"
+                }, {
+                    "type": "Large",
+                    "update_date": "2011-09-29",
+                    "height": 300,
+                    "width": 300,
+                    "url": "http://m.travelpn.com/images/st_johns/hotel/1/144841/Exterior_E_1.jpg",
+                    "@name": "image"
+                }, {
+                    "type": "Large",
+                    "update_date": "2011-09-29",
+                    "height": 300,
+                    "width": 300,
+                    "url": "http://m.travelpn.com/images/st_johns/hotel/1/144841/Pool_E_1.jpg",
+                    "@name": "image"
+                }, {
+                    "type": "Large",
+                    "update_date": "2011-09-29",
+                    "height": 300,
+                    "width": 300,
+                    "url": "http://m.travelpn.com/images/st_johns/hotel/1/144841/Restaurant_E_1.jpg",
+                    "@name": "image"
+                }, {
+                    "type": "Large",
+                    "update_date": "2011-09-29",
+                    "height": 300,
+                    "width": 300,
+                    "url": "http://m.travelpn.com/images/st_johns/hotel/1/144841/Guest_room_E_2.jpg",
+                    "@name": "image"
+                }, {
+                    "type": "Large",
+                    "update_date": "2011-09-29",
+                    "height": 300,
+                    "width": 300,
+                    "url": "http://m.travelpn.com/images/st_johns/hotel/1/144841/Guest_room_E_3.jpg",
+                    "@name": "image"
+                }, {
+                    "type": "Large",
+                    "update_date": "2011-09-29",
+                    "height": 300,
+                    "width": 300,
+                    "url": "http://m.travelpn.com/images/st_johns/hotel/1/144841/Guest_room_E_4.jpg",
+                    "@name": "image"
+                }, {
+                    "type": "Medium",
+                    "update_date": "2011-09-29",
+                    "height": 200,
+                    "width": 200,
+                    "url": "http://m.travelpn.com/images/st_johns/hotel/1/144841/Beach_D_1.jpg",
+                    "@name": "image"
+                }, {
+                    "type": "Thumbnail",
+                    "update_date": "2011-09-29",
+                    "height": 100,
+                    "width": 100,
+                    "url": "http://m.travelpn.com/images/st_johns/hotel/1/144841/Beach_B_1.jpg",
+                    "@name": "image"
+                }, {
+                    "type": "ThumbnailLarge",
+                    "update_date": "2011-09-29",
+                    "height": 98,
+                    "width": 130,
+                    "url": "http://m.travelpn.com/images/st_johns/hotel/1/144841/Beach_H_1.jpg",
+                    "@name": "image"
+                }],
+                "address": {
+                    "general_location": "St Johns, AG",
+                    "country_name": "Antigua and Barbuda",
+                    "postal_code": "00000",
+                    "label_lines": [{
+                        "text": "Sunset Lane",
+                        "part": "street",
+                        "@name": "line"
+                    }, {
+                        "text": "St Johns 00000, AG",
+                        "part": "city",
+                        "@name": "line"
+                    }],
+                    "city": "St Johns",
+                    "country_code": "AG"
+                }
+            }
+        },
+        "type": "Hotel",
+        "end_time": {
+            "time": "2013-06-15T12:10:00",
+            "tz_offset": -14400,
+            "tz_name": "America/Antigua",
+            "utc_time": "2013-06-15T16:10:00"
+        },
+        "start_time": {
+            "time": "2013-06-09T14:50:00",
+            "tz_offset": -14400,
+            "tz_name": "America/Antigua",
+            "utc_time": "2013-06-09T18:50:00"
+        },
+        "read_only": false,
+        "@name": "item"
+    }, {
+        "num_following": 0,
+        "note": "Transportation from the hotel is provided",
+        "id": 75947,
+        "type": "Generic",
+        "generic_reservation": {
+            "end_date": "2013-06-11T16:00:00",
+            "orig_location": {
+                "name": "Beach picinic",
+                "geo_code": {
+                    "latitude": 17.1166,
+                    "longitude": -61.833302
+                },
+                "closest_airport": {
+                    "iata_code": "ANU"
+                },
+                "address": {
+                    "general_location": "Saint Johnston, Saint John, AG",
+                    "state_code": "Saint John",
+                    "country_name": "Antigua and Barbuda",
+                    "label_lines": [{
+                        "text": "Beach picinic",
+                        "part": "name",
+                        "@name": "line"
+                    }, {
+                        "text": "Saint Johnston, Saint John, AG",
+                        "part": "city",
+                        "@name": "line"
+                    }],
+                    "city": "Saint Johnston",
+                    "label": "Beachside BBQ",
+                    "country_code": "AG"
+                }
+            },
+            "type": "food_drink",
+            "phones": [{
+                "number": " 1-268-4620302    ",
+                "type": "Voice",
+                "@name": "phone"
+            }],
+            "confirmation_number": "C34vd56",
+            "start_date": "2013-06-11T13:00:00"
+        },
+        "end_time": {
+            "time": "2013-06-11T16:00:00",
+            "tz_offset": -14400,
+            "tz_name": "America/Antigua",
+            "utc_time": "2013-06-11T20:00:00"
+        },
+        "start_time": {
+            "time": "2013-06-11T13:00:00",
+            "tz_offset": -14400,
+            "tz_name": "America/Antigua",
+            "utc_time": "2013-06-11T17:00:00"
+        },
+        "read_only": false,
+        "@name": "item"
+    }, {
+        "num_following": 0,
+        "note": "Dinner and open bar are included",
+        "id": 75948,
+        "type": "Generic",
+        "generic_reservation": {
+            "end_date": "2013-06-15T23:30:00",
+            "orig_location": {
+                "name": "Dinner Cruise",
+                "geo_code": {
+                    "latitude": 17.1166,
+                    "longitude": -61.849998
+                },
+                "closest_airport": {
+                    "iata_code": "ANU"
+                },
+                "address": {
+                    "general_location": "Saint John, Saint John, AG",
+                    "state_code": "Saint John",
+                    "country_name": "Antigua and Barbuda",
+                    "label_lines": [{
+                        "text": "Saint John, Saint John, AG",
+                        "part": "city",
+                        "@name": "line"
+                    }],
+                    "city": "Saint John",
+                    "label": "Long Bay",
+                    "country_code": "AG"
+                }
+            },
+            "type": "cruise",
+            "phones": [{
+                "number": "011-297-835-000   ",
+                "type": "Voice",
+                "@name": "phone"
+            }],
+            "confirmation_number": "123456789",
+            "start_date": "2013-06-13T16:30:00",
+            "dest_location": {
+                "name": "Dinner Cruise",
+                "geo_code": {
+                    "latitude": 12.5166,
+                    "longitude": -70.033302
+                },
+                "closest_airport": {
+                    "iata_code": "AUA"
+                },
+                "address": {
+                    "general_location": "Oranjestad, Aruba, Bonaire, Curacao, AW",
+                    "state_code": "Aruba, Bonaire, Curacao",
+                    "country_name": "Aruba",
+                    "label_lines": [{
+                        "text": "Oranjestad, Aruba, Bonaire, Curacao, AW",
+                        "part": "city",
+                        "@name": "line"
+                    }],
+                    "city": "Oranjestad",
+                    "label": "Divi Island",
+                    "country_code": "AW"
+                }
+            }
+        },
+        "end_time": {
+            "time": "2013-06-15T23:30:00",
+            "tz_offset": -14400,
+            "tz_name": "America/Aruba",
+            "utc_time": "2013-06-16T03:30:00"
+        },
+        "start_time": {
+            "time": "2013-06-13T16:30:00",
+            "tz_offset": -14400,
+            "tz_name": "America/Antigua",
+            "utc_time": "2013-06-13T20:30:00"
+        },
+        "read_only": false,
+        "@name": "item"
+    }, {
+        "itinerary_ref": {
+            "id": 0,
+            "type": "Record Locator",
+            "locator": "HSWTFU"
+        },
+        "num_following": 0,
+        "note": "",
+        "air_reservation": {
+            "seats": [{
+                "number": "06A",
+                "@name": "seat"
+            }],
+            "seat_map_url": "http://ctovm2418.dev.sabre.com/mapi/services/flight_seat_map?trip_item=75942",
+            "reservation_number": "HSWTFU",
+            "flight": {
+                "estimated_duration": 210,
+                "arrival_status": "",
+                "estimated_arrival": "2013-06-15T18:40:00",
+                "arrival_airport": {
+                    "general_location": "Miami, FL",
+                    "latitude": 25.7925,
+                    "state_code": "FL",
+                    "name": "Miami International Airport",
+                    "iata_code": "MIA",
+                    "longitude": -80.2861111111111,
+                    "city": "Miami",
+                    "country_code": "US"
+                },
+                "scheduled_arrival": "2013-06-15T18:40:00",
+                "departure_terminal": "",
+                "id": 75942,
+                "departure_airport": {
+                    "general_location": "Antigua, AG",
+                    "latitude": 17.1083333333333,
+                    "state_code": "",
+                    "name": "V.C. Bird International Airport",
+                    "iata_code": "ANU",
+                    "longitude": -61.7638888888889,
+                    "city": "Antigua",
+                    "country_code": "AG"
+                },
+                "sched_duration": 210,
+                "arrival_gate": "",
+                "estimated_departure": "2013-06-15T15:10:00",
+                "change_events": [],
+                "status_code": "S",
+                "scheduled_departure": "2013-06-15T15:10:00",
+                "alt_schedules_avail": true,
+                "baggage_claim": "",
+                "completed": false,
+                "airline": {
+                    "name": "American Airlines",
+                    "phones": [{
+                        "number": "800-433-7300",
+                        "@name": "phone"
+                    }, {
+                        "number": "121-111-1111",
+                        "type": "Agency",
+                        "@name": "phone"
+                    }],
+                    "iata_code": "AA"
+                },
+                "arrival_terminal": "",
+                "departure_status": "",
+                "cancelled": false,
+                "flight_number": 1906,
+                "aircraft": {
+                    "description": "Boeing 737-800",
+                    "iata_code": "738"
+                },
+                "departure_gate": "",
+                "extended_status_code": "S"
+            }
+        },
+        "id": 75942,
+        "type": "Air",
+        "end_time": {
+            "time": "2013-06-15T18:40:00",
+            "tz_offset": -14400,
+            "tz_name": "America/New_York",
+            "utc_time": "2013-06-15T22:40:00"
+        },
+        "start_time": {
+            "time": "2013-06-15T15:10:00",
+            "tz_offset": -14400,
+            "tz_name": "America/Antigua",
+            "utc_time": "2013-06-15T19:10:00"
+        },
+        "read_only": true,
+        "@name": "item"
+    }],
+    "name": "Ken's trip to  ANTIGUA",
+    "closest_image_mobi_small": "http://www.tripcase.com/pictures/loc/destinations/destination_default_4-3_sz49.jpg",
+    "created_at": "2013-02-15T16:59:56",
+    "object_url": "http://ctovm2418.dev.sabre.com/mapi/trips/19674.xml",
+    "most_relevant_item": {
+        "item_id": 75941,
+        "index": 0
+    },
+    "closest_image_mobi_medium": "http://www.tripcase.com/pictures/loc/destinations/destination_default_4-3_sz65.jpg",
+    "create_source": "browser",
+    "destination": "Antigua, AG",
+    "active": true,
+    "item_types": "air,vehicle,lodging,food_drink,cruise",
+    "closest_image_web": "http://www.tripcase.com/pictures/loc/destinations/destination_default_4-3_sz125.jpg",
+    "item_date_sequence": [{
+        "events": [{
+            "id": 75941,
+            "event_type": "start",
+            "@name": "event"
+        }, {
+            "id": 75943,
+            "event_type": "start",
+            "@name": "event"
+        }, {
+            "id": 75946,
+            "event_type": "start",
+            "@name": "event"
+        }],
+        "type": "Object",
+        "value": "2013-06-09",
+        "@name": "day"
+    }, {
+        "events": [{
+            "id": 75947,
+            "event_type": "start",
+            "@name": "event"
+        }],
+        "type": "Object",
+        "value": "2013-06-11",
+        "@name": "day"
+    }, {
+        "events": [{
+            "id": 75948,
+            "event_type": "start",
+            "@name": "event"
+        }],
+        "type": "Object",
+        "value": "2013-06-13",
+        "@name": "day"
+    }, {
+        "events": [{
+            "id": 75943,
+            "event_type": "end",
+            "@name": "event"
+        }, {
+            "id": 75946,
+            "event_type": "end",
+            "@name": "event"
+        }, {
+            "id": 75942,
+            "event_type": "start",
+            "@name": "event"
+        }],
+        "type": "Object",
+        "value": "2013-06-15",
+        "@name": "day"
+    }],
+    "closest_image_mobi_large": "http://www.tripcase.com/pictures/loc/destinations/destination_default_4-3_sz98.jpg",
+    "item": {
+        "itinerary_ref": {
+            "id": 0,
+            "type": "Record Locator",
+            "locator": "HSWTFU"
+        },
+        "num_following": 0,
+        "note": "",
+        "air_reservation": {
+            "seats": [{
+                "number": "06A",
+                "@name": "seat"
+            }],
+            "seat_map_url": "http://ctovm2418.dev.sabre.com/mapi/services/flight_seat_map?trip_item=75941",
+            "reservation_number": "HSWTFU",
+            "flight": {
+                "estimated_duration": 180,
+                "arrival_status": "",
+                "estimated_arrival": "2013-06-09T13:50:00",
+                "arrival_airport": {
+                    "general_location": "Antigua, AG",
+                    "latitude": 17.1083333333333,
+                    "state_code": "",
+                    "name": "V.C. Bird International Airport",
+                    "iata_code": "ANU",
+                    "longitude": -61.7638888888889,
+                    "city": "Antigua",
+                    "country_code": "AG"
+                },
+                "scheduled_arrival": "2013-06-09T13:50:00",
+                "departure_terminal": "",
+                "id": 75941,
+                "departure_airport": {
+                    "general_location": "Miami, FL",
+                    "latitude": 25.7925,
+                    "state_code": "FL",
+                    "name": "Miami International Airport",
+                    "iata_code": "MIA",
+                    "longitude": -80.2861111111111,
+                    "city": "Miami",
+                    "country_code": "US"
+                },
+                "sched_duration": 180,
+                "arrival_gate": "",
+                "estimated_departure": "2013-06-09T10:50:00",
+                "change_events": [],
+                "status_code": "S",
+                "scheduled_departure": "2013-06-09T10:50:00",
+                "alt_schedules_avail": true,
+                "baggage_claim": "",
+                "completed": false,
+                "airline": {
+                    "name": "American Airlines",
+                    "phones": [{
+                        "number": "800-433-7300",
+                        "@name": "phone"
+                    }, {
+                        "number": "121-111-1111",
+                        "type": "Agency",
+                        "@name": "phone"
+                    }],
+                    "iata_code": "AA"
+                },
+                "arrival_terminal": "",
+                "departure_status": "",
+                "cancelled": false,
+                "flight_number": 1907,
+                "aircraft": {
+                    "description": "Boeing 737-800",
+                    "iata_code": "738"
+                },
+                "departure_gate": "",
+                "extended_status_code": "S"
+            }
+        },
+        "id": 75941,
+        "type": "Air",
+        "end_time": {
+            "time": "2013-06-09T13:50:00",
+            "tz_offset": -14400,
+            "tz_name": "America/Antigua",
+            "utc_time": "2013-06-09T17:50:00"
+        },
+        "start_time": {
+            "time": "2013-06-09T10:50:00",
+            "tz_offset": -14400,
+            "tz_name": "America/New_York",
+            "utc_time": "2013-06-09T14:50:00"
+        },
+        "read_only": true
+    },
+    "destination_country": "AG",
+    "end_time": "2013-06-15T23:30:00",
+    "start_time": "2013-06-09T10:50:00",
+    "@name": "trip"
+}

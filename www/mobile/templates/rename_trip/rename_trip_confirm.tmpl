@@ -1,0 +1,12 @@
+<form action="#rename-trip" id="rename-trip-form" class="standard-form-panel">
+	<div class="input-group">
+		<div class="label"><p>{{t "TripName"}}</p></div>
+		<div class="input-container">
+			<input {{#if name}}value="{{name}}"{{/if}} id="tripname" name="tripname" type="text" autocomplete="off" autocapitalize="off" autocorrect="off"/>
+		</div>
+	</div>
+
+	<div class="actions">
+		<button class="submit"><span>{{t "Save"}}</span><span class="loader light">{{t "Loading"}}</span></button>
+	</div>
+</form>

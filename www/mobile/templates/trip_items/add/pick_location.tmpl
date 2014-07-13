@@ -1,0 +1,61 @@
+
+<div class="standard-form-panel trip-item-location-picker">
+{{#unless showOnlyItems}}
+	<div id="searchLocation" class="list-item actionable">
+		<div class="details">
+			<a class="item-title action no-icon">
+				<h2>{{t "ChooseLocation"}}</h2>
+				<p class="item-sub-title">{{t "EnterStreetLocation"}}</p>
+			</a>
+			<div class="button-icon btn_arrow"></div>
+		</div>
+	</div>
+	<h2 class="component-subheader">{{listHeaderText}}</h2>
+{{/unless}}
+<div id="myTripItemLocations">
+{{#unless showOnlyItems}}
+<div id="searchByGpsCoordinates" class="list-item actionable">
+	<div class="details">
+		<a class="item-title action no-icon">
+			<h2>{{t "MyCurrentLocation"}}</h2>
+			<p class="item-sub-title">{{t "MyCurrentGPSLocation"}}</p>
+		</a>
+		<div class="button-icon btn_arrow"></div>
+	</div>
+</div>
+{{/unless}}
+<div class="list-loader">
+		<div class="list-item">
+			<div class="details">
+					<a class="item-title action no-icon"><span class="loader">
+					</span></a>
+			</div>
+		</div>
+</div>
+<div class="list">
+{{#unless myTripItemLocations}}
+		<div class="list-item">
+				<div class="details">
+						<a class="item-title action no-icon">
+								<h2>{{t "YouHaventAddedAnItem"}}</h2>
+						</a>
+				</div>
+		</div>
+{{else}}
+
+	{{#each_with_index myTripItemLocations}}
+		<div data-index="{{index}}" class="list-item add group actionable">
+			<div class="details">
+				<div class="item-title action add-{{lowercase type}} two-liner">
+					<div class="icon-type general-icon icon_{{lowercase icon_type}}_45px"></div>
+					<p class="main-title">{{name}}</p>
+					<p class="item-sub-title">{{general_location}}</p>
+				</div>
+				<div class="next btn_arrow button-icon"></div>
+			</div>
+		</div>
+	{{/each_with_index}}
+{{/unless}}
+</div>
+</div>
+</div>

@@ -1,0 +1,229 @@
+/************************************
+//*
+//*		Alternate Flights List
+//*
+//************************************/
+div.alt-flight {
+	display: -webkit-box; display: -moz-box; display: box;
+	-webkit-box-orient: vertical;
+	-moz-box-orient: vertical;
+	-ms-box-orient: vertical;
+	box-orient: vertical;
+	-webkit-box-align: start;
+	-moz-box-align: start;
+	-ms-box-align: start;
+	box-align: start;
+	-webkit-box-pack: justify;
+	-moz-box-pack: justify;
+	-ms-box-pack: justify;
+	box-pack: justify;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	min-height: 100%;
+	position: relative;
+}
+form#airlineSelection {
+	display: -webkit-box; display: -moz-box; display: box;
+	-webkit-box-orient: horizontal;
+	-moz-box-orient: horizontal;
+	-ms-box-orient: horizontal;
+	box-orient: horizontal;
+	-webkit-box-align: stretch;
+	-moz-box-align: stretch;
+	-ms-box-align: stretch;
+	box-align: stretch;
+	-webkit-box-pack: justify;
+	-moz-box-pack: justify;
+	-ms-box-pack: justify;
+	box-pack: justify;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 33px;
+	position: relative;
+	border: none;
+	background-color: black;
+	overflow: hidden;
+}
+form#airlineSelection label {
+	display: -webkit-box; display: -moz-box; display: box;
+	-webkit-box-flex: 1;
+	-moz-box-flex: 1;
+	-ms-box-flex: 1;
+	box-flex: 1;
+	-webkit-box-flex-group: 2;
+	-moz-box-flex-group: 2;
+	-ms-box-flex-group: 2;
+	box-flex-group: 2;
+	-webkit-box-align: center;
+	-moz-box-align: center;
+	-ms-box-align: center;
+	box-align: center;
+	-webkit-box-pack: center;
+	-moz-box-pack: center;
+	-ms-box-pack: center;
+	box-pack: center;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 0px;
+	padding: 0px;
+	position: relative;
+	color: white;
+	height: 33px;
+	font-size: 12px;
+	line-height: 33px;
+	text-align: center;
+	font-weight: bold;
+	width: 50%;
+	z-index: 3;
+}
+form#airlineSelection label span {
+	position: absolute;
+	font-weight: bold;
+	width: 100%;
+	height: 33px;
+	margin: 0px;
+	padding: 0px;
+	text-shadow: rgb(32, 32, 32) 0px -1px 0px;
+	z-index: 8;
+}
+form#airlineSelection label input[type=radio] {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	border-radius: 0px;
+	margin: 0px;
+	padding: 0px;
+	border: none;
+	outline: none;
+	background: transparent -webkit-gradient(linear, left top, left bottom, from(rgb(83, 100, 112)), to(rgb(58, 73, 81))) center center no-repeat;
+	display: block;
+	width: 100%;
+	height: 33px;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+}
+form#airlineSelection label:first-of-type input[type=radio]:checked {
+	border-right: 1px solid black;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+form#airlineSelection label input[type=radio]:checked {
+	background: transparent -webkit-gradient(linear, left top, left bottom, from(rgb(52, 64, 71)), to(rgb(35, 45, 51))) center center no-repeat;
+	outline: 1px solid black;
+	z-index: 5;
+}
+div.alt-flights .item-list {
+	background-color: white;
+}
+div.alt-flights .item-list li {
+	display: -webkit-box; display: -moz-box; display: box;
+	-webkit-box-orient: horizontal;
+	-moz-box-orient: horizontal;
+	-ms-box-orient: horizontal;
+	box-orient: horizontal;
+	-webkit-box-align: center;
+	-moz-box-align: center;
+	-ms-box-align: center;
+	box-align: center;
+	-webkit-box-pack: justify;
+	-moz-box-pack: justify;
+	-ms-box-pack: justify;
+	box-pack: justify;
+	min-height: 44px;
+}
+div.alt-flights .original-flight {
+	padding-top: 8px;
+}
+div.alt-flights .flight-details {
+	padding-top: 2px;
+	font-size: 16px;
+	color: #666;
+	font-weight: normal;
+}
+div.alt-flights .action-list li {
+	-webkit-box-align: start;
+	-moz-box-align: start;
+	-ms-box-align: start;
+	box-align: start;
+}
+div.alt-flights .action-list li .item-icon {
+	margin-top: 12px;
+	margin-left: 12px;
+	margin-right: 0px;
+	width: 45px;
+	height: 33px;
+	display: -webkit-box; display: -moz-box; display: box;
+	-webkit-box-pack: center;
+	-moz-box-pack: center;
+	-ms-box-pack: center;
+	box-pack: center;
+	-webkit-box-align: center;
+	-moz-box-align: center;
+	-ms-box-align: center;
+	box-align: center;
+	font-size: 8px;
+}
+div.alt-flights .action-list li .item-content {
+	padding-top: 2px;
+}
+div.alt-flights .item-content .flight-detail {
+	font-size: 15px;
+	width: auto;
+	max-width: 100%;
+	padding-top: 3px;
+	padding-bottom: 2px;
+	border-collapse: separate;
+	background: transparent url(../assets/images/btn_arrow_thin.png) center center no-repeat;
+}
+div.alt-flights .item-content .flight-detail td {
+	color: inherit;
+	font-size: inherit;
+	font-weight: inherit;
+	text-align: left;
+	border: none;
+	font-size: 16px;
+	height: 20px;
+	line-height: 20px;
+}
+div.alt-flights .item-content .flight-detail td:first-child {
+	border-right: 25px solid transparent;
+
+}
+div.alt-flights .item-content .flight-detail td:last-child {
+	border-left: 25px solid transparent;
+}
+div.alt-flights .item-content .flight-detail .airport td {
+	color: rgb(102, 102, 102);
+	font-weight: normal;
+	text-transform: uppercase;
+	font-size: 16px;
+}
+div.alt-flights .item-content .flight-detail .time td {
+	color: black;
+	font-weight: bold;
+}
+div.alt-flights .item-content .flight-stops {
+	color: #666;
+	font-size: 16px;
+	height: 20px;
+	line-height: 20px;
+	font-weight: normal;
+	padding-bottom: 2px;
+}
+@include pixelDensity(1.5) {
+	div.alt-flights .item-content .flight-detail {
+		background: white url(../assets/images/btn_arrow_thin_2x.png) center center no-repeat;
+		-webkit-background-image-size: 10px 13px;
+		background-image-size: 10px 13px;
+	}
+}

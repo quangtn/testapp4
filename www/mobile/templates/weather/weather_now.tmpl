@@ -1,0 +1,50 @@
+{{#if current_conditions}}
+	<div class='location-container'>
+		<div class='location'>{{generalLocation}}</div>
+
+		<input class="checkbox-slider weather-units"
+    {{#if isFahrenheit}}
+      checked="checked"
+    {{/if}}
+    id="weather-units" name="weather-units" type="checkbox" value="">
+
+	</div>
+
+	<div class='stats-container'>
+		<div class='now'>{{t "Now"}} </div><div class='stat-label'>({{t "Updated"}} {{updated_at}})</div><div class='w-clear'></div>
+
+		<div class='temp' id='current-temp'>
+      {{#if isFahrenheit}}
+        {{{current_conditions.fahrenheit}}}
+      {{else}}
+        {{{current_conditions.celsius}}}
+      {{/if}}
+    </div><div class='w-clear'></div>
+
+		<div class='condition'>{{current_conditions.condition}}</div><div class='w-clear'></div>
+
+		<div class='stat-label stat-fixed-width'>{{t "Humidity"}}:</div> <div class='stat-value'>{{current_conditions.humidity}}</div><div class='w-clear'></div>
+		<div class='stat-label stat-fixed-width'>{{t "Visibility"}}:</div> <div class='stat-value' id='current-visibility'>
+      {{#if isFahrenheit}}
+        {{{current_conditions.visibility_sm}}}
+      {{else}}
+        {{{current_conditions.visibility_km}}}
+      {{/if}}
+    </div><div class='w-clear'></div>
+		<div class='stat-label stat-fixed-width'>{{t "Wind"}}:</div> <div class='stat-value' id='current-wind'>{{current_conditions.wind_direction}} {{t "At"}}
+      <span id="current-wind-value">
+        {{#if isFahrenheit}}
+          {{{current_conditions.wind_mph}}}
+        {{else}}
+          {{{current_conditions.wind_kph}}}
+        {{/if}}
+      </span>
+    </div><div class='w-clear'></div>
+	</div>
+
+	<div class='weather-icon {{weatherCurrentIconUrl}}'></div>
+{{else}}
+	<div class="instruction">
+		<p class="instruction-info">{{t "WeatherNotAvail"}}</p>
+	</div>
+{{/if}}

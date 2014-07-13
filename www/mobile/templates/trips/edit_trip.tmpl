@@ -1,0 +1,57 @@
+<ul class="icon-action-list">
+	<li id="id-trip-option">{{t "RenameTrip"}}
+		<div class="icon_edit_32px general-icon"></div>
+		<div class="icon-action button-icon btn_arrow"></div>
+	</li>
+</ul>
+
+<h2 class="component-subheader">{{t "ManuallyAddedTripItems"}}</h2>
+<ul class="trip-item-list">
+	{{#each manualTripItems}}
+	<li><div class="general-icon {{icon}}"></div>
+		<div class="item">{{masthead}}
+			<p>{{subhead}}</p>
+			<p>{{startAction}} {{timeFromDateTime start_time}} {{t "On"}} {{dateMonth start_date}}</p>
+		</div>
+		<div class="small btn warning delete-trip-item" data-trip-item-id="{{id}}">
+			<div class="button-icon btn_icon_delete_25px"></div>
+		</div>
+	</li>
+	{{else}}
+	<li class="no-items">{{t "ManualTripListEmpty"}}</li>
+	{{/each}}
+</ul>
+
+<h2 class="component-subheader">{{t "ImportedTripItems"}}</h2>
+<ul class="trip-item-list imported">
+	{{#each sources}}
+	<li><div class="expandable-item">
+			<div class="general-icon icon_arrow_solid"></div>
+			<div class="item"><span class="item-label">{{t "ConfirmationNumber"}}</span>{{identifier}}
+				<p class="link-text">{{t "ViewItems"}}</p>
+			</div>
+			<div class="small btn warning delete-link" data-link-id="{{id}}">
+				<div class="button-icon btn_icon_delete_25px"></div>
+			</div>
+		</div>
+		<ul class="subitem-list">
+			{{#each items}}
+			<li><div class="general-icon {{icon}}"></div>
+				<div class="item">{{masthead}}
+					<p>{{subhead}}</p>
+					<p>{{startAction}} {{timeFromDateTime start_time}} {{t "On"}} {{dateMonth start_date}}</p>
+				</div>
+			</li>
+			{{else}}
+			<li class="no-items">{{t "EmptyLinkedBooking"}}</li>
+			{{/each}}
+		</ul>
+	</li>
+	{{else}}
+	<li class="no-items">{{t "LinkedItemListEmpty"}}</li>
+	{{/each}}
+</ul>
+
+<div class="actions delete-trip-panel">
+	<button class="warning-button delete-trip submit"><span>{{t "DeleteTrip"}}</span><span class="loader light">{{t "Loading"}}</span></button>
+</div>

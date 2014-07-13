@@ -1,0 +1,19 @@
+.segmented-button-bar {
+
+	ul {
+		@include flexbox;
+		@include align-items(center);
+		@include justify-content(center);
+		width: 100%;
+	}
+
+	li {
+		border-right: 1px solid;
+		display: block;
+		@include flex(1);
+	}
+
+	li:last-child {
+		border: none;
+	}
+}

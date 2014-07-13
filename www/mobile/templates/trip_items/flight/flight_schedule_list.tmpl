@@ -1,0 +1,41 @@
+<div class="alt-flights">
+{{#if flightInfo}}
+	<ul class="action-list" id="flightList">
+	{{#each flightInfo}}
+		<li data-id="{{id}}">
+			<div class="item-icon airline-icon airline-{{lowercase airline_code}}"></div>
+			<div class="item-content">
+				<span class="airline">{{airline}}</span>
+				<table class="flight-detail">
+					<tr class="airport">
+						<td>{{departure_airport}}</td>	<td>{{arrival_airport}}</td>
+					</tr>
+					<tr class="time">
+						<td>{{timeFromDateTime scheduled_departure}}</td>	<td>{{timeFromDateTime scheduled_arrival}}</td>
+					</tr>
+				</table>
+				<span class="item-subtext">{{flightStops number_of_stops}}</span>
+			</div>
+		</li>
+	{{/each}}
+	</ul>
+{{else}}
+	<div id="empty-flights-message">
+		<ul class="item-list">
+			<li>
+				<div class="item-content">
+					{{#if allPastFlights}}
+					<p class="item-help-text">{{t "AlternateFlightsFutureOnly"}}</p>
+					{{else}}
+						{{#if noSeatMaps}}
+							<p class="item-help-text">{{t "NoSeatMaps"}}</p>
+						{{else}}
+							<p class="item-help-text">{{t "NoAlternateFlights"}}</p>
+						{{/if}}
+					{{/if}}
+				</div>
+			</li>
+		</ul>
+	</div>
+{{/if}}
+</div>

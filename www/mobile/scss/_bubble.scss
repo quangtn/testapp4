@@ -1,0 +1,32 @@
+.bubble-arrow:after {
+	background	: $content-background-color;
+}
+
+.bubble {
+
+	@extend %bubble;
+
+	.bubble-details {
+		@extend %bubble-block;
+
+		.bubble-head { @extend %bubble-head; }
+
+		.bubble-tags { @extend %bubble-tags; }
+
+		.bubble-text { @extend %bubble-header; }
+
+		.bubble-content { @extend %bubble-body; }
+
+		.bubble-note {
+			@extend %bubble-footer;
+			word-wrap: break-word;
+		}
+	}
+}
+
+[class^="bubble-icon"] { @extend %bubble-icon; }
+
+.bubble-marker { @extend %bubble-bullet; }
+
+
+

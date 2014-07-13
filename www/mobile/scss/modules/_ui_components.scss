@@ -1,0 +1,116 @@
+//
+// UI Components
+//
+//	- collection of small UI components
+// 	- if a component gets more complicated, create a module in a seperate file
+
+
+//-----------------------------
+// TEXTBOX
+//-----------------------------
+.searchbox {
+	@extend .list-row-alt-flat;
+	@include justify-content(center);
+	height: $list-row-height-med;
+}
+
+.searchbox-input {
+	@include flexbox;
+	@include flex-grow(1);
+	@include appearance(none);
+	@include border-radius(4px);
+	@include box-sizing(border-box);
+	@include box-shadow(inset 0px 2px 5px rgba(0, 0, 0, 0.50));
+
+	font-size: $text-detail-small-size;
+	border: 1px solid $color-lighter-gray;
+	padding: 0 $GUTTER;
+	outline: none;
+	height: 40px;
+}
+
+
+//-----------------------------
+// PAGE INDICATORS
+//-----------------------------
+.page-indicators {
+	text-align: center;
+	color: $color-white;
+}
+.page-indicator {
+	@include transition-property(opacity);
+	@include transition-duration(0.33s);
+	@include border-radius(25px);
+	display: inline-block;
+	background-color: $color-white;
+	width: 6px;
+	height: 6px;
+	opacity: .5;
+
+	&.active-indicator {
+		opacity: 1;
+	}
+}
+
+
+//-----------------------------
+// CHECKBOX
+//-----------------------------
+$tc-checkbox-path: 'assets/images/btn_checkbox.png';
+.tc-checkbox {
+	@include appearance(none);
+	background: url(../assets/images/btn_checkbox.png) left center no-repeat;
+	height: image-height($tc-checkbox-path);
+	width: image-width($tc-checkbox-path);
+	border: 0;
+	margin: 0 12px 0 0;
+
+	&:checked {
+		background-image: url(../assets/images/btn_checkbox_selected.png);
+	}
+
+	&:focus {
+		outline: none;
+		border: none;
+	}
+
+	@include pixelDensity(1.5) {
+		@include background-size(image-width($tc-checkbox-path) image-height($tc-checkbox-path));
+		background-image: url(../assets/images/btn_checkbox_2x.png);
+
+		&:checked {
+			background-image: url(../assets/images/btn_checkbox_selected_2x.png);
+		}
+	}
+}
+
+
+//-----------------------------
+// FIXED TOOLBAR
+//-----------------------------
+$fixed-toolbar-height: 74px;
+.has-fixed-toolbar {
+	margin-bottom: $fixed-toolbar-height;
+}
+
+.fixed-toolbar {
+	@extend %slide-out-container;
+	@include box-sizing(border-box);
+	height: $fixed-toolbar-height;
+	position: fixed;
+	width: 100%;
+	bottom: 0;
+	padding: 15px;
+	background-color: white;
+	text-align: center;
+	z-index: 4;
+
+	.overflowscrolling & {
+		position: absolute;
+	}
+}
+
+.fixed-toolbar-on-dark-bg {
+	@extend .fixed-toolbar;
+	background-color: $color-medium-dark-blue;
+}

@@ -1,0 +1,19 @@
+<div class="preview">
+	<img src="{{previewUrl}}" height="65" width="65" alt="{{destination}}"/>
+</div>
+<div class="destination-group">
+	<div class="destination-group__panel">
+		{{#if isFollowing}}
+			<div class="destination-group__traveler">{{traveler_name}}</div>
+		{{else}}
+			{{#if for_business}}
+				<div class="destination-group__tags">
+					<div class="destination-group__tags__tag--business">{{t "Business"}}</div>
+				</div>
+			{{/if}}
+		{{/if}}
+		<div class="destination-group__date">{{tripStart start_time}}</div>
+	</div>
+	<div class="title">{{name}}</div>
+	<div class="city-state">{{destination}}</div>
+</div>

@@ -1,0 +1,34 @@
+{"items": [], "name": "isEmpty...", "@name": "trip", "messages": [], "created_at": "2013-04-09T21:44:53", "end_time": "2013-04-09T21:44:53", "create_source": "touch/Unknown", "trip_event_relevance": [], "social_clients": [
+	{
+		"name": "Facebook",
+		"@name": "client",
+		"enabled": false,
+		"authorized": false
+	},
+	{
+		"name": "Twitter",
+		"@name": "client",
+		"enabled": false,
+		"authorized": false
+	},
+	{
+		"name": "Linkedin",
+		"@name": "client",
+		"enabled": false,
+		"authorized": false
+	}
+], "item_types": "", "end_time_utc": "2013-04-09T21:44:53", "destination": "", "closest_image_mobi_medium": "http://www.tripcase.com/pictures/loc/destinations/destination_default_4-3_sz65.jpg", "id": 43, "sources": [], "closest_image_mobi_large": "http://www.tripcase.com/pictures/loc/destinations/destination_default_4-3_sz98.jpg", "user_id": "2", "object_url": "http://localhost:3000/mapi/trips/43.xml", "closest_image_mobi_small": "http://www.tripcase.com/pictures/loc/destinations/destination_default_4-3_sz49.jpg", "destination_country": "", "item_date_sequence": [], "default_dates_and_times": {
+	"hotel_check_out_time": "2013-04-10T12:00:00",
+	"hotel_check_out_date": "2013-04-11",
+	"generic_item_end_time": "2013-04-10T15:00:00",
+	"generic_item_end_date": "2013-04-10",
+	"generic_item_start_time": "2013-04-10T12:00:00",
+	"hotel_check_in_time": "2013-04-10T15:00:00",
+	"generic_item_start_date": "2013-04-10",
+	"hotel_check_in_date": "2013-04-10",
+	"vehicle_pick_up_date": "2013-04-10",
+	"vehicle_drop_off_time": "2013-04-10T12:00:00",
+	"vehicle_drop_off_date": "2013-04-11",
+	"flight_departure_date": "2013-04-10",
+	"vehicle_pick_up_time": "2013-04-10T15:00:00"
+}, "start_time_utc": "2013-04-09T21:44:53", "closest_image_mobi_xlarge": "http://www.tripcase.com/pictures/loc/destinations/destination_default_4-3_sz130.jpg", "start_time": "2013-04-09T21:44:53", "active": true, "closest_image_web": "http://www.tripcase.com/pictures/loc/destinations/destination_default_4-3_sz125.jpg"}

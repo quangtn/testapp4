@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<title>TripCase</title>
+
+	<meta http-equiv="content-type" content="text/xhtml; charset=utf-8" />
+	<meta http-equiv="imagetoolbar" content="no" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+	<meta name="viewport" id="vp" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width" />
+	<meta name="viewport" id="vp" content="initial-scale=1.0,user-scalable=no,maximum-scale=1" media="(device-height: 568px)" />
+	<script src="mobile/libs/timing/performance_now_polyfill.js"></script>
+
+	<link href="mobile/css/combined.css" rel="stylesheet" type="text/css" />
+
+	<script src="mobile/app/runtime_error_handler.js"></script>
+	<script type="text/javascript">
+		var runTimeErrorOptions = { endpoint: "https://www.tripcase.com/mapi/services/report_error.json" };
+		var globalErrorHandler = new RuntimeErrorHandler(runTimeErrorOptions);
+		window.onerror = globalErrorHandler.onErrorHandler;
+	</script>
+</head>
+
+<body class="load">
+	<div id="viewport">
+		<div id="initial" class="loader light lg"></div>
+		<div id="offline">offline</div>
+		<div id="app-page"></div>
+		<div id="sidemenu-scroll-wrapper">
+			<div id="sidemenu" class="sidemenu"></div>
+		</div>
+	</div>
+	<script src="mobile/config/require_config.js"></script>
+	<script data-main="mobile/app/main" src="require.js"></script>
+	<script src="phonegap.js"></script>
+	<script src="childbrowser.js"></script>
+	<script src="GAPlugin.js"></script>
+	<script type="text/javascript" charset="utf-8" src="PushNotification.js"></script>
+</body>
+</html>

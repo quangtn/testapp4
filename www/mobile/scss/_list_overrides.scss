@@ -1,0 +1,270 @@
+
+/* Share List */
+.share-list {
+	ul.item-list li .item-label,
+	ul.action-list li .item-label {
+		display: block;
+		height: 43px;
+		line-height: 43px;
+		padding: 0px 30px 0px 15px;
+	}
+}
+
+/* Airline Select Auto-Suggest List */
+.airline-results {
+
+	ul.action-list {
+
+		.item-label {
+			-webkit-box-pack: start;
+		}
+
+		.item-icon.airline-icon {
+			float: none;
+			margin-left: 12px;
+		}
+		abbr:after {
+			max-width: 180px;
+			position: absolute;
+			left: 40px;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			// padding-left: 15px;
+			text-transform: capitalize;
+		}
+	}
+}
+
+/* Alternate Flight Lists */
+
+.alt-flights ul.item-list li:only-child .item-content {
+	padding: 0px 15px;
+}
+.alt-flights ul.item-list li:only-child .item-content .help-text {
+	font-size: 15px;
+}
+
+.alt-flights ul.action-list li {
+	-webkit-box-align: start;
+}
+
+.alt-flights ul.action-list li .item-icon.airline-icon {
+	display: -webkit-box;
+	-webkit-box-align: center;
+	-webkit-box-pack: center;
+	-webkit-box-flex: 0;
+	margin: 12px -5px 0px 10px;
+	width: 45px;
+	height: 30px;
+}
+
+.alt-flights ul.action-list li .item-content {
+	padding-top: 2px;
+	padding: 2px 15px 0px 15px;
+}
+
+.alt-flights ul.action-list .item-content .flight-detail {
+	margin: 3px 0 0 0;
+	padding: 0px 0px 0px 0px;
+	width: auto;
+	min-width: 172px;
+	max-width: 100%;
+	font-size: 15px;
+	text-align: left;
+	border: none;
+	border-collapse: separate;
+	background: transparent url(../assets/images/btn_arrow_thin.png) center center no-repeat;
+	position: relative;
+}
+
+@include pixelDensity(1.5) {
+	.alt-flights ul.action-list .item-content .flight-detail {
+		background: transparent url(../assets/images/btn_arrow_thin_2x.png) center center no-repeat;
+		@include background-size(image-width('assets/images/btn_arrow_thin.png') image-height('assets/images/btn_arrow_thin.png'));
+	}
+}
+
+.alt-flights ul.action-list .item-content .flight-detail td {
+	-webkit-box-sizing: border-box;
+	border: none;
+	width: 50%;
+}
+
+.alt-flights .item-content table.flight-detail td:first-of-type, .alt-flights .item-content .flight-detail td:first-child {
+	border-right: 25px solid transparent;
+}
+
+.alt-flights .item-content table.flight-detail td:last-of-type, .alt-flights .item-content .flight-detail td:last-child {
+	border-left: 25px solid transparent;
+}
+
+.alt-flights .item-content .flight-detail .airport td {
+	font-weight: normal;
+	text-transform: uppercase;
+	color: rgb(102, 102, 102);
+	font-size: 12px;
+}
+
+.alt-flights .item-content .flight-detail .time td{
+	font-weight: bold;
+	color: black;
+	font-size: 15px;
+}
+
+.alt-flights ul.action-list li .item-content .item-subtext {
+	line-height: 20px;
+	padding: 0px;
+	font-size: 13px;
+}
+
+/* Alternate Flight Details */
+
+.alt-flight-details ul.item-list li .item-content .item-header span + span {
+	position: absolute;
+	top: 0px;
+	left: 125px;
+}
+.alt-flight-details ul.item-list li .item-content .item-subtext-s:not(.flight-stops) {
+	display: block;
+	font-size: 12px;
+	font-weight: bold;
+	color: #c27129;
+	line-height: 15px;
+	height: 15px;
+}
+
+.alt-flight-details ul.item-list li:first-child,
+.alt-flight-details ul.item-list li:first-of-type, {
+	border-bottom: none;
+}
+
+.alt-flight-details ul.item-list li:last-child,
+.alt-flight-details ul.item-list li:last-of-type, {
+	border-bottom: 1px solid $border-edge-color;
+}
+
+.alt-flight-details ul.item-list li .item-content table.flight-schedule {
+	width: 100%;
+}
+.alt-flight-details ul.item-list li .item-content table.flight-schedule tr:not(.item-header) + tr.item-header {
+	padding-top: 12px;
+}
+
+.alt-flight-details ul.item-list li .item-content table.flight-schedule td {
+	font-weight: bold;
+	font-size: 15px;
+	text-align: left;
+	white-space: nowrap;
+	height: 18px;
+	line-height: 18px;
+}
+.alt-flight-details ul.item-list li .item-content table .colOne,
+.alt-flight-details ul.item-list li .item-content table colgroup col:first-child,
+.alt-flight-details ul.item-list li .item-content table colgroup col:first-of-type,
+.alt-flight-details ul.item-list li .item-content table colgroup col:nth-child(1),
+.alt-flight-details ul.item-list li .item-content table td:first-child,
+.alt-flight-details ul.item-list li .item-content table td:first-of-type,
+.alt-flight-details ul.item-list li .item-content table td:nth-child(1) {
+	width: 35%;
+}
+.alt-flight-details ul.item-list li .item-content table .colTwo,
+.alt-flight-details ul.item-list li .item-content table colgroup col:nth-child(2),
+.alt-flight-details ul.item-list li .item-content table td:nth-child(2) {
+	width: 23%;
+}
+.alt-flight-details ul.item-list li .item-content table .colThree,
+.alt-flight-details ul.item-list li .item-content table colgroup col:nth-child(3),
+.alt-flight-details ul.item-list li .item-content table td:nth-child(3) {
+	width: 17%;
+}
+.alt-flight-details ul.item-list li .item-content table .colFour,
+.alt-flight-details ul.item-list li .item-content table colgroup col:last-child,
+.alt-flight-details ul.item-list li .item-content table colgroup col:last-of-type,
+.alt-flight-details ul.item-list li .item-content table colgroup col:nth-child(4),
+.alt-flight-details ul.item-list li .item-content table td:last-child,
+.alt-flight-details ul.item-list li .item-content table td:last-of-type,
+.alt-flight-details ul.item-list li .item-content table td:nth-child(4) {
+	width: 25%;
+	font-weight: normal;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.alt-flight-details .item-content table td.empty-cell {
+
+}
+.alt-flight-details .item-contetn table td:first-child {
+
+}
+
+.alt-flight-details .item-contetn table td:last-child {
+
+}
+
+.alt-flight-details ul.item-list li.item-divider .item-content table.layover-stop {
+	width: 100%;
+	font-size: 15px;
+}
+.alt-flight-details li.item-divider .item-content table tr {}
+
+.alt-flight-details .item-divider .item-content table td {
+
+}
+
+
+.alt-flight-details .item-divider .item-content table td:first-child {
+
+}
+
+.alt-flight-details .item-divider .item-content table td.empty-cell {
+
+}
+
+.alt-flight-details .item-divider .item-content table td:not(:first-child) {
+	color: white;
+	font-weight: bold;
+}
+
+.alt-flight-details .item-divider .item-content table.layover-stop ~ span.item-subtext {
+	color: #eb8932;
+	font-weight: bold;
+}
+
+.alt-flight-details .item-list .dynamic-action .item-content .item-subtext-s.flight-stops {
+	display: block;
+	position: absolute;
+	left: 133px;
+	bottom: 0px;
+}
+
+.alt-flight-details ul.item-list li.seats-available .item-content {
+	font-size: 16px;
+}
+
+.alt-flight-details .end-action .loader {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: -13px;
+	margin-top: -13px;
+}
+
+.load .alt-flight-details .end-action .button-label {
+	display: none;
+}
+
+.action-list .warning {
+	color: #f00;
+	font-weight: normal;
+}
+
+.seatmaps-list .unavailable {
+	background-image: none;
+}
+
+.map-directions ul.item-list li:last-child,
+.map-directions ul.action-list li:last-of-type {
+	border-bottom: 1px solid $border-edge-color;
+}

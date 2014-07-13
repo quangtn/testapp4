@@ -1,0 +1,214 @@
+
+@include spriting("icon_mainmenu", 'main-menu');
+
+#sidemenu-scroll-wrapper {
+	background: #1a2025;
+	display: none;
+	left: 0;
+	overflow: auto;
+	padding: 0;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);	// TODO: do we want this?
+	width: 280px;
+}
+
+#disable-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+
+	z-index: 50;
+}
+
+
+.no-csstransforms3d  .sidemenu .trip-summary-group {
+	background-image: none !important;
+	img {
+		box-shadow: none !important;
+	}
+}
+
+.sidemenu {
+	.menu-item-group {
+		background-color: $sidemenu-item-background-color;
+		border-bottom: 1px solid $sidemenu-border-color;
+		height: 46px;
+
+		.preview-icon {
+			float: left;
+			margin-left: 4px;
+			margin-right: 4px;
+		}
+
+		.message {
+			float: left;
+			width: 200px;
+
+			p {
+				color: white;
+				font-size: $text-detail-medium-size;
+				font-weight: bold;
+				padding-top: 15px;
+				text-shadow: 0px -1px 0 black;
+			}
+		}
+
+		.next {
+			float: right;
+			margin-right: 7px;
+			margin-top: 17px;
+			height: 13px;
+			width: 19px;
+		}
+
+		&.group-selected {
+			background-color: $sidemenu-item-selected-background-color;
+		}
+
+		&.group-profile-bevel {
+			border-bottom-color: black;
+		}
+
+		&.group-profile {
+			@include backgroundGradientLinear($sidemenu-feature-background-color1, $sidemenu-feature-background-color2);
+
+			p {
+				@include ellipsis();
+				color: $color-medium-gray;
+				font-size: 14px;
+				text-transform: uppercase;
+			}
+
+			.message {
+				margin-left: 12px;
+			}
+
+			.next {
+				// special-case, the profile menu item doesn't need 'next arrow' shown
+				display: none;
+			}
+		}
+
+		&.group-legal-help {
+			border-bottom: none;
+
+			ul {
+				color: $color-medium-gray;
+				font-size: $text-detail-Xsmall-size;
+				padding-top: 15px;
+				text-align: center;
+				width: 100%;
+			}
+
+			li {
+				border-right: 1px solid;
+				display: inline-block;
+				padding-left: 15px;
+				padding-right: 15px;
+			}
+
+			li:last-child {
+				border: none;
+			}
+		}
+	}
+
+	.toolbar-group {
+		background-color: $sidemenu-item-background-color;
+		border-bottom: 1px solid black;
+		padding-bottom: 15px;
+
+		ul {
+			@include clearFixAfter();
+		}
+
+		li {
+			color: white;
+			float: left;;
+			font-size: $text-detail-Xsmall-size;
+			margin: 0 auto;
+			text-align: center;
+			text-shadow: 0px -1px 0 black;
+			width: 25%;
+		}
+
+		.group-toolbar-icon {
+			margin: 0 auto;
+		}
+	}
+
+	.trip-summary-group {
+		@include backgroundGradientLinear($sidemenu-feature-background-color1, $sidemenu-feature-background-color2);
+		border-bottom: 1px solid $sidemenu-border-color;
+		border-top: 1px solid $sidemenu-border-color;
+		height: 50px;
+
+		.trip-summary-icon {
+			float: left;
+			padding-left: 5px;
+			padding-right: 10px;
+			padding-top: 5px;
+
+			img {
+				border: 1px solid white;
+				box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.75);
+				height: 38px;
+				width: 38px;
+			}
+		}
+
+		.trip-info-group {
+			float: left;
+			width: 190px;
+
+			.trip-name {
+				@include ellipsis();
+				color: white;
+				font-size: $text-detail-medium-size;
+				font-weight: bold;
+				padding-top: 6px;
+				text-shadow: 0px -1px 0 black;
+				display: block;
+				text-overflow: ellipsis;
+				overflow: hidden;
+				width: 180px;
+			}
+
+			.trip-date {
+				color: #999;
+				font-size: $text-detail-Xsmall-size;
+				text-shadow: 0px -1px 0 black;
+				display: block;
+			}
+		}
+
+		.next {
+			float: right;
+			margin-right: 7px;
+			margin-top: 17px;
+			width: 19px;
+			height: 13px;
+		}
+	}
+}
+
+.sidemenu-slide-out {
+	@include translate(280px, 0px);
+}
+
+.no-csstransforms3d .sidemenu-slide-out {
+	-webkit-transition: none;
+	-webkit-transform-origin: none;
+	-webkit-transform: none;
+	left: 280px
+}
+
+%slide-out-container {
+	@include transition-property(transform);
+	@include transition-duration(0.25s);
+	@include transition-timing-function(ease-out);
+}

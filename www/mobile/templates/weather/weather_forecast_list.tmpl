@@ -1,0 +1,37 @@
+<div class='forecast-title-pane'>
+	<div class='date-label'>Date</div>
+	<div class='forecast-label'>Forecast</div>
+	<div class='precip-chance-label'>Precip</div>
+</div>
+<div id='weather-forecast-list'>
+  {{#each .}}
+    <div class="forecast-group">
+      <div class='date-group'>
+        <div class='day'>{{dayAbbreviated day}}</div><div class='w-clear'></div>
+        <div class='date'>{{{monthAndDay}}}</div><div class='w-clear'></div>
+      </div>
+
+      <div class='weather-icon {{icon_style}}'></div>
+
+      <div class='temp-group'>
+        <div class='high-temp'>
+          {{#if isFahrenheit}}
+            {{{high_fahrenheit}}}
+          {{else}}
+            {{{high_celsius}}}
+          {{/if}}
+        </div>
+        <div class='low-temp'>
+          {{#if isFahrenheit}}
+            {{{low_fahrenheit}}}
+          {{else}}
+            {{{low_celsius}}}
+          {{/if}}
+        </div><div class='w-clear'></div>
+        <div class='condition'>{{condition}}</div><div class='w-clear'></div>
+      </div>
+
+      <div class='precip-chance'>{{precipitation_chance}}</div>
+    </div>
+  {{/each}}
+</div>

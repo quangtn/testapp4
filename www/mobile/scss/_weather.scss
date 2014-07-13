@@ -1,0 +1,202 @@
+@import '_common_text.scss';
+
+@include spriting("weather_icons", "weather");
+
+.weather-panel {
+	color: $text-body-color;
+
+	.now-pane {
+		background-color: white;
+
+		.location-container {
+			border-bottom: 1px solid $border-edge-color;
+			height: 57px;
+			padding-left: 16px;
+
+			.location {
+				@include ellipsis();
+
+				float: left;
+				font-size: $text-detail-medium-size;
+				font-weight: bold;
+				padding-top: 20px;
+				width: 60%;
+			}
+
+			.checkbox-slider {
+				&.weather-units {
+					float: right;
+					height: 25px;
+					margin-top: 15px;
+					margin-right: 15px;
+				}
+
+				&:checked::before{
+					// override checkbox-slider standard "on" text label
+					content: '°F';
+				}
+				&::before {
+					// override checkbox-slider standard "off" text label
+					content: '°C';
+				}
+			}
+		}
+
+		.stats-container {
+			padding-bottom: 10px;
+			padding-left: 16px;
+			padding-top: 14px;
+
+			.now {
+				float: left;
+				font-size: $text-body-size;
+				font-weight: bold;
+				padding-right: 5px;
+			}
+
+			.stat-label {
+				color: $text-body-light-color;
+				float: left;
+				font-size: $text-body-size;
+			}
+
+			.stat-fixed-width {
+				width: 70px;
+			}
+
+			.temp {
+				float: left;
+				font-size: $text-detail-XXlarge-size;
+				font-weight: bold;
+				padding-top: 5px;
+			}
+
+			.condition {
+				float: left;
+				font-size: $text-body-size;
+				padding-bottom: 15px;
+				font-weight: bold;
+				width: 95px;
+			}
+
+			.stat-value {
+				float: left;
+				font-size: $text-body-size;
+				font-weight: bold;
+			}
+		}
+
+		.weather-icon {
+			position: absolute;
+			height: 120px;
+			right: 0px;
+			top: 125px;
+			width: 180px;
+
+		}
+	}
+
+	.forecast-title-pane {
+		@include backgroundGradientLinear($separator-bar-top-color, $separator-bar-bottom-color);
+
+		color: white;
+		font-size: $text-detail-medium-size;
+		height: 35px;
+		text-shadow: 0 -1px 0 black;
+
+		.date-label {
+			float: left;
+			margin-left: 15px;
+			margin-top: 7px;
+		}
+
+		.forecast-label {
+			float: left;
+			margin-left: 20px;
+			margin-top: 7px;
+		}
+
+		.precip-chance-label {
+			float: right;
+			margin-top: 7px;
+			margin-right: 15px;
+		}
+	}
+
+	.forecast-pane {
+
+		.forecast-group {
+			background-color: white;
+			border-bottom: 1px solid $border-edge-color;
+			height: 69px;
+			overflow: hidden;
+			padding-left: 16px;
+
+			.date-group {
+				float: left;
+				padding-top: 17px;
+				width: 55px;
+
+				.day {
+					float: left;
+					font-size: $text-detail-medium-size;
+				}
+
+				.date {
+					color: $text-body-light-color;
+					float: left;
+					font-size: $text-body-size;
+				}
+			}
+
+			.weather-icon {
+				float: left;
+				height: 48px;
+				margin-top: 8px;
+				width: 72px;
+			}
+
+			.temp-group {
+				float: left;
+				padding-left: 5px;
+				padding-top: 10px;
+				width: 120px;
+
+				.high-temp {
+					float: left;
+					font-size: $text-detail-Xlarge-size;
+					padding-right: 3px;
+				}
+
+				.low-temp {
+					color: $text-body-light-color;
+					float: left;
+					font-size: $text-detail-medium-size;
+					padding-top: 10px;
+				}
+
+			}
+
+			.precip-chance {
+				float: right;
+				font-size: $text-detail-medium-size;
+				padding-right: 15px;
+				padding-top: 20px;
+			}
+
+			.condition {
+				@include ellipsis();
+
+				color: $text-body-light-color;
+				float: left;
+				font-size: $text-body-size;
+				width: 170px;
+			}
+
+		}
+	}
+
+	.w-clear {
+		clear: both;
+	}
+}

@@ -1,0 +1,30 @@
+<div id="map-info" class="map-event-info-panel">
+	<div class="name-address-group">
+		<div class="name">{{name}}</div>
+		{{#if address1}}
+			<div class="address">{{address1}}</div>
+		{{/if}}
+		{{#if address2}}
+			<div class="address">{{address2}}</div>
+		{{/if}}
+		{{#if address3}}
+			<div class="address">{{address3}}</div>
+		{{/if}}
+	</div>
+	<div class="actions-group">
+		<div id="map-directions" class="map-button map-button-directions map-button-border-right">
+			<a>
+				<div class="button-icon btn_icon_directions_blue_25px"></div>
+				<div class="map-button-label">{{t "Directions"}}</div>
+			</a>
+		</div>
+		<div id="map-call" class="map-button map-button-call">
+			<a>
+				<div class="button-icon btn_icon_call_blue_25px"></div>
+				<div class="map-button-label">{{t "Call"}}</div>
+			</a>
+		</div>
+	</div>
+</div>
+
+<div id="map-panel" class="map-panel"></div>

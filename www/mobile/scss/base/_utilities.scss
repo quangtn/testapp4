@@ -1,0 +1,13 @@
+//
+// UTILITIES
+//
+//	Small and focused styles applied to elements
+//	requiring very minimal styles. If elements becomes
+//	more complex, create a module.
+//
+//	https://github.com/suitcss/suit/blob/master/doc/naming-conventions.md#u-utilityName
+
+
+.u-text-left {text-align: left;}
+.u-text-center {text-align: center;}
+.u-text-right {text-align: right;}

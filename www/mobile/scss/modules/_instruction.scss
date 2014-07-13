@@ -1,0 +1,39 @@
+.instruction {
+	padding: $GUTTER;
+	background-color: $color-white;
+	color: $color-medium-dark-gray;
+	border-bottom: 1px solid $color-lighter-gray;
+
+	&:only-child {
+		border-bottom: 0;
+	}
+}
+
+.instruction-centered {
+	@extend .instruction;
+	text-align: center;
+}
+
+.instruction-header {
+	@extend .instruction;
+	@extend .instruction-emphasis;
+}
+
+.instruction-header-med {
+	@extend .instruction-header;
+	font-size: $text-detail-medium-size;
+}
+
+.instruction-info {
+	font-size: $text-detail-small-size;
+	line-height: 1.3em;
+
+	&:not(:first-child) {
+		margin-top: 10px;
+	}
+}
+
+.instruction-emphasis {
+	color: $color-black;
+	font-weight: bold;
+}

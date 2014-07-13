@@ -1,0 +1,21 @@
+<li class="list-row">
+	{{#if fullName}}
+	<div class="list-row-group">
+		<p class="tc-sublabel">Name</p>
+		<p class="tc-label text-ellipsis">{{fullName}}</p>
+	</div>
+	{{/if}}
+
+	<div class="list-row-group">
+		<p class="tc-sublabel">Email</p>
+		<p class="tc-label text-ellipsis">{{email}}</p>
+	</div>
+</li>
+<li class="list-row-flat">
+	<div class="list-row-flat-icon button-icon btn_icon_share_blue_25px"></div>
+	<div class="list-row-main">
+		<p class="tc-sublabel">Always Share</p>
+		<p class="tc-label">{{#if is_always_sharing}}{{t "ON"}} 	{{else}}{{t "OFF"}} 	{{/if}}</p>
+	</div>
+	<div id="always-share-help" class="list-row-flat-icon icon_info_20px general-icon"></div>
+</li>

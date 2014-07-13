@@ -1,0 +1,220 @@
+<section class="flight-group-summary">
+	<dl class="depart-summary">
+		<dt class="label">{{t "Depart"}}</dt>
+		<dd class="value primary">{{mediumDate start_date}}</dd>
+		{{{nextDayArriveNotifier start_date end_date}}}
+	</dl>
+
+	<dl class="stop-summary">
+		{{#if number_of_stops}}
+			<dt class="label">{{pluralize number_of_stops "Stop"}}</dt>
+			<dd class="value primary">{{stops.[0]}}</dd>
+			<dd class="value">{{stopAirportCodes stops}}</dd>
+		{{else}}
+			<dt class="label">{{t "Nonstop"}}</dt>
+		{{/if}}
+	</dl>
+
+	<dl class="travel-time-summary">
+		<dt class="label">{{t "TravelTime"}}</dt>
+		<dd class="value primary">{{hoursMinutesFromMinutes travel_time_minutes}}</dd>
+	</dl>
+</section>
+
+{{flightDetailShowDateBlockReset}}
+
+{{#each_with_index air_reservations}}
+	{{#showDateBlock scheduled_departure}}
+		<h2 class="date-divider">{{mediumDate scheduled_departure}}</h2>
+	{{/showDateBlock}}
+
+	{{#if layover_minutes}}
+		<section class="layover">
+			<dl class="airport">
+				<dt class="label">{{t "Layover"}}</dt>
+				<dd>{{departure_airport_code}} <span class="airport-name">{{departure_airport}}</span></dd>
+				<!-- <dd class="special-note">{hasPlaneChange}</dd> -->
+			</dl>
+
+			<dl class="duration">
+				<dt class="label">{{t "Duration"}}</dt>
+				<dd>{{hoursMinutesFromMinutes layover_minutes}}</dd>
+			</dl>
+		</section>
+	{{/if}}
+
+	<div class="flight-information section">
+		<div class="phone-actionable phone-drop-down-button" data-index="{{index}}">
+			<div class="button-icon btn_icon_call_25px"></div>
+		</div>
+		<span class="airline-icon airline-{{lowercase airline_code}}"></span>
+		<div class="airline">{{airline}}</div>
+		<div class="flight">{{airline_code}} {{flight_number}}</div>
+	</div>
+
+	<section>
+		<dl>
+			<dt class="label">{{t "ConfirmationNumber"}}</dt>
+			<dd class="value word-wrap-text">{{if_not_blank confirmation_number "NotEntered"}}</dd>
+		</dl>
+		{{#if for_business}}
+		<div class="tags">
+			<div class="tag--business">{{t "Business"}}</div>
+		</div>
+		{{/if}}
+	</section>
+
+	{{#if cancelled}}
+		<section id='canceled-alt-flight' data-index="{{index}}">
+			<div class="icon_alert_25px general-icon"></div>
+			<div class="next btn_arrow button-icon"></div>
+			<dl>
+				<dt class="value alert">{{t "FlightCanceled"}}</dt>
+				<dd class="value simple">{{t "FindAltFlight"}}</dd>
+			</dl>
+		</section>
+	{{/if}}
+
+	{{#if operated_by}}
+		<section>
+			<dl>
+				<dt class="label">{{t "OperatedBy"}}</dt>
+				<dd class="value">{{operated_by}}</dd>
+			</dl>
+		</section>
+	{{/if}}
+
+	<section>
+		<div class="map map-drop-down-button" data-segment="depart" data-index="{{index}}">
+			<div class="button-icon btn_icon_map_25px"></div>
+		</div>
+
+		<dl class="arrive-depart">
+			<dt class="label">{{t "Depart"}}</dt>
+			<dd class="value">{{departure_airport_code}} <span class="airport-name">{{departure_airport}}</span></dd>
+		</dl>
+
+		<dl class="inline">
+			<dt class="label">{{t "Scheduled"}}</dt>
+			<dd class="value">{{timeFromDateTime scheduled_departure}}</dd>
+		</dl>
+
+		<dl class="inline">
+			<dt class="label">{{t "Actual"}}</dt>
+			<dd class="value
+				{{#if_is_delayed scheduled_departure estimated_departure}}
+					alert
+				{{/if_is_delayed}}
+				{{#if cancelled}}
+					alert
+				{{/if}}
+			">
+				{{#if cancelled}}
+					{{t "Canceled"}}
+				{{else}}
+					{{timeFromDateTime estimated_departure}}
+					{{delayed_by scheduled_departure estimated_departure}}
+				{{/if}}
+			</dd>
+		</dl>
+
+		<dl class="inline">
+			<dt class="label">{{t "TermGate"}}</dt>
+			<dd class="value {{#if departure_terminal_or_gate_change}} alert {{/if}}">
+				{{get_terminal_and_gate departure_terminal departure_gate}}
+			</dd>
+		</dl>
+	</section>
+
+	{{#showDateBlock scheduled_arrival}}
+		<h2 class="date-divider"> {{mediumDate scheduled_arrival}} </h2>
+	{{/showDateBlock}}
+
+	<section>
+		<div class="map map-drop-down-button" data-segment="arrive" data-index="{{index}}">
+			<div class="button-icon btn_icon_map_25px"></div>
+		</div>
+
+		<dl class="arrive-depart">
+			<dt class="label">{{t "Arrive"}}</dt>
+			<dd class="value">{{arrival_airport_code}} <span class="airport-name">{{arrival_airport}}</span></dd>
+		</dl>
+
+		<dl class="inline">
+			<dt class="label">{{t "Scheduled"}}</dt>
+			<dd class="value">{{timeFromDateTime scheduled_arrival}}</dd>
+		</dl>
+
+		<dl class="inline">
+			<dt class="label">{{t "Actual"}}</dt>
+			<dd class="value
+				{{#if_is_delayed scheduled_arrival estimated_arrival}}
+					alert
+				{{/if_is_delayed}}
+				{{#if cancelled}}
+					alert
+				{{/if}}
+			">
+				{{#if cancelled}}
+					{{t "Canceled"}}
+				{{else}}
+					{{timeFromDateTime estimated_arrival}}
+					{{delayed_by scheduled_arrival estimated_arrival}}
+				{{/if}}
+			</dd>
+		</dl>
+
+		<dl class="inline">
+			<dt class="label">{{t "TermGate"}}</dt>
+			<dd class="value {{#if arrival_terminal_or_gate_change}}alert{{/if}}">{{get_terminal_and_gate arrival_terminal arrival_gate}}</dd>
+		</dl>
+
+		<dl class="inline">
+			<dt class="label">{{t "Baggage"}}</dt>
+			<dd class="value {{#if baggage_claim_change}}alert{{/if}}">{{if_not_blank baggage_claim "TBD"}}</dd>
+		</dl>
+	</section>
+
+	<section class="aircraft">
+		{{#if seat_map_url}}
+			<div id="seats" class="seats seats-button" data-item_id="{{id}}">
+				<div class="button-icon btn_icon_seatmaps_25px"></div>
+			</div>
+		{{/if}}
+
+		<dl class="inline">
+			<dt class="label">{{t "TravelTime"}}</dt>
+			<dd class="value">{{hoursMinutesFromMinutes travel_time_minutes}}</dd>
+		</dl>
+
+		<dl class="inline">
+			<dt class="label">{{t "Aircraft"}}</dt>
+			<dd class="value">{{if_not_blank aircraft_description "TBD"}}</dd>
+		</dl>
+
+		<dl class="inline">
+			<dt class="label">{{t "Seats"}}</dt>
+			<dd class="value">{{#unless seats}}{{t "NA"}}{{else}}{{#each seats}}{{number}}{{/each}}{{/unless}}</dd>
+		</dl>
+	</section>
+
+	<section>
+		<dl>
+			<dt class="label">{{t "Note"}}</dt>
+			<dd class="word-wrap-text">{{if_not_blank note "NotEntered"}}</dd>
+		</dl>
+	</section>
+{{/each_with_index}}
+
+
+{{#each detailMenuItems}}
+	<div id="{{id}}" class="detail-menu-item">
+		{{label}}
+		<div class="{{icon}} general-icon detail-menu-icon "></div>
+		<div class="detail-menu-next button-icon btn_arrow"></div>
+	</div>
+{{/each}}
+
+{{#if isWorldMate}}
+	<div id="worldmate" class="wm"></div>
+{{/if}}

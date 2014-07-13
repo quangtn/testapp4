@@ -1,0 +1,54 @@
+<div class="list-loader">
+		<div class="list-item">
+			<div class="details">
+					<a class="item-title action no-icon"><span class="loader">
+					</span></a>
+			</div>
+		</div>
+</div>
+<div class="list">
+{{#unless locations}}
+		<div class="list-item actionable">
+			<div class="details">
+				<div class="item-title action">
+					<p>{{t "SearchResultsZero"}}</p>
+				</div>
+			</div>
+		</div>
+{{else}}
+{{#each_with_index locations}}
+	<div data-index="{{index}}" class="list-item actionable chevron-lift">
+		<div class="display-box">
+			<div class="flex-8 item-title action">
+				<h2>{{name}}</h2>
+				{{#each address_lines}}
+					<p class="item-sub-title">{{.}}</p>
+				{{/each}}
+			</div>
+			<div class="button-icon btn_arrow"></div>
+			<div class="flex-2 item-sub-title lower right-align"><p><b>{{search_distance_mi}}</b></p><p>{{t "MilesAway"}}</p></div>
+		</div>
+	</div>
+	{{#if_is_nudgeable index=index length=../locations.length}}
+	<div class="nudgeable list-item actionable" >
+		<div class="details">
+			<div class="item-title action">
+				<div class="icon_add_32px general-icon"></div>
+			   <h2>{{t "VehicleManualPrompt"}}</h2>
+			</div>
+			<div class="button-icon btn_arrow"></div>
+		</div>
+	</div>
+	{{/if_is_nudgeable}}
+{{/each_with_index}}
+{{/unless}}
+	<div class="nudgeable list-item actionable" >
+		<div class="details">
+			<div class="item-title action">
+				<div class="icon_add_32px general-icon"></div>
+			   <h2>{{t "VehicleManualPrompt"}}</h2>
+			</div>
+			<div class="button-icon btn_arrow"></div>
+		</div>
+	</div>
+</div>

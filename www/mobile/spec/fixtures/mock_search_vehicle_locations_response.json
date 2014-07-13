@@ -1,0 +1,2018 @@
+[
+	{
+		"address": {
+			"city": "Dallas",
+			"country_name": "United States",
+			"country_code": "US",
+			"postal_code": "75261-9428",
+			"general_location": "Dallas, TX",
+			"state_code": "TX",
+			"label_lines": [
+				{
+					"@name": "line",
+					"text": "1816 North 24th Street",
+					"part": "street"
+				},
+				{
+					"@name": "line",
+					"text": "Dallas, TX 75261-9428",
+					"part": "city"
+				}
+			]
+		},
+		"name": "AVIS Rent-A-Car",
+		"@name": "vehicle_location",
+		"location_code": "DFWC022",
+		"search_distance_km": "0.94951296",
+		"search_distance_mi": "0.59",
+		"vendor_code": "ZI"
+	},
+	{
+		"address": {
+			"city": "Dallas",
+			"country_name": "United States",
+			"country_code": "US",
+			"postal_code": "75261",
+			"general_location": "Dallas, TX",
+			"state_code": "TX",
+			"label_lines": [
+				{
+					"@name": "line",
+					"text": "1816 North 24th Ave",
+					"part": "street"
+				},
+				{
+					"@name": "line",
+					"text": "Dallas, TX 75261",
+					"part": "city"
+				}
+			]
+		},
+		"name": "Hertz Rent-A-Car",
+		"@name": "vehicle_location",
+		"location_code": "DFWC021",
+		"search_distance_km": "0.99779328",
+		"search_distance_mi": "0.62",
+		"vendor_code": "ZE"
+	},
+	{
+		"address": {
+			"city": "Dallas",
+			"country_name": "United States",
+			"country_code": "US",
+			"postal_code": "75261",
+			"general_location": "Dallas, TX",
+			"state_code": "TX",
+			"label_lines": [
+				{
+					"@name": "line",
+					"text": "Dallas Ft Worth Intl Airport",
+					"part": "street"
+				},
+				{
+					"@name": "line",
+					"text": "Dallas, TX 75261",
+					"part": "city"
+				}
+			]
+		},
+		"name": "EZ Rent-A-Car",
+		"@name": "vehicle_location",
+		"location_code": "DFWDFW",
+		"search_distance_km": "0.99779328",
+		"search_distance_mi": "0.62",
+		"vendor_code": "EZ"
+	},
+	{
+		"address": {
+			"city": "Dallas",
+			"country_name": "United States",
+			"country_code": "US",
+			"postal_code": "75261-9004",
+			"general_location": "Dallas, TX",
+			"state_code": "TX",
+			"label_lines": [
+				{
+					"@name": "line",
+					"text": "2424 E 38th Street",
+					"part": "street"
+				},
+				{
+					"@name": "line",
+					"text": "Dallas, TX 75261-9004",
+					"part": "city"
+				}
+			]
+		},
+		"name": "AVIS Rent-A-Car",
+		"@name": "vehicle_location",
+		"location_code": "DFWDFW",
+		"search_distance_km": "0.99779328",
+		"search_distance_mi": "0.62",
+		"vendor_code": "ZI"
+	},
+	{
+		"address": {
+			"city": "Dfw Airport",
+			"country_name": "United States",
+			"country_code": "US",
+			"postal_code": "75261-3109",
+			"general_location": "Dfw Airport, TX",
+			"state_code": "TX",
+			"label_lines": [
+				{
+					"@name": "line",
+					"text": "2424 E 38th Street",
+					"part": "street"
+				},
+				{
+					"@name": "line",
+					"text": "Dfw Airport, TX 75261-3109",
+					"part": "city"
+				}
+			]
+		},
+		"name": "Enterprise Rent-A-Car",
+		"@name": "vehicle_location",
+		"location_code": "DFWDFW",
+		"search_distance_km": "2.83244544",
+		"search_distance_mi": "1.76",
+		"vendor_code": "ET"
+	},
+	{
+		"address": {
+			"city": "Dfw Airport",
+			"country_name": "United States",
+			"country_code": "US",
+			"postal_code": "75261",
+			"general_location": "Dfw Airport, TX",
+			"state_code": "TX",
+			"label_lines": [
+				{
+					"@name": "line",
+					"text": "2750 Emergency Rd",
+					"part": "street"
+				},
+				{
+					"@name": "line",
+					"text": "Dfw Airport, TX 75261",
+					"part": "city"
+				}
+			]
+		},
+		"name": "National Rent-A-Car",
+		"@name": "vehicle_location",
+		"location_code": "DFWC001",
+		"search_distance_km": "2.83244544",
+		"search_distance_mi": "1.76",
+		"vendor_code": "ZL"
+	},
+	{
+		"address": {
+			"city": "Irving",
+			"country_name": "United States",
+			"country_code": "US",
+			"postal_code": "75063-2521",
+			"general_location": "Irving, TX",
+			"state_code": "TX",
+			"label_lines": [
+				{
+					"@name": "line",
+					"text": "8440 Freeport Parkway",
+					"part": "street"
+				},
+				{
+					"@name": "line",
+					"text": "Irving, TX 75063-2521",
+					"part": "city"
+				}
+			]
+		},
+		"name": "Hertz Rent-A-Car",
+		"@name": "vehicle_location",
+		"location_code": "DFWW002",
+		"search_distance_km": "3.28306176",
+		"search_distance_mi": "2.04",
+		"vendor_code": "ZE"
+	},
+	{
+		"address": {
+			"city": "Dallas",
+			"country_name": "United States",
+			"country_code": "US",
+			"postal_code": "75261",
+			"general_location": "Dallas, TX",
+			"state_code": "TX",
+			"label_lines": [
+				{
+					"@name": "line",
+					"text": "2424 East 38th Street",
+					"part": "street"
+				},
+				{
+					"@name": "line",
+					"text": "Dallas, TX 75261",
+					"part": "city"
+				}
+			]
+		},
+		"name": "National Rent-A-Car",
+		"@name": "vehicle_location",
+		"location_code": "DFWDFW",
+		"search_distance_km": "4.13601408",
+		"search_distance_mi": "2.57",
+		"vendor_code": "ZL"
+	},
+	{
+		"address": {
+			"city": "Dallas",
+			"country_name": "United States",
+			"country_code": "US",
+			"postal_code": "75261",
+			"general_location": "Dallas, TX",
+			"state_code": "TX",
+			"label_lines": [
+				{
+					"@name": "line",
+					"text": "2424 East 38th Street",
+					"part": "street"
+				},
+				{
+					"@name": "line",
+					"text": "Dallas, TX 75261",
+					"part": "city"
+				}
+			]
+		},
+		"name": "Silvercar",
+		"@name": "vehicle_location",
+		"location_code": "DFWDFW",
+		"search_distance_km": "4.13601408",
+		"search_distance_mi": "2.57",
+		"vendor_code": "SC"
+	},
+	{
+		"address": {
+			"city": "Dallas",
+			"country_name": "United States",
+			"country_code": "US",
+			"postal_code": "75261",
+			"general_location": "Dallas, TX",
+			"state_code": "TX",
+			"label_lines": [
+				{
+					"@name": "line",
+					"text": "2424 E 38th St",
+					"part": "street"
+				},
+				{
+					"@name": "line",
+					"text": "Dallas, TX 75261",
+					"part": "city"
+				}
+			]
+		},
+		"name": "Alamo Rent-A-Car",
+		"@name": "vehicle_location",
+		"location_code": "DFWDFW",
+		"search_distance_km": "4.13601408",
+		"search_distance_mi": "2.57",
+		"vendor_code": "AL"
+	},
+	{
+		"address": {
+			"city": "Dallas",
+			"country_name": "United States",
+			"country_code": "US",
+			"postal_code": "75261",
+			"general_location": "Dallas, TX",
+			"state_code": "TX",
+			"label_lines": [
+				{
+					"@name": "line",
+					"text": "2424 East 38th Street",
+					"part": "street"
+				},
+				{
+					"@name": "line",
+					"text": "Dallas, TX 75261",
+					"part": "city"
+				}
+			]
+		},
+		"name": "Advantage",
+		"@name": "vehicle_location",
+		"location_code": "DFWDFW",
+		"search_distance_km": "4.13601408",
+		"search_distance_mi": "2.57",
+		"vendor_code": "AD"
+	},
+	{
+		"address": {
+			"city": "Dallas",
+			"country_name": "United States",
+			"country_code": "US",
+			"postal_code": "75261",
+			"general_location": "Dallas, TX",
+			"state_code": "TX",
+			"label_lines": [
+				{
+					"@name": "line",
+					"text": "2424 East 38th Street",
+					"part": "street"
+				},
+				{
+					"@name": "line",
+					"text": "Dallas, TX 75261",
+					"part": "city"
+				}
+			]
+		},
+		"name": "Budget Rent-A-Car",
+		"@name": "vehicle_location",
+		"location_code": "DFWDFW",
+		"search_distance_km": "4.13601408",
+		"search_distance_mi": "2.57",
+		"vendor_code": "ZD"
+	},
+	{
+		"address": {
+			"city": "Dallas",
+			"country_name": "United States",
+			"country_code": "US",
+			"postal_code": "75261",
+			"general_location": "Dallas, TX",
+			"state_code": "TX",
+			"label_lines": [
+				{
+					"@name": "line",
+					"text": "2424 East 38th Street",
+					"part": "street"
+				},
+				{
+					"@name": "line",
+					"text": "Dallas, TX 75261",
+					"part": "city"
+				}
+			]
+		},
+		"name": "EuropCar",
+		"@name": "vehicle_location",
+		"location_code": "DFWDFW",
+		"search_distance_km": "4.13601408",
+		"search_distance_mi": "2.57",
+		"vendor_code": "EP"
+	},
+	{
+		"address": {
+			"city": "Dallas",
+			"country_name": "United States",
+			"country_code": "US",
+			"postal_code": "75261",
+			"general_location": "Dallas, TX",
+			"state_code": "TX",
+			"label_lines": [
+				{
+					"@name": "line",
+					"text": "2424 E 38th Street",
+					"part": "street"
+				},
+				{
+					"@name": "line",
+					"text": "Dallas, TX 75261",
+					"part": "city"
+				}
+			]
+		},
+		"name": "Dollar Rent-A-Car",
+		"@name": "vehicle_location",
+		"location_code": "DFWDFW",
+		"search_distance_km": "4.13601408",
+		"search_distance_mi": "2.57",
+		"vendor_code": "ZR"
+	},
+	{
+		"address": {
+			"city": "Dallas",
+			"country_name": "United States",
+			"country_code": "US",
+			"postal_code": "75261",
+			"general_location": "Dallas, TX",
+			"state_code": "TX",
+			"label_lines": [
+				{
+					"@name": "line",
+					"text": "2424 East 38th Street",
+					"part": "street"
+				},
+				{
+					"@name": "line",
+					"text": "Dallas, TX 75261",
+					"part": "city"
+				}
+			]
+		},
+		"name": "Hertz Rent-A-Car",
+		"@name": "vehicle_location",
+		"location_code": "DFWDFW",
+		"search_distance_km": "4.13601408",
+		"search_distance_mi": "2.57",
+		"vendor_code": "ZE"
+	},
+	{
+		"address": {
+			"city": "Irving",
+			"country_name": "United States",
+			"country_code": "US",
+			"postal_code": "75038-4681",
+			"general_location": "Irving, TX",
+			"state_code": "TX",
+			"label_lines": [
+				{
+					"@name": "line",
+					"text": "3701 Esters Rd",
+					"part": "street"
+				},
+				{
+					"@name": "line",
+					"text": "Irving, TX 75038-4681",
+					"part": "city"
+				}
+			]
+		},
+		"name": "Ace Rent-A-Car",
+		"@name": "vehicle_location",
+		"location_code": "DFWDFW",
+		"search_distance_km": "4.60272384",
+		"search_distance_mi": "2.86",
+		"vendor_code": "AC"
+	},
+	{
+		"address": {
+			"city": "Grapevine",
+			"country_name": "United States",
+			"country_code": "US",
+			"postal_code": "76051-7689",
+			"general_location": "Grapevine, TX",
+			"state_code": "TX",
+			"label_lines": [
+				{
+					"@name": "line",
+					"text": "701 E State Highway 114",
+					"part": "street"
+				},
+				{
+					"@name": "line",
+					"text": "Grapevine, TX 76051-7689",
+					"part": "city"
+				}
+			]
+		},
+		"name": "Enterprise Rent-A-Car",
+		"@name": "vehicle_location",
+		"location_code": "DFWN016",
+		"search_distance_km": "4.77975168",
+		"search_distance_mi": "2.97",
+		"vendor_code": "ET"
+	},
+	{
+		"address": {
+			"city": "Irving Texas",
+			"country_name": "United States",
+			"country_code": "US",
+			"postal_code": "75038",
+			"general_location": "Irving Texas, TX",
+			"state_code": "TX",
+			"label_lines": [
+				{
+					"@name": "line",
+					"text": "3701 Esters Rd 114",
+					"part": "street"
+				},
+				{
+					"@name": "line",
+					"text": "Irving Texas, TX 75038",
+					"part": "city"
+				}
+			]
+		},
+		"name": "Fox Rent-A-Car",
+		"@name": "vehicle_location",
+		"location_code": "DFWDFW",
+		"search_distance_km": "5.34302208",
+		"search_distance_mi": "3.32",
+		"vendor_code": "FX"
+	},
+	{
+		"address": {
+			"city": "Grapevine",
+			"country_name": "United States",
+			"country_code": "US",
+			"postal_code": "76051-4119",
+			"general_location": "Grapevine, TX",
+			"state_code": "TX",
+			"label_lines": [
+				{
+					"@name": "line",
+					"text": "617 East Dallas Road",
+					"part": "street"
+				},
+				{
+					"@name": "line",
+					"text": "Grapevine, TX 76051-4119",
+					"part": "city"
+				}
+			]
+		},
+		"name": "AVIS Rent-A-Car",
+		"@name": "vehicle_location",
+		"location_code": "DFWN003",
+		"search_distance_km": "5.72926464",
+		"search_distance_mi": "3.56",
+		"vendor_code": "ZI"
+	},
+	{
+		"address": {
+			"city": "Grapevine",
+			"country_name": "United States",
+			"country_code": "US",
+			"postal_code": "76051-4119",
+			"general_location": "Grapevine, TX",
+			"state_code": "TX",
+			"label_lines": [
+				{
+					"@name": "line",
+					"text": "617 East Dallas Road",
+					"part": "street"
+				},
+				{
+					"@name": "line",
+					"text": "Grapevine, TX 76051-4119",
+					"part": "city"
+				}
+			]
+		},
+		"name": "Budget Rent-A-Car",
+		"@name": "vehicle_location",
+		"location_code": "DFWN010",
+		"search_distance_km": "5.74535808",
+		"search_distance_mi": "3.57",
+		"vendor_code": "ZD"
+	},
+	{
+		"address": {
+			"city": "Grapevine",
+			"country_name": "United States",
+			"country_code": "US",
+			"postal_code": "76051-3988",
+			"general_location": "Grapevine, TX",
+			"state_code": "TX",
+			"label_lines": [
+				{
+					"@name": "line",
+					"text": "1001 E Highway 114",
+					"part": "street"
+				},
+				{
+					"@name": "line",
+					"text": "Grapevine, TX 76051-3988",
+					"part": "city"
+				}
+			]
+		},
+		"name": "Advantage",
+		"@name": "vehicle_location",
+		"location_code": "DFWN135",
+		"search_distance_km": "6.40518912",
+		"search_distance_mi": "3.98",
+		"vendor_code": "AD"
+	},
+	{
+		"address": {
+			"city": "Irving",
+			"country_name": "United States",
+			"country_code": "US",
+			"postal_code": "75038-2611",
+			"general_location": "Irving, TX",
+			"state_code": "TX",
+			"label_lines": [
+				{
+					"@name": "line",
+					"text": "850 W Walnut Hill Lane Suite 127",
+					"part": "street"
+				},
+				{
+					"@name": "line",
+					"text": "Irving, TX 75038-2611",
+					"part": "city"
+				}
+			]
+		},
+		"name": "AVIS Rent-A-Car",
+		"@name": "vehicle_location",
+		"location_code": "DFWW003",
+		"search_distance_km": "6.45346944",
+		"search_distance_mi": "4.01",
+		"vendor_code": "ZI"
+	},
+	{
+		"address": {
+			"city": "Grapevine",
+			"country_name": "United States",
+			"country_code": "US",
+			"postal_code": "76051-3991",
+			"general_location": "Grapevine, TX",
+			"state_code": "TX",
+			"label_lines": [
+				{
+					"@name": "line",
+					"text": "1101 W Highway 114",
+					"part": "street"
+				},
+				{
+					"@name": "line",
+					"text": "Grapevine, TX 76051-3991",
+					"part": "city"
+				}
+			]
+		},
+		"name": "Enterprise Rent-A-Car",
+		"@name": "vehicle_location",
+		"location_code": "DFWN045",
+		"search_distance_km": "6.56612352",
+		"search_distance_mi": "4.08",
+		"vendor_code": "ET"
+	},
+	{
+		"address": {
+			"city": "Grapevine",
+			"country_name": "United States",
+			"country_code": "US",
+			"postal_code": "76051-3984",
+			"general_location": "Grapevine, TX",
+			"state_code": "TX",
+			"label_lines": [
+				{
+					"@name": "line",
+					"text": "2601 William D Tate Ave",
+					"part": "street"
+				},
+				{
+					"@name": "line",
+					"text": "Grapevine, TX 76051-3984",
+					"part": "city"
+				}
+			]
+		},
+		"name": "Enterprise Rent-A-Car",
+		"@name": "vehicle_location",
+		"location_code": "DFWN036",
+		"search_distance_km": "6.5983104",
+		"search_distance_mi": "4.1",
+		"vendor_code": "ET"
+	},
+	{
+		"address": {
+			"city": "Irving",
+			"country_name": "United States",
+			"country_code": "US",
+			"postal_code": "75063-3612",
+			"general_location": "Irving, TX",
+			"state_code": "TX",
+			"label_lines": [
+				{
+					"@name": "line",
+					"text": "941 Macarthur",
+					"part": "street"
+				},
+				{
+					"@name": "line",
+					"text": "Irving, TX 75063-3612",
+					"part": "city"
+				}
+			]
+		},
+		"name": "Hertz Rent-A-Car",
+		"@name": "vehicle_location",
+		"location_code": "DFWW015",
+		"search_distance_km": "6.85580544",
+		"search_distance_mi": "4.26",
+		"vendor_code": "ZE"
+	},
+	{
+		"address": {
+			"city": "Irving",
+			"country_name": "United States",
+			"country_code": "US",
+			"postal_code": "75062-5909",
+			"general_location": "Irving, TX",
+			"state_code": "TX",
+			"label_lines": [
+				{
+					"@name": "line",
+					"text": "3910 W Airport Freeway",
+					"part": "street"
+				},
+				{
+					"@name": "line",
+					"text": "Irving, TX 75062-5909",
+					"part": "city"
+				}
+			]
+		},
+		"name": "Enterprise Rent-A-Car",
+		"@name": "vehicle_location",
+		"location_code": "DFWC046",
+		"search_distance_km": "6.93627264",
+		"search_distance_mi": "4.31",
+		"vendor_code": "ET"
+	},
+	{
+		"address": {
+			"city": "Irving",
+			"country_name": "United States",
+			"country_code": "US",
+			"postal_code": "75062-5161",
+			"general_location": "Irving, TX",
+			"state_code": "TX",
+			"label_lines": [
+				{
+					"@name": "line",
+					"text": "2501 Irving Mall Road",
+					"part": "street"
+				},
+				{
+					"@name": "line",
+					"text": "Irving, TX 75062-5161",
+					"part": "city"
+				}
+			]
+		},
+		"name": "AVIS Rent-A-Car",
+		"@name": "vehicle_location",
+		"location_code": "DFWW004",
+		"search_distance_km": "7.0006464",
+		"search_distance_mi": "4.35",
+		"vendor_code": "ZI"
+	},
+	{
+		"address": {
+			"city": "Irving",
+			"country_name": "United States",
+			"country_code": "US",
+			"postal_code": "75062-5161",
+			"general_location": "Irving, TX",
+			"state_code": "TX",
+			"label_lines": [
+				{
+					"@name": "line",
+					"text": "2501 Irving Mall Road",
+					"part": "street"
+				},
+				{
+					"@name": "line",
+					"text": "Irving, TX 75062-5161",
+					"part": "city"
+				}
+			]
+		},
+		"name": "Budget Rent-A-Car",
+		"@name": "vehicle_location",
+		"location_code": "DFWW003",
+		"search_distance_km": "7.0006464",
+		"search_distance_mi": "4.35",
+		"vendor_code": "ZD"
+	},
+	{
+		"address": {
+			"city": "Irving",
+			"country_name": "United States",
+			"country_code": "US",
+			"postal_code": "75062-6316",
+			"general_location": "Irving, TX",
+			"state_code": "TX",
+			"label_lines": [
+				{
+					"@name": "line",
+					"text": "3401 West Airport Freeway",
+					"part": "street"
+				},
+				{
+					"@name": "line",
+					"text": "Irving, TX 75062-6316",
+					"part": "city"
+				}
+			]
+		},
+		"name": "Hertz Rent-A-Car",
+		"@name": "vehicle_location",
+		"location_code": "DFWW005",
+		"search_distance_km": "7.12939392",
+		"search_distance_mi": "4.43",
+		"vendor_code": "ZE"
+	},
+	{
+		"address": {
+			"city": "Grapevine",
+			"country_name": "United States",
+			"country_code": "US",
+			"postal_code": "76051",
+			"general_location": "Grapevine, TX",
+			"state_code": "TX",
+			"label_lines": [
+				{
+					"@name": "line",
+					"text": "1501 Gaylord Trail",
+					"part": "street"
+				},
+				{
+					"@name": "line",
+					"text": "Grapevine, TX 76051",
+					"part": "city"
+				}
+			]
+		},
+		"name": "Hertz Rent-A-Car",
+		"@name": "vehicle_location",
+		"location_code": "DFWW045",
+		"search_distance_km": "7.29032832",
+		"search_distance_mi": "4.53",
+		"vendor_code": "ZE"
+	},
+	{
+		"address": {
+			"city": "Grapevine",
+			"country_name": "United States",
+			"country_code": "US",
+			"postal_code": "76051-8602",
+			"general_location": "Grapevine, TX",
+			"state_code": "TX",
+			"label_lines": [
+				{
+					"@name": "line",
+					"text": "2078 W State Highway 114",
+					"part": "street"
+				},
+				{
+					"@name": "line",
+					"text": "Grapevine, TX 76051-8602",
+					"part": "city"
+				}
+			]
+		},
+		"name": "Enterprise Rent-A-Car",
+		"@name": "vehicle_location",
+		"location_code": "DFWN007",
+		"search_distance_km": "7.99843968",
+		"search_distance_mi": "4.97",
+		"vendor_code": "ET"
+	},
+	{
+		"address": {
+			"city": "Irving",
+			"country_name": "United States",
+			"country_code": "US",
+			"postal_code": "75062-6016",
+			"general_location": "Irving, TX",
+			"state_code": "TX",
+			"label_lines": [
+				{
+					"@name": "line",
+					"text": "2415 West Airport Freeway",
+					"part": "street"
+				},
+				{
+					"@name": "line",
+					"text": "Irving, TX 75062-6016",
+					"part": "city"
+				}
+			]
+		},
+		"name": "Budget Rent-A-Car",
+		"@name": "vehicle_location",
+		"location_code": "DFWW002",
+		"search_distance_km": "8.01453312",
+		"search_distance_mi": "4.98",
+		"vendor_code": "ZD"
+	},
+	{
+		"address": {
+			"city": "Irving",
+			"country_name": "United States",
+			"country_code": "US",
+			"postal_code": "75062-6016",
+			"general_location": "Irving, TX",
+			"state_code": "TX",
+			"label_lines": [
+				{
+					"@name": "line",
+					"text": "2415 West Airport Freeway",
+					"part": "street"
+				},
+				{
+					"@name": "line",
+					"text": "Irving, TX 75062-6016",
+					"part": "city"
+				}
+			]
+		},
+		"name": "AVIS Rent-A-Car",
+		"@name": "vehicle_location",
+		"location_code": "DFWW002",
+		"search_distance_km": "8.03062656",
+		"search_distance_mi": "4.99",
+		"vendor_code": "ZI"
+	},
+	{
+		"address": {
+			"city": "Irving",
+			"country_name": "United States",
+			"country_code": "US",
+			"postal_code": "75039-3717",
+			"general_location": "Irving, TX",
+			"state_code": "TX",
+			"label_lines": [
+				{
+					"@name": "line",
+					"text": "500 Las Colinas Blvd W",
+					"part": "street"
+				},
+				{
+					"@name": "line",
+					"text": "Irving, TX 75039-3717",
+					"part": "city"
+				}
+			]
+		},
+		"name": "Enterprise Rent-A-Car",
+		"@name": "vehicle_location",
+		"location_code": "DFWW099",
+		"search_distance_km": "8.3685888",
+		"search_distance_mi": "5.2",
+		"vendor_code": "ET"
+	},
+	{
+		"address": {
+			"city": "Bedford",
+			"country_name": "United States",
+			"country_code": "US",
+			"postal_code": "76021-4034",
+			"general_location": "Bedford, TX",
+			"state_code": "TX",
+			"label_lines": [
+				{
+					"@name": "line",
+					"text": "2900 Hwy 121  Ste 150",
+					"part": "street"
+				},
+				{
+					"@name": "line",
+					"text": "Bedford, TX 76021-4034",
+					"part": "city"
+				}
+			]
+		},
+		"name": "Enterprise Rent-A-Car",
+		"@name": "vehicle_location",
+		"location_code": "DFWS041",
+		"search_distance_km": "8.70655104",
+		"search_distance_mi": "5.41",
+		"vendor_code": "ET"
+	},
+	{
+		"address": {
+			"city": "Coppell",
+			"country_name": "United States",
+			"country_code": "US",
+			"postal_code": "75019",
+			"general_location": "Coppell, TX",
+			"state_code": "TX",
+			"label_lines": [
+				{
+					"@name": "line",
+					"text": "120 S Denton Tap Rd",
+					"part": "street"
+				},
+				{
+					"@name": "line",
+					"text": "Coppell, TX 75019",
+					"part": "city"
+				}
+			]
+		},
+		"name": "JL Testcar",
+		"@name": "vehicle_location",
+		"location_code": "DFWC002",
+		"search_distance_km": "8.9318592",
+		"search_distance_mi": "5.55",
+		"vendor_code": "JL"
+	},
+	{
+		"address": {
+			"city": "Irving",
+			"country_name": "United States",
+			"country_code": "US",
+			"postal_code": "75062-5501",
+			"general_location": "Irving, TX",
+			"state_code": "TX",
+			"label_lines": [
+				{
+					"@name": "line",
+					"text": "2210 N Macarthur Blvd",
+					"part": "street"
+				},
+				{
+					"@name": "line",
+					"text": "Irving, TX 75062-5501",
+					"part": "city"
+				}
+			]
+		},
+		"name": "Enterprise Rent-A-Car",
+		"@name": "vehicle_location",
+		"location_code": "DFWW081",
+		"search_distance_km": "9.12498048",
+		"search_distance_mi": "5.67",
+		"vendor_code": "ET"
+	},
+	{
+		"address": {
+			"city": "Euless",
+			"country_name": "United States",
+			"country_code": "US",
+			"postal_code": "76040-4021",
+			"general_location": "Euless, TX",
+			"state_code": "TX",
+			"label_lines": [
+				{
+					"@name": "line",
+					"text": "1751 Airport Fwy 1",
+					"part": "street"
+				},
+				{
+					"@name": "line",
+					"text": "Euless, TX 76040-4021",
+					"part": "city"
+				}
+			]
+		},
+		"name": "Enterprise Rent-A-Car",
+		"@name": "vehicle_location",
+		"location_code": "DFWW004",
+		"search_distance_km": "9.84918528",
+		"search_distance_mi": "6.12",
+		"vendor_code": "ET"
+	},
+	{
+		"address": {
+			"city": "Grand Prairie",
+			"country_name": "United States",
+			"country_code": "US",
+			"postal_code": "75050-2507",
+			"general_location": "Grand Prairie, TX",
+			"state_code": "TX",
+			"label_lines": [
+				{
+					"@name": "line",
+					"text": "1110 N State Highway 360",
+					"part": "street"
+				},
+				{
+					"@name": "line",
+					"text": "Grand Prairie, TX 75050-2507",
+					"part": "city"
+				}
+			]
+		},
+		"name": "Budget Rent-A-Car",
+		"@name": "vehicle_location",
+		"location_code": "DFWS005",
+		"search_distance_km": "10.57339008",
+		"search_distance_mi": "6.57",
+		"vendor_code": "ZD"
+	},
+	{
+		"address": {
+			"city": "Irving",
+			"country_name": "United States",
+			"country_code": "US",
+			"postal_code": "75062-4819",
+			"general_location": "Irving, TX",
+			"state_code": "TX",
+			"label_lines": [
+				{
+					"@name": "line",
+					"text": "1450 E Airport Freeway",
+					"part": "street"
+				},
+				{
+					"@name": "line",
+					"text": "Irving, TX 75062-4819",
+					"part": "city"
+				}
+			]
+		},
+		"name": "Enterprise Rent-A-Car",
+		"@name": "vehicle_location",
+		"location_code": "DFWW083",
+		"search_distance_km": "11.47462272",
+		"search_distance_mi": "7.13",
+		"vendor_code": "ET"
+	},
+	{
+		"address": {
+			"city": "Colleyville",
+			"country_name": "United States",
+			"country_code": "US",
+			"postal_code": "76034-3986",
+			"general_location": "Colleyville, TX",
+			"state_code": "TX",
+			"label_lines": [
+				{
+					"@name": "line",
+					"text": "4843 Colleyville Blvd Ste 211",
+					"part": "street"
+				},
+				{
+					"@name": "line",
+					"text": "Colleyville, TX 76034-3986",
+					"part": "city"
+				}
+			]
+		},
+		"name": "Enterprise Rent-A-Car",
+		"@name": "vehicle_location",
+		"location_code": "DFWW071",
+		"search_distance_km": "11.89305216",
+		"search_distance_mi": "7.39",
+		"vendor_code": "ET"
+	},
+	{
+		"address": {
+			"city": "Irving",
+			"country_name": "United States",
+			"country_code": "US",
+			"postal_code": "75062-4825",
+			"general_location": "Irving, TX",
+			"state_code": "TX",
+			"label_lines": [
+				{
+					"@name": "line",
+					"text": "1750 E Airport Freeway",
+					"part": "street"
+				},
+				{
+					"@name": "line",
+					"text": "Irving, TX 75062-4825",
+					"part": "city"
+				}
+			]
+		},
+		"name": "Enterprise Rent-A-Car",
+		"@name": "vehicle_location",
+		"location_code": "DALW043",
+		"search_distance_km": "11.97351936",
+		"search_distance_mi": "7.44",
+		"vendor_code": "ET"
+	},
+	{
+		"address": {
+			"city": "Dallas",
+			"country_name": "United States",
+			"country_code": "US",
+			"postal_code": "75229-2214",
+			"general_location": "Dallas, TX",
+			"state_code": "TX",
+			"label_lines": [
+				{
+					"@name": "line",
+					"text": "11661 Denton Dr",
+					"part": "street"
+				},
+				{
+					"@name": "line",
+					"text": "Dallas, TX 75229-2214",
+					"part": "city"
+				}
+			]
+		},
+		"name": "Advantage",
+		"@name": "vehicle_location",
+		"location_code": "DFWN196",
+		"search_distance_km": "12.97131264",
+		"search_distance_mi": "8.06",
+		"vendor_code": "AD"
+	},
+	{
+		"address": {
+			"city": "Dallas",
+			"country_name": "United States",
+			"country_code": "US",
+			"postal_code": "75229-2214",
+			"general_location": "Dallas, TX",
+			"state_code": "TX",
+			"label_lines": [
+				{
+					"@name": "line",
+					"text": "11613 Denton Drive",
+					"part": "street"
+				},
+				{
+					"@name": "line",
+					"text": "Dallas, TX 75229-2214",
+					"part": "city"
+				}
+			]
+		},
+		"name": "Enterprise Rent-A-Car",
+		"@name": "vehicle_location",
+		"location_code": "DFWC038",
+		"search_distance_km": "12.98740608",
+		"search_distance_mi": "8.07",
+		"vendor_code": "ET"
+	},
+	{
+		"address": {
+			"city": "Carrollton",
+			"country_name": "United States",
+			"country_code": "US",
+			"postal_code": "75006-7283",
+			"general_location": "Carrollton, TX",
+			"state_code": "TX",
+			"label_lines": [
+				{
+					"@name": "line",
+					"text": "1105 Vandergriff",
+					"part": "street"
+				},
+				{
+					"@name": "line",
+					"text": "Carrollton, TX 75006-7283",
+					"part": "city"
+				}
+			]
+		},
+		"name": "Enterprise Rent-A-Car",
+		"@name": "vehicle_location",
+		"location_code": "DFWN004",
+		"search_distance_km": "13.06787328",
+		"search_distance_mi": "8.12",
+		"vendor_code": "ET"
+	},
+	{
+		"address": {
+			"city": "Carrollton",
+			"country_name": "United States",
+			"country_code": "US",
+			"postal_code": "75007-4402",
+			"general_location": "Carrollton, TX",
+			"state_code": "TX",
+			"label_lines": [
+				{
+					"@name": "line",
+					"text": "2700 N Interstate 35e",
+					"part": "street"
+				},
+				{
+					"@name": "line",
+					"text": "Carrollton, TX 75007-4402",
+					"part": "city"
+				}
+			]
+		},
+		"name": "Enterprise Rent-A-Car",
+		"@name": "vehicle_location",
+		"location_code": "DFWN099",
+		"search_distance_km": "13.56676992",
+		"search_distance_mi": "8.43",
+		"vendor_code": "ET"
+	},
+	{
+		"address": {
+			"city": "Lewisville",
+			"country_name": "United States",
+			"country_code": "US",
+			"postal_code": "75067-2314",
+			"general_location": "Lewisville, TX",
+			"state_code": "TX",
+			"label_lines": [
+				{
+					"@name": "line",
+					"text": "2403 S Stemmons Freeway Ste 115",
+					"part": "street"
+				},
+				{
+					"@name": "line",
+					"text": "Lewisville, TX 75067-2314",
+					"part": "city"
+				}
+			]
+		},
+		"name": "Budget Rent-A-Car",
+		"@name": "vehicle_location",
+		"location_code": "DFWN005",
+		"search_distance_km": "13.64723712",
+		"search_distance_mi": "8.48",
+		"vendor_code": "ZD"
+	},
+	{
+		"address": {
+			"city": "Lewisville",
+			"country_name": "United States",
+			"country_code": "US",
+			"postal_code": "75067-2314",
+			"general_location": "Lewisville, TX",
+			"state_code": "TX",
+			"label_lines": [
+				{
+					"@name": "line",
+					"text": "2403 S Stemmons Freeway Ste 115",
+					"part": "street"
+				},
+				{
+					"@name": "line",
+					"text": "Lewisville, TX 75067-2314",
+					"part": "city"
+				}
+			]
+		},
+		"name": "AVIS Rent-A-Car",
+		"@name": "vehicle_location",
+		"location_code": "DFWN005",
+		"search_distance_km": "13.64723712",
+		"search_distance_mi": "8.48",
+		"vendor_code": "ZI"
+	},
+	{
+		"address": {
+			"city": "Dallas",
+			"country_name": "United States",
+			"country_code": "US",
+			"postal_code": "75234-7503",
+			"general_location": "Dallas, TX",
+			"state_code": "TX",
+			"label_lines": [
+				{
+					"@name": "line",
+					"text": "2909 Forest Lane",
+					"part": "street"
+				},
+				{
+					"@name": "line",
+					"text": "Dallas, TX 75234-7503",
+					"part": "city"
+				}
+			]
+		},
+		"name": "Hertz Rent-A-Car",
+		"@name": "vehicle_location",
+		"location_code": "DFWC018",
+		"search_distance_km": "14.09785344",
+		"search_distance_mi": "8.76",
+		"vendor_code": "ZE"
+	},
+	{
+		"address": {
+			"city": "Grand Prairie",
+			"country_name": "United States",
+			"country_code": "US",
+			"postal_code": "75050-2507",
+			"general_location": "Grand Prairie, TX",
+			"state_code": "TX",
+			"label_lines": [
+				{
+					"@name": "line",
+					"text": "1110 N State Hwy 360",
+					"part": "street"
+				},
+				{
+					"@name": "line",
+					"text": "Grand Prairie, TX 75050-2507",
+					"part": "city"
+				}
+			]
+		},
+		"name": "AVIS Rent-A-Car",
+		"@name": "vehicle_location",
+		"location_code": "DFWS003",
+		"search_distance_km": "14.74159104",
+		"search_distance_mi": "9.16",
+		"vendor_code": "ZI"
+	},
+	{
+		"address": {
+			"city": "Lewisville",
+			"country_name": "United States",
+			"country_code": "US",
+			"postal_code": "75067-6318",
+			"general_location": "Lewisville, TX",
+			"state_code": "TX",
+			"label_lines": [
+				{
+					"@name": "line",
+					"text": "1653 S Stemmons Fwy",
+					"part": "street"
+				},
+				{
+					"@name": "line",
+					"text": "Lewisville, TX 75067-6318",
+					"part": "city"
+				}
+			]
+		},
+		"name": "Enterprise Rent-A-Car",
+		"@name": "vehicle_location",
+		"location_code": "DFWN070",
+		"search_distance_km": "14.98299264",
+		"search_distance_mi": "9.31",
+		"vendor_code": "ET"
+	},
+	{
+		"address": {
+			"city": "Grand Prairie",
+			"country_name": "United States",
+			"country_code": "US",
+			"postal_code": "75050-2342",
+			"general_location": "Grand Prairie, TX",
+			"state_code": "TX",
+			"label_lines": [
+				{
+					"@name": "line",
+					"text": "401 E Palace Pkwy",
+					"part": "street"
+				},
+				{
+					"@name": "line",
+					"text": "Grand Prairie, TX 75050-2342",
+					"part": "city"
+				}
+			]
+		},
+		"name": "Enterprise Rent-A-Car",
+		"@name": "vehicle_location",
+		"location_code": "DFWS031",
+		"search_distance_km": "15.1278336",
+		"search_distance_mi": "9.4",
+		"vendor_code": "ET"
+	},
+	{
+		"address": {
+			"city": "Lewisville",
+			"country_name": "United States",
+			"country_code": "US",
+			"postal_code": "75057-4802",
+			"general_location": "Lewisville, TX",
+			"state_code": "TX",
+			"label_lines": [
+				{
+					"@name": "line",
+					"text": "360 Bennett Ln",
+					"part": "street"
+				},
+				{
+					"@name": "line",
+					"text": "Lewisville, TX 75057-4802",
+					"part": "city"
+				}
+			]
+		},
+		"name": "Enterprise Rent-A-Car",
+		"@name": "vehicle_location",
+		"location_code": "DFWN090",
+		"search_distance_km": "15.33704832",
+		"search_distance_mi": "9.53",
+		"vendor_code": "ET"
+	},
+	{
+		"address": {
+			"city": "Lewisville",
+			"country_name": "United States",
+			"country_code": "US",
+			"postal_code": "75057-4802",
+			"general_location": "Lewisville, TX",
+			"state_code": "TX",
+			"label_lines": [
+				{
+					"@name": "line",
+					"text": "1400 S I35e",
+					"part": "street"
+				},
+				{
+					"@name": "line",
+					"text": "Lewisville, TX 75057-4802",
+					"part": "city"
+				}
+			]
+		},
+		"name": "Enterprise Rent-A-Car",
+		"@name": "vehicle_location",
+		"location_code": "DFWN003",
+		"search_distance_km": "15.33704832",
+		"search_distance_mi": "9.53",
+		"vendor_code": "ET"
+	},
+	{
+		"address": {
+			"city": "Arlington",
+			"country_name": "United States",
+			"country_code": "US",
+			"postal_code": "76011-8844",
+			"general_location": "Arlington, TX",
+			"state_code": "TX",
+			"label_lines": [
+				{
+					"@name": "line",
+					"text": "2001 N Collins",
+					"part": "street"
+				},
+				{
+					"@name": "line",
+					"text": "Arlington, TX 76011-8844",
+					"part": "city"
+				}
+			]
+		},
+		"name": "Advantage",
+		"@name": "vehicle_location",
+		"location_code": "DFWN193",
+		"search_distance_km": "15.64282368",
+		"search_distance_mi": "9.72",
+		"vendor_code": "AD"
+	},
+	{
+		"address": {
+			"city": "Lewisville",
+			"country_name": "United States",
+			"country_code": "US",
+			"postal_code": "75057-4673",
+			"general_location": "Lewisville, TX",
+			"state_code": "TX",
+			"label_lines": [
+				{
+					"@name": "line",
+					"text": "301 Huffines Plaza",
+					"part": "street"
+				},
+				{
+					"@name": "line",
+					"text": "Lewisville, TX 75057-4673",
+					"part": "city"
+				}
+			]
+		},
+		"name": "Enterprise Rent-A-Car",
+		"@name": "vehicle_location",
+		"location_code": "DFWW028",
+		"search_distance_km": "15.81985152",
+		"search_distance_mi": "9.83",
+		"vendor_code": "ET"
+	},
+	{
+		"address": {
+			"city": "Lewisville",
+			"country_name": "United States",
+			"country_code": "US",
+			"postal_code": "75067-3536",
+			"general_location": "Lewisville, TX",
+			"state_code": "TX",
+			"label_lines": [
+				{
+					"@name": "line",
+					"text": "701 S Stemmons Freeway Ste 130",
+					"part": "street"
+				},
+				{
+					"@name": "line",
+					"text": "Lewisville, TX 75067-3536",
+					"part": "city"
+				}
+			]
+		},
+		"name": "AVIS Rent-A-Car",
+		"@name": "vehicle_location",
+		"location_code": "DFWN010",
+		"search_distance_km": "16.31874816",
+		"search_distance_mi": "10.14",
+		"vendor_code": "ZI"
+	},
+	{
+		"address": {
+			"city": "Lewisville",
+			"country_name": "United States",
+			"country_code": "US",
+			"postal_code": "75067-3536",
+			"general_location": "Lewisville, TX",
+			"state_code": "TX",
+			"label_lines": [
+				{
+					"@name": "line",
+					"text": "701 South Stemmons Freeway No 130",
+					"part": "street"
+				},
+				{
+					"@name": "line",
+					"text": "Lewisville, TX 75067-3536",
+					"part": "city"
+				}
+			]
+		},
+		"name": "Budget Rent-A-Car",
+		"@name": "vehicle_location",
+		"location_code": "DFWN003",
+		"search_distance_km": "16.31874816",
+		"search_distance_mi": "10.14",
+		"vendor_code": "ZD"
+	},
+	{
+		"address": {
+			"city": "Dallas",
+			"country_name": "United States",
+			"country_code": "US",
+			"postal_code": "75234-2324",
+			"general_location": "Dallas, TX",
+			"state_code": "TX",
+			"label_lines": [
+				{
+					"@name": "line",
+					"text": "3208 Beltline Rd",
+					"part": "street"
+				},
+				{
+					"@name": "line",
+					"text": "Dallas, TX 75234-2324",
+					"part": "city"
+				}
+			]
+		},
+		"name": "Enterprise Rent-A-Car",
+		"@name": "vehicle_location",
+		"location_code": "DFWS003",
+		"search_distance_km": "16.4153088",
+		"search_distance_mi": "10.2",
+		"vendor_code": "ET"
+	},
+	{
+		"address": {
+			"city": "Hurst",
+			"country_name": "United States",
+			"country_code": "US",
+			"postal_code": "76053-6205",
+			"general_location": "Hurst, TX",
+			"state_code": "TX",
+			"label_lines": [
+				{
+					"@name": "line",
+					"text": "1101 Melbourne Road",
+					"part": "street"
+				},
+				{
+					"@name": "line",
+					"text": "Hurst, TX 76053-6205",
+					"part": "city"
+				}
+			]
+		},
+		"name": "Budget Rent-A-Car",
+		"@name": "vehicle_location",
+		"location_code": "DFWW001",
+		"search_distance_km": "17.300448",
+		"search_distance_mi": "10.75",
+		"vendor_code": "ZD"
+	},
+	{
+		"address": {
+			"city": "Hurst",
+			"country_name": "United States",
+			"country_code": "US",
+			"postal_code": "76053-6205",
+			"general_location": "Hurst, TX",
+			"state_code": "TX",
+			"label_lines": [
+				{
+					"@name": "line",
+					"text": "1101 Melbourne Rd",
+					"part": "street"
+				},
+				{
+					"@name": "line",
+					"text": "Hurst, TX 76053-6205",
+					"part": "city"
+				}
+			]
+		},
+		"name": "AVIS Rent-A-Car",
+		"@name": "vehicle_location",
+		"location_code": "DFWW001",
+		"search_distance_km": "17.33263488",
+		"search_distance_mi": "10.77",
+		"vendor_code": "ZI"
+	},
+	{
+		"address": {
+			"city": "Arlington",
+			"country_name": "United States",
+			"country_code": "US",
+			"postal_code": "76011-6024",
+			"general_location": "Arlington, TX",
+			"state_code": "TX",
+			"label_lines": [
+				{
+					"@name": "line",
+					"text": "908 N Collins",
+					"part": "street"
+				},
+				{
+					"@name": "line",
+					"text": "Arlington, TX 76011-6024",
+					"part": "city"
+				}
+			]
+		},
+		"name": "Advantage",
+		"@name": "vehicle_location",
+		"location_code": "DFWW132",
+		"search_distance_km": "17.4613824",
+		"search_distance_mi": "10.85",
+		"vendor_code": "AD"
+	},
+	{
+		"address": {
+			"city": "Dallas",
+			"country_name": "United States",
+			"country_code": "US",
+			"postal_code": "75209-1614",
+			"general_location": "Dallas, TX",
+			"state_code": "TX",
+			"label_lines": [
+				{
+					"@name": "line",
+					"text": "8611 Lemmon Avenue",
+					"part": "street"
+				},
+				{
+					"@name": "line",
+					"text": "Dallas, TX 75209-1614",
+					"part": "city"
+				}
+			]
+		},
+		"name": "Hertz Rent-A-Car",
+		"@name": "vehicle_location",
+		"location_code": "DFWC036",
+		"search_distance_km": "17.47747584",
+		"search_distance_mi": "10.86",
+		"vendor_code": "ZE"
+	},
+	{
+		"address": {
+			"city": "Arlington",
+			"country_name": "United States",
+			"country_code": "US",
+			"postal_code": "76010-1409",
+			"general_location": "Arlington, TX",
+			"state_code": "TX",
+			"label_lines": [
+				{
+					"@name": "line",
+					"text": "3212 East Abrams",
+					"part": "street"
+				},
+				{
+					"@name": "line",
+					"text": "Arlington, TX 76010-1409",
+					"part": "city"
+				}
+			]
+		},
+		"name": "Budget Rent-A-Car",
+		"@name": "vehicle_location",
+		"location_code": "FTWE002",
+		"search_distance_km": "17.59012992",
+		"search_distance_mi": "10.93",
+		"vendor_code": "ZD"
+	},
+	{
+		"address": {
+			"city": "Arlington",
+			"country_name": "United States",
+			"country_code": "US",
+			"postal_code": "76010-1409",
+			"general_location": "Arlington, TX",
+			"state_code": "TX",
+			"label_lines": [
+				{
+					"@name": "line",
+					"text": "3212 E Abrams",
+					"part": "street"
+				},
+				{
+					"@name": "line",
+					"text": "Arlington, TX 76010-1409",
+					"part": "city"
+				}
+			]
+		},
+		"name": "AVIS Rent-A-Car",
+		"@name": "vehicle_location",
+		"location_code": "FTWE001",
+		"search_distance_km": "17.60622336",
+		"search_distance_mi": "10.94",
+		"vendor_code": "ZI"
+	},
+	{
+		"address": {
+			"city": "Dallas",
+			"country_name": "United States",
+			"country_code": "US",
+			"postal_code": "75209-2643",
+			"general_location": "Dallas, TX",
+			"state_code": "TX",
+			"label_lines": [
+				{
+					"@name": "line",
+					"text": "8321 Lemmon Avenue",
+					"part": "street"
+				},
+				{
+					"@name": "line",
+					"text": "Dallas, TX 75209-2643",
+					"part": "city"
+				}
+			]
+		},
+		"name": "Hertz Rent-A-Car",
+		"@name": "vehicle_location",
+		"location_code": "DFWC028",
+		"search_distance_km": "17.73497088",
+		"search_distance_mi": "11.02",
+		"vendor_code": "ZE"
+	},
+	{
+		"address": {
+			"city": "Dallas",
+			"country_name": "United States",
+			"country_code": "US",
+			"postal_code": "75235-2852",
+			"general_location": "Dallas, TX",
+			"state_code": "TX",
+			"label_lines": [
+				{
+					"@name": "line",
+					"text": "8008 Cedar Springs Road",
+					"part": "street"
+				},
+				{
+					"@name": "line",
+					"text": "Dallas, TX 75235-2852",
+					"part": "city"
+				}
+			]
+		},
+		"name": "Advantage",
+		"@name": "vehicle_location",
+		"location_code": "DALDAL",
+		"search_distance_km": "17.75106432",
+		"search_distance_mi": "11.03",
+		"vendor_code": "AD"
+	},
+	{
+		"address": {
+			"city": "Dallas",
+			"country_name": "United States",
+			"country_code": "US",
+			"postal_code": "75209-2613",
+			"general_location": "Dallas, TX",
+			"state_code": "TX",
+			"label_lines": [
+				{
+					"@name": "line",
+					"text": "8001 Lemmon Avenue",
+					"part": "street"
+				},
+				{
+					"@name": "line",
+					"text": "Dallas, TX 75209-2613",
+					"part": "city"
+				}
+			]
+		},
+		"name": "AVIS Rent-A-Car",
+		"@name": "vehicle_location",
+		"location_code": "DFWC020",
+		"search_distance_km": "18.15340032",
+		"search_distance_mi": "11.28",
+		"vendor_code": "ZI"
+	},
+	{
+		"address": {
+			"city": "Dallas",
+			"country_name": "United States",
+			"country_code": "US",
+			"postal_code": "75209-2613",
+			"general_location": "Dallas, TX",
+			"state_code": "TX",
+			"label_lines": [
+				{
+					"@name": "line",
+					"text": "8001 Lemmon Avenue",
+					"part": "street"
+				},
+				{
+					"@name": "line",
+					"text": "Dallas, TX 75209-2613",
+					"part": "city"
+				}
+			]
+		},
+		"name": "Hertz Rent-A-Car",
+		"@name": "vehicle_location",
+		"location_code": "DFWC017",
+		"search_distance_km": "18.15340032",
+		"search_distance_mi": "11.28",
+		"vendor_code": "ZE"
+	},
+	{
+		"address": {
+			"city": "North Richland Hills",
+			"country_name": "United States",
+			"country_code": "US",
+			"postal_code": "76108-3795",
+			"general_location": "North Richland Hills, TX",
+			"state_code": "TX",
+			"label_lines": [
+				{
+					"@name": "line",
+					"text": "7904 Ne Loop 820",
+					"part": "street"
+				},
+				{
+					"@name": "line",
+					"text": "North Richland Hills, TX 76108-3795",
+					"part": "city"
+				}
+			]
+		},
+		"name": "Advantage",
+		"@name": "vehicle_location",
+		"location_code": "DFWW130",
+		"search_distance_km": "18.20168064",
+		"search_distance_mi": "11.31",
+		"vendor_code": "AD"
+	},
+	{
+		"address": {
+			"city": "Arlington",
+			"country_name": "United States",
+			"country_code": "US",
+			"postal_code": "76011-7338",
+			"general_location": "Arlington, TX",
+			"state_code": "TX",
+			"label_lines": [
+				{
+					"@name": "line",
+					"text": "1108 E Division St",
+					"part": "street"
+				},
+				{
+					"@name": "line",
+					"text": "Arlington, TX 76011-7338",
+					"part": "city"
+				}
+			]
+		},
+		"name": "Enterprise Rent-A-Car",
+		"@name": "vehicle_location",
+		"location_code": "DFWS004",
+		"search_distance_km": "18.21777408",
+		"search_distance_mi": "11.32",
+		"vendor_code": "ET"
+	},
+	{
+		"address": {
+			"city": "Dallas",
+			"country_name": "United States",
+			"country_code": "US",
+			"postal_code": "75235-2812",
+			"general_location": "Dallas, TX",
+			"state_code": "TX",
+			"label_lines": [
+				{
+					"@name": "line",
+					"text": "7366 Cedar Springs Rd",
+					"part": "street"
+				},
+				{
+					"@name": "line",
+					"text": "Dallas, TX 75235-2812",
+					"part": "city"
+				}
+			]
+		},
+		"name": "National Rent-A-Car",
+		"@name": "vehicle_location",
+		"location_code": "DALDAL",
+		"search_distance_km": "18.3465216",
+		"search_distance_mi": "11.4",
+		"vendor_code": "ZL"
+	}
+]

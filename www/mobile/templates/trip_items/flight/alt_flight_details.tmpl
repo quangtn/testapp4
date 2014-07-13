@@ -1,0 +1,80 @@
+<div class="alt-flight-details">
+	<ul class="item-list">
+		<li>
+			<div class="item-content">
+				<div class="item-header">
+					<span>{{t "Depart"}}</span>
+					<span>{{#if number_of_stops}}{{pluralize number_of_stops "Stop"}}{{else}}{{t "Nonstop"}}{{/if}}</span>
+				</div>
+				{{mediumDate start_date}}
+			{{#if_has_nextDayArrivalAlert start_date end_date}}
+				<span class="item-subtext-s">{{nextDayArrivalText start_date end_date}}</span>
+			{{/if_has_nextDayArrivalAlert}}
+			</div>
+		</li>
+	{{#each_with_index flight_segments}}
+		<li class="dynamic-action">
+			<div class="item-icon airline-icon airline-{{lowercase airline_code}}"></div>
+			<div class="item-content">
+				<span class="item-header">{{airline_name}}</span>
+				{{airline_code}} {{flight_number}}
+				<span class="item-subtext-s flight-stops">{{#if stops}}{{pluralize stops "Stop"}}{{else}}{{t "Nonstop"}}{{/if}}</span>
+			</div>
+			<button data-index="{{index}}" class="small call">
+				<div class="button-icon btn_icon_call_25px"></div>
+			</button>
+		</li>
+		<li>
+			<div class="item-content">
+				<table class="flight-schedule">
+					<tr class="item-header">
+						<th colspan="4">{{t "Depart"}}</th>
+					</tr>
+					<tr>
+						<td>{{mediumDate departure_date}}</td>
+						<td>{{timeFromDateTime departure_date}}</td>
+						<td>{{departure_airport}}</td>
+						<td><span class="item-subtext-l">{{departure_city}}</span></td>
+					</tr>
+					<tr class="item-header">
+						<th colspan="4">{{t "Arrive"}}</th>
+					</tr>
+					<tr>
+						<td>{{mediumDate arrival_date}}</td>
+						<td>{{timeFromDateTime arrival_date}}</td>
+						<td>{{arrival_airport}}</td>
+						<td><span class="item-subtext-l">{{arrival_city}}</span></td>
+					</tr>
+				</table>
+			</div>
+		</li>
+		<li class="seats-available">
+			<div class="item-content">
+				<span class="item-header">{{t "SeatsAvailable"}}</span>
+				{{seats_available}}
+			</div>
+		</li>
+		{{#unless last_segment}}
+		<li class="item-divider">
+			<div class="item-content">
+				<table class="layover-stop">
+					<td><span class="item-header">{{t "Layover"}}</span></td>
+					<td class="empty-cell">&nbsp;</td>
+					<td>{{arrival_airport}}</td>
+					<td>{{arrival_city}}</td>
+				</table>
+				<span class="item-subtext">{{t "ChangePlanes"}}</span>
+			</div>
+		</li>
+		{{/unless}}
+	{{/each_with_index}}
+	</ul>
+	{{#unless isFollowingTrip}}
+		<div class="actions">
+			<button class="submit">
+				<span>{{t "AddToTrip"}}</span>
+				<span class="loader light">{{t "Loading"}}</span>
+			</button>
+		</div>
+	{{/unless}}
+</div>

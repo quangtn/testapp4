@@ -1,0 +1,44 @@
+{{#unless locations}}
+		<div class="list-item actionable">
+			<div class="details">
+				<div class="item-title action">
+					<p>Your search returned 0 results</p>
+				</div>
+			</div>
+		</div>
+{{else}}
+{{#each_with_index locations}}
+	<div data-index="{{index}}" class="list-item actionable chevron-lift">
+		<div class="display-box">
+			<div class="flex-8 item-title action">
+				<h2>{{name}}</h2>
+				{{#each address_lines}}
+					<p class="item-sub-title">{{.}}</p>
+				{{/each}}
+			</div>
+			<div class="button-icon btn_arrow"></div>
+			<div class="flex-2 item-sub-title lower right-align"><p><b>{{search_distance_mi}}</b></p><p>mi away</p></div>
+		</div>
+	</div>
+	{{#if_is_nudgeable index=index length=../locations.length}}
+	<div class="nudgeable list-item actionable" >
+		<div class="details">
+			<div class="item-title action">
+				<div class="icon_add_32px general-icon"></div>
+			   <h2>Don't see the ground transportation you want? Add it manually.</h2>
+			</div>
+			<div class="button-icon btn_arrow"></div>
+		</div>
+	</div>
+	{{/if_is_nudgeable}}
+{{/each_with_index}}
+{{/unless}}
+	<div class="nudgeable list-item actionable" >
+		<div class="details">
+			<div class="item-title action">
+				<div class="icon_add_32px general-icon"></div>
+			   <h2>Don't see the ground transportation you want? Add it manually.</h2>
+			</div>
+			<div class="button-icon btn_arrow"></div>
+		</div>
+	</div>

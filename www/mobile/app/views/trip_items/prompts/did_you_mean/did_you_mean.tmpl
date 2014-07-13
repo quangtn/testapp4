@@ -1,0 +1,25 @@
+<div class="trip-items standard-form-panel error-popup">
+		<div class="error-title-group">
+		<div class="general-icon icon_alert_25px"></div>
+		<div class="message"><p>{{t "DidYouMean"}}</p></div>
+	</div>
+
+	<div class="selection-group">
+		<ul>
+		{{#each_with_index locations}}
+			<li class="display-box">
+				<div class="flex-8">
+					<p class="item-title">{{street}}</p>
+					<p class="item-title">{{display_address_for city city=city county=county state=state postal_code=postal_code}}</p>
+				</div>
+				<input class="selectable flex-2  button continue" data-index="{{index}}" type="button" value="{{t "Select"}}" />
+			</li>
+		{{/each_with_index}}
+		</ul>
+	</div>
+
+	<div class="actions">
+		<button id="cancel" class="submit"><span>{{t "Cancel"}}</span></button>
+	</div>
+</div>
+<div class="full-screen-underlay"></div>

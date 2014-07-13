@@ -1,0 +1,252 @@
+
+h2.component-subheader {
+	@include backgroundGradientLinear($search-panel-top-color, $search-panel-bottom-color);
+	@include box-shadow( 0px 1px 2px rgba(0, 0, 0, 0.25));
+
+	color: $text-body-light-color-on-dark;
+	font-size: $text-detail-medium-size;
+	font-weight: lighter;
+	padding-bottom: 9px;
+	padding-left: 15px;
+	padding-top: 9px;
+	text-shadow: 0 -1px 0 black;
+}
+
+
+// *************************
+// ICONS
+//
+// *************************
+.icon-action {
+	position: absolute;
+	right: 0;
+	top: 50%;
+	margin-top: -6.5px;
+}
+
+
+// *************************
+// ICON ACTION LIST
+//
+// *************************
+.icon-action-list li {
+	position:relative;
+	padding:13px 25px 13px 55px;
+	border-bottom:1px solid $border-edge-color;
+	font-size:17px;
+	font-weight:bold;
+}
+
+.icon-action-list .general-icon {
+	position:absolute;
+	top:50%;
+	margin-top:-16px;
+	left:11px;
+}
+
+
+// *************************
+// BUTTONS
+//
+// *************************
+
+@mixin greenButton {
+	color: white;
+	text-shadow: 0 -1px 0 black;
+	border: 1px solid $green-button-border-call;
+
+	@include backgroundGradientLinear($green-button-top-color, $green-button-bottom-color);
+	@include box-shadow( 0px 1px 2px rgba(0, 0, 0, 0.25), inset 0px 1px 0px rgba(255, 255, 255, 0.3) );
+
+	&:hover, &:active {
+		@include backgroundGradientLinear($green-button-hover-top-color, $green-button-hover-bottom-color);
+	}
+}
+
+@mixin grayButton {
+	color: $dark-blue-link-color;
+	text-shadow: 0 1px 0 white;
+	border: 1px solid $gray-button-border-call;
+
+	@include backgroundGradientLinear($gray-button-top-color, $gray-button-bottom-color);
+	@include box-shadow( 0px 1px 2px rgba(0, 0, 0, 0.25), inset 0px 1px 0px rgba(255, 255, 255, 0.3) );
+
+	&:hover, &:active {
+		@include backgroundGradientLinear($gray-button-hover-top-color, $gray-button-hover-bottom-color);
+	}
+}
+
+
+.btn {
+	@include border-radius(5px);
+	@include box-shadow(0px 1px 2px rgba(0, 0, 0, 0.25), inset 0px 1px 0px rgba(255, 255, 255, 0.3));
+
+	&.warning {
+		@include backgroundGradientLinear($warning-button-top-color, $warning-button-bottom-color);
+		border: 1px solid $warning-button-bottom-color;
+
+		&:hover, &:active {
+			@include backgroundGradientLinear($warning-button-hover-top-color, $warning-button-hover-bottom-color);
+			border-color: $warning-button-hover-bottom-color;
+		}
+	}
+
+	&.small {
+		width:25px;
+		height:25px;
+		padding:2.5px 7.5px;
+	}
+
+	&.large {
+		height:42px;
+		line-height:42px;
+		font-size:17px;
+		font-weight:bold;
+		text-align:center;
+		color: $text-body-light-color-on-dark;
+		text-shadow: 0 -1px 0 rgba(0, 0, 0, 1);
+	}
+
+}
+
+// *************************
+// ACTION LISTS
+//
+// *************************
+
+	ul.action-list {
+		display: -webkit-box;
+		display: -moz-box;
+		display: box;
+		margin: 0px;
+		padding: 0px;
+		-webkit-box-orient: vertical;
+		-webkit-box-align: start;
+		-webkit-box-pack: start;
+		-moz-box-orient: vertical;
+		-moz-box-align: start;
+		-moz-box-pack: start;
+		box-orient: vertical;
+		box-align: start;
+		box-pack: start;
+		position: relative;
+	}
+	ul.action-list li {
+		display: -webkit-box;
+		-webkit-box-sizing: border-box;
+		display: -moz-box;
+		-moz-box-sizing: border-box;
+		display: box;
+		box-sizing: border-box;
+		margin: 0px;
+		padding: 0px 30px 0px 0px;
+		-webkit-box-orient: horizontal;
+		-webkit-box-align: stretch;
+		-webkit-box-pack: justify;
+		-webkit-box-flex: 1;
+		-moz-box-orient: horizontal;
+		-moz-box-align: stretch;
+		-moz-box-pack: justify;
+		-moz-box-flex: 1;
+		box-orient: horizontal;
+		box-align: stretch;
+		box-pack: justify;
+		box-flex: 1;
+		width: 100%;
+		min-height: 44px;
+		border-bottom: 1px solid $border-edge-color;
+		background: white url(../assets/images/btn_arrow.png) right center no-repeat;
+		position: relative;
+	}
+	@include pixelDensity(1.5) {
+			ul.action-list li {
+				background: white url(../assets/images/btn_arrow_2x.png) right center no-repeat;
+				@include background-size(image-width('assets/images/btn_arrow.png') image-height('assets/images/btn_arrow.png'));
+			}
+	}
+	ul.action-list li.single {
+		height: 43px;
+		overflow: hidden;
+	}
+	form ul.action-list li {
+		background-color: white;
+		background-image: none;
+		padding: 0px;
+	}
+	form ul.action-list li label {
+		display: -webkit-box;
+		display: -moz-box;
+		display: box;
+		margin: 0px;
+		padding: 0px 0px 0px 15px;
+		position: relative;
+		-webkit-box-orient: vertical;
+		-webkit-box-pack: center;
+		-webkit-box-align: start;
+		-webkit-box-flex: 0;
+		-webkit-box-flex-group: 1;
+		-webkit-box-sizing: border-box;
+		-moz-box-orient: vertical;
+		-moz-box-pack: center;
+		-moz-box-align: start;
+		-moz-box-flex: 0;
+		-moz-box-flex-group: 1;
+		-moz-box-sizing: border-box;
+		box-orient: vertical;
+		box-pack: center;
+		box-align: start;
+		box-flex: 0;
+		box-flex-group: 1;
+		box-sizing: border-box;
+		width: 70px;
+		background-color: rgb(235,235,235);
+		color: rgb(17,17,17);
+		font-size: 13px;
+		line-height: 15px;
+	}
+	form ul.action-list li input {
+		display: block;
+		margin: 0px;
+		padding: 0px 30px 0px 0px;
+		height: 100%;
+		text-indent: 8px;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		font-size: 17px;
+		line-height: 43px;
+		text-align: start;
+		color: black;
+		-webkit-box-flex: 1;
+		-moz-box-flex: 1;
+		box-flex: 1;
+		background: white url(../assets/images/btn_arrow.png) right center no-repeat;
+		@include box-shadow( 0px 0px 0px rgb(0, 0, 0));
+		@include border-radius(0px);
+		border: none;
+		outline: none;
+		-webkit-appearance: none;
+		-webkit-border-image: none;
+		-webkit-box-shadow: none;
+		-webkit-rtl-ordering: logical;
+		-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+		-webkit-user-select: text;
+	}
+	@include pixelDensity(1.5) {
+			form ul.action-list li input {
+				background: white url(../assets/images/btn_arrow_2x.png) right center no-repeat;
+				@include background-size(image-width('assets/images/btn_arrow.png') image-height('assets/images/btn_arrow.png'));
+			}
+	}
+	form ul.action-list li input:focus {
+		@include box-shadow( 0px 0px 0px rgb(0, 0, 0));
+		@include border-radius(0px);
+		border: none;
+		outline: none;
+		-webkit-appearance: none;
+		-webkit-border-image: none;
+		-webkit-box-shadow: none;
+		-webkit-rtl-ordering: logical;
+		-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+		-webkit-user-select: text;
+	}

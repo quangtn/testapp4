@@ -1,0 +1,728 @@
+{"items": [
+	{
+		"@name": "item",
+		"end_time": {
+			"tz_offset": -18000,
+			"time": "2013-06-09T12:00:00",
+			"tz_name": "America/Chicago",
+			"utc_time": "2013-06-09T17:00:00"
+		},
+		"read_only": false,
+		"num_following": 0,
+		"hotel_reservation": {
+			"start_date": "2013-06-01T15:00:00",
+			"hotel_property": {
+				"address": {
+					"country_name": "United States",
+					"city": "Chicago",
+					"country_code": "US",
+					"postal_code": "60611-1501",
+					"general_location": "Chicago, IL",
+					"state_code": "IL",
+					"label_lines": [
+						{
+							"@name": "line",
+							"text": "140 East Walton Place",
+							"part": "street"
+						},
+						{
+							"@name": "line",
+							"text": "Chicago, IL 60611-1501",
+							"part": "city"
+						}
+					]
+				},
+				"name": "Chicago - The Drake",
+				"hotel_chain_code": "HH",
+				"hotel_details": {
+					"airport": {
+						"code": "ORD"
+					},
+					"num_rooms": 535,
+					"num_floors": 10,
+					"amenities": [
+						{
+							"@name": "amenity",
+							"category": "Property",
+							"code": "PETS_ALLOWED",
+							"description": "Pets allowed"
+						},
+						{
+							"@name": "amenity",
+							"category": "Property",
+							"code": "FITNESS_FACILITY",
+							"description": "Fitness facility on site or within walking distance"
+						},
+						{
+							"@name": "amenity",
+							"category": "Room",
+							"code": "WHEEL_CHAIR_ACCESS",
+							"description": "Wheelchair accessible rooms available"
+						},
+						{
+							"@name": "amenity",
+							"category": "Property",
+							"code": "TENNIS_COURT",
+							"description": "Tennis court on site or within walking distance"
+						},
+						{
+							"@name": "amenity",
+							"category": "Property",
+							"code": "BUSINESS_CENTER",
+							"description": "Business center on site"
+						},
+						{
+							"@name": "amenity",
+							"category": "Property",
+							"code": "DINING",
+							"description": "Dining facility on site"
+						},
+						{
+							"@name": "amenity",
+							"category": "Property",
+							"code": "MEETING_ROOM",
+							"description": "Meeting rooms available"
+						},
+						{
+							"@name": "amenity",
+							"category": "Room",
+							"code": "NONSMOKING",
+							"description": "Non-smoking rooms available"
+						},
+						{
+							"@name": "amenity",
+							"category": "Room ",
+							"code": "DATA_PORT",
+							"description": "Data ports provided in rooms"
+						},
+						{
+							"@name": "amenity",
+							"category": "Room",
+							"code": "HIGH_SPEED_INTERNET",
+							"description": "High-speed internet available in rooms"
+						},
+						{
+							"@name": "amenity",
+							"category": "Property",
+							"code": "DRY_CLEANING",
+							"description": "Dry cleaning services available"
+						},
+						{
+							"@name": "amenity",
+							"category": "Property",
+							"code": "HOT_TUB",
+							"description": "Hot Tub"
+						},
+						{
+							"@name": "amenity",
+							"category": "Property",
+							"code": "BEACH",
+							"description": "Beachfront property"
+						},
+						{
+							"@name": "amenity",
+							"code": "LUXURY"
+						},
+						{
+							"@name": "amenity",
+							"category": "Property",
+							"code": "INTERIOR_CORRIDORS",
+							"description": "Rooms with Interior corridors"
+						},
+						{
+							"@name": "amenity",
+							"category": "Property",
+							"code": "GREEN_HOTEL",
+							"description": "Eco-Certified hotel"
+						}
+					],
+					"check_out_time": "1200",
+					"awards": [
+						{
+							"rating": 4,
+							"@name": "award",
+							"provider": "TVLY"
+						}
+					],
+					"geo_code": {
+						"latitude": 41.900012,
+						"confidence_factor": 1,
+						"longitude": -87.623824
+					},
+					"long_description": "Perfectly located in Chicago's most exclusive area, the Gold Coast on the Magnificent Mile, The Drake offers dazzling views of Lake Shore Drive and Oak Street Beach and is just steps from Chicago's most prestigious boutiques.\n\nRelax in elegant rooms furnished with antiques or in one of the four restaurants and bars. Do business in one of 19 state-of-the-art meeting rooms. Step outside to Chicago's Magnificent Mile. Chicago airports are 30 minutes away.\n\nThe hotel's 535 rooms allow you to settle in for the night with plush new bedding, relaxing tubs, and comfortable terry robes. Fresh fruit is located at the front desk daily.",
+					"check_in_time": "1500",
+					"phones": [
+						{
+							"number": "1-312-787-2200",
+							"@name": "phone",
+							"type": "Local"
+						},
+						{
+							"number": "1-312-787-2549",
+							"@name": "phone",
+							"type": "Fax"
+						}
+					]
+				},
+				"property_id": "9396",
+				"multi_media_objects": [
+					{
+						"@name": "image",
+						"url": "http://m.travelpn.com/images/chicago/hotel/0/009396/Exterior_F_1.jpg",
+						"update_date": "2011-06-28",
+						"type": "Large",
+						"height": 333,
+						"width": 500
+					},
+					{
+						"@name": "image",
+						"url": "http://m.travelpn.com/images/chicago/hotel/0/009396/Guest_room_F_1.jpg",
+						"update_date": "2011-06-28",
+						"type": "Large",
+						"height": 333,
+						"width": 500
+					},
+					{
+						"@name": "image",
+						"url": "http://m.travelpn.com/images/chicago/hotel/0/009396/Suite_F_1.jpg",
+						"update_date": "2011-06-28",
+						"type": "Large",
+						"height": 333,
+						"width": 500
+					},
+					{
+						"@name": "image",
+						"url": "http://m.travelpn.com/images/chicago/hotel/0/009396/Lobby_F_1.jpg",
+						"update_date": "2011-06-28",
+						"type": "Large",
+						"height": 333,
+						"width": 500
+					},
+					{
+						"@name": "image",
+						"url": "http://m.travelpn.com/images/chicago/hotel/0/009396/Restaurant_F_1.jpg",
+						"update_date": "2011-06-28",
+						"type": "Large",
+						"height": 333,
+						"width": 500
+					},
+					{
+						"@name": "image",
+						"url": "http://m.travelpn.com/images/chicago/hotel/0/009396/Health_club_F_1.jpg",
+						"update_date": "2011-06-28",
+						"type": "Large",
+						"height": 332,
+						"width": 500
+					},
+					{
+						"@name": "image",
+						"url": "http://m.travelpn.com/images/chicago/hotel/0/009396/Bar_Lounge_F_1.jpg",
+						"update_date": "2011-06-28",
+						"type": "Large",
+						"height": 333,
+						"width": 500
+					},
+					{
+						"@name": "image",
+						"url": "http://m.travelpn.com/images/chicago/hotel/0/009396/Meeting_room_F_1.jpg",
+						"update_date": "2011-06-28",
+						"type": "Large",
+						"height": 333,
+						"width": 500
+					},
+					{
+						"@name": "image",
+						"url": "http://m.travelpn.com/images/chicago/hotel/0/009396/Business_center_F_1.jpg",
+						"update_date": "2011-06-28",
+						"type": "Large",
+						"height": 333,
+						"width": 500
+					},
+					{
+						"@name": "image",
+						"url": "http://m.travelpn.com/images/chicago/hotel/0/009396/Ballroom_F_1.jpg",
+						"update_date": "2011-06-28",
+						"type": "Large",
+						"height": 333,
+						"width": 500
+					},
+					{
+						"@name": "image",
+						"url": "http://m.travelpn.com/images/chicago/hotel/0/009396/Other_F_1.jpg",
+						"update_date": "2011-06-28",
+						"type": "Large",
+						"height": 316,
+						"width": 500
+					},
+					{
+						"@name": "image",
+						"url": "http://m.travelpn.com/images/chicago/hotel/0/009396/Exterior_F_2.jpg",
+						"update_date": "2011-06-28",
+						"type": "Large",
+						"height": 333,
+						"width": 500
+					},
+					{
+						"@name": "image",
+						"url": "http://m.travelpn.com/images/chicago/hotel/0/009396/Exterior_D_1.jpg",
+						"update_date": "2011-06-28",
+						"type": "Medium",
+						"height": 134,
+						"width": 200
+					},
+					{
+						"@name": "image",
+						"url": "http://m.travelpn.com/images/chicago/hotel/0/009396/Guest_room_F_2.jpg",
+						"update_date": "2011-06-28",
+						"type": "Large",
+						"height": 333,
+						"width": 500
+					},
+					{
+						"@name": "image",
+						"url": "http://m.travelpn.com/images/chicago/hotel/0/009396/Suite_F_2.jpg",
+						"update_date": "2011-06-28",
+						"type": "Large",
+						"height": 333,
+						"width": 500
+					},
+					{
+						"@name": "image",
+						"url": "http://m.travelpn.com/images/chicago/hotel/0/009396/Lobby_F_2.jpg",
+						"update_date": "2011-06-28",
+						"type": "Large",
+						"height": 332,
+						"width": 500
+					},
+					{
+						"@name": "image",
+						"url": "http://m.travelpn.com/images/chicago/hotel/0/009396/Exterior_B_1.jpg",
+						"update_date": "2011-06-28",
+						"type": "Thumbnail",
+						"height": 67,
+						"width": 100
+					},
+					{
+						"@name": "image",
+						"url": "http://m.travelpn.com/images/chicago/hotel/0/009396/Exterior_H_1.jpg",
+						"update_date": "2011-06-28",
+						"type": "ThumbnailLarge",
+						"height": 98,
+						"width": 130
+					}
+				]
+			},
+			"cancellable": false,
+			"confirmation_number": "abc-def-123",
+			"end_date": "2013-06-09T12:00:00"
+		},
+		"id": 368,
+		"type": "Hotel",
+		"note": "Bring favorite pillow",
+		"start_time": {
+			"tz_offset": -18000,
+			"time": "2013-06-01T15:00:00",
+			"tz_name": "America/Chicago",
+			"utc_time": "2013-06-01T20:00:00"
+		}
+	}
+], "name": "Hotel Only", "@name": "trip", "messages": [], "created_at": "2013-04-10T19:10:45", "end_time": "2013-06-09T12:00:00", "create_source": "touch/Unknown", "trip_event_relevance": [
+	{
+		"@name": "event",
+		"relevant_at": "1970-01-01T00:00:00",
+		"relevant_at_epoch": 0,
+		"event_index": 0
+	},
+	{
+		"@name": "event",
+		"relevant_at": "2013-06-02T00:00:00",
+		"relevant_at_epoch": 1370131200,
+		"event_index": 1
+	}
+], "social_clients": [
+	{
+		"name": "Facebook",
+		"@name": "client",
+		"enabled": false,
+		"authorized": false
+	},
+	{
+		"name": "Twitter",
+		"@name": "client",
+		"enabled": false,
+		"authorized": false
+	},
+	{
+		"name": "Linkedin",
+		"@name": "client",
+		"enabled": false,
+		"authorized": false
+	}
+], "item_types": "lodging", "end_time_utc": "2013-06-09T17:00:00", "destination": "Chicago, IL", "closest_image_mobi_medium": "http://www.tripcase.com/pictures/loc/destinations/Chicago_sq_sz65.jpg", "id": 44, "sources": [], "closest_image_mobi_large": "http://www.tripcase.com/pictures/loc/destinations/Chicago_sq_sz98.jpg", "user_id": "2", "object_url": "http://localhost:3000/mapi/trips/44.xml", "most_relevant_item": {
+	"index": 0,
+	"item_id": 368
+}, "default_item_create_date": "2013-06-09", "closest_image_mobi_small": "http://www.tripcase.com/pictures/loc/destinations/Chicago_sq_sz49.jpg", "destination_country": "US", "item_date_sequence": [
+	{
+		"@name": "day",
+		"events": [
+			{
+				"@name": "event",
+				"id": 368,
+				"event_type": "start"
+			}
+		],
+		"value": "2013-06-01",
+		"type": "Object"
+	},
+	{
+		"@name": "day",
+		"events": [
+			{
+				"@name": "event",
+				"id": 368,
+				"event_type": "end"
+			}
+		],
+		"value": "2013-06-09",
+		"type": "Object"
+	}
+], "default_dates_and_times": {
+	"hotel_check_out_time": "2013-04-10T12:00:00",
+	"hotel_check_out_date": "2013-06-02",
+	"generic_item_end_time": "2013-04-10T15:00:00",
+	"generic_item_end_date": "2013-06-09",
+	"generic_item_start_time": "2013-04-10T12:00:00",
+	"hotel_check_in_time": "2013-04-10T15:00:00",
+	"generic_item_start_date": "2013-06-09",
+	"hotel_check_in_date": "2013-06-01",
+	"vehicle_pick_up_date": "2013-06-01",
+	"vehicle_drop_off_time": "2013-04-10T12:00:00",
+	"vehicle_drop_off_date": "2013-06-02",
+	"flight_departure_date": "2013-04-10",
+	"vehicle_pick_up_time": "2013-06-01T14:00:00"
+}, "start_time_utc": "2013-06-01T20:00:00", "closest_image_mobi_xlarge": "http://www.tripcase.com/pictures/loc/destinations/Chicago_sq_sz130.jpg", "item": {
+	"end_time": {
+		"tz_offset": -18000,
+		"time": "2013-06-09T12:00:00",
+		"tz_name": "America/Chicago",
+		"utc_time": "2013-06-09T17:00:00"
+	},
+	"read_only": false,
+	"num_following": 0,
+	"hotel_reservation": {
+		"start_date": "2013-06-01T15:00:00",
+		"hotel_property": {
+			"address": {
+				"country_name": "United States",
+				"city": "Chicago",
+				"country_code": "US",
+				"postal_code": "60611-1501",
+				"general_location": "Chicago, IL",
+				"state_code": "IL",
+				"label_lines": [
+					{
+						"@name": "line",
+						"text": "140 East Walton Place",
+						"part": "street"
+					},
+					{
+						"@name": "line",
+						"text": "Chicago, IL 60611-1501",
+						"part": "city"
+					}
+				]
+			},
+			"name": "Chicago - The Drake",
+			"hotel_chain_code": "HH",
+			"hotel_details": {
+				"airport": {
+					"code": "ORD"
+				},
+				"num_rooms": 535,
+				"num_floors": 10,
+				"amenities": [
+					{
+						"@name": "amenity",
+						"category": "Property",
+						"code": "PETS_ALLOWED",
+						"description": "Pets allowed"
+					},
+					{
+						"@name": "amenity",
+						"category": "Property",
+						"code": "FITNESS_FACILITY",
+						"description": "Fitness facility on site or within walking distance"
+					},
+					{
+						"@name": "amenity",
+						"category": "Room",
+						"code": "WHEEL_CHAIR_ACCESS",
+						"description": "Wheelchair accessible rooms available"
+					},
+					{
+						"@name": "amenity",
+						"category": "Property",
+						"code": "TENNIS_COURT",
+						"description": "Tennis court on site or within walking distance"
+					},
+					{
+						"@name": "amenity",
+						"category": "Property",
+						"code": "BUSINESS_CENTER",
+						"description": "Business center on site"
+					},
+					{
+						"@name": "amenity",
+						"category": "Property",
+						"code": "DINING",
+						"description": "Dining facility on site"
+					},
+					{
+						"@name": "amenity",
+						"category": "Property",
+						"code": "MEETING_ROOM",
+						"description": "Meeting rooms available"
+					},
+					{
+						"@name": "amenity",
+						"category": "Room",
+						"code": "NONSMOKING",
+						"description": "Non-smoking rooms available"
+					},
+					{
+						"@name": "amenity",
+						"category": "Room ",
+						"code": "DATA_PORT",
+						"description": "Data ports provided in rooms"
+					},
+					{
+						"@name": "amenity",
+						"category": "Room",
+						"code": "HIGH_SPEED_INTERNET",
+						"description": "High-speed internet available in rooms"
+					},
+					{
+						"@name": "amenity",
+						"category": "Property",
+						"code": "DRY_CLEANING",
+						"description": "Dry cleaning services available"
+					},
+					{
+						"@name": "amenity",
+						"category": "Property",
+						"code": "HOT_TUB",
+						"description": "Hot Tub"
+					},
+					{
+						"@name": "amenity",
+						"category": "Property",
+						"code": "BEACH",
+						"description": "Beachfront property"
+					},
+					{
+						"@name": "amenity",
+						"code": "LUXURY"
+					},
+					{
+						"@name": "amenity",
+						"category": "Property",
+						"code": "INTERIOR_CORRIDORS",
+						"description": "Rooms with Interior corridors"
+					},
+					{
+						"@name": "amenity",
+						"category": "Property",
+						"code": "GREEN_HOTEL",
+						"description": "Eco-Certified hotel"
+					}
+				],
+				"check_out_time": "1200",
+				"awards": [
+					{
+						"rating": 4,
+						"@name": "award",
+						"provider": "TVLY"
+					}
+				],
+				"geo_code": {
+					"latitude": 41.900012,
+					"confidence_factor": 1,
+					"longitude": -87.623824
+				},
+				"long_description": "Perfectly located in Chicago's most exclusive area, the Gold Coast on the Magnificent Mile, The Drake offers dazzling views of Lake Shore Drive and Oak Street Beach and is just steps from Chicago's most prestigious boutiques.\n\nRelax in elegant rooms furnished with antiques or in one of the four restaurants and bars. Do business in one of 19 state-of-the-art meeting rooms. Step outside to Chicago's Magnificent Mile. Chicago airports are 30 minutes away.\n\nThe hotel's 535 rooms allow you to settle in for the night with plush new bedding, relaxing tubs, and comfortable terry robes. Fresh fruit is located at the front desk daily.",
+				"check_in_time": "1500",
+				"phones": [
+					{
+						"number": "1-312-787-2200",
+						"@name": "phone",
+						"type": "Local"
+					},
+					{
+						"number": "1-312-787-2549",
+						"@name": "phone",
+						"type": "Fax"
+					}
+				]
+			},
+			"property_id": "9396",
+			"multi_media_objects": [
+				{
+					"@name": "image",
+					"url": "http://m.travelpn.com/images/chicago/hotel/0/009396/Exterior_F_1.jpg",
+					"update_date": "2011-06-28",
+					"type": "Large",
+					"height": 333,
+					"width": 500
+				},
+				{
+					"@name": "image",
+					"url": "http://m.travelpn.com/images/chicago/hotel/0/009396/Guest_room_F_1.jpg",
+					"update_date": "2011-06-28",
+					"type": "Large",
+					"height": 333,
+					"width": 500
+				},
+				{
+					"@name": "image",
+					"url": "http://m.travelpn.com/images/chicago/hotel/0/009396/Suite_F_1.jpg",
+					"update_date": "2011-06-28",
+					"type": "Large",
+					"height": 333,
+					"width": 500
+				},
+				{
+					"@name": "image",
+					"url": "http://m.travelpn.com/images/chicago/hotel/0/009396/Lobby_F_1.jpg",
+					"update_date": "2011-06-28",
+					"type": "Large",
+					"height": 333,
+					"width": 500
+				},
+				{
+					"@name": "image",
+					"url": "http://m.travelpn.com/images/chicago/hotel/0/009396/Restaurant_F_1.jpg",
+					"update_date": "2011-06-28",
+					"type": "Large",
+					"height": 333,
+					"width": 500
+				},
+				{
+					"@name": "image",
+					"url": "http://m.travelpn.com/images/chicago/hotel/0/009396/Health_club_F_1.jpg",
+					"update_date": "2011-06-28",
+					"type": "Large",
+					"height": 332,
+					"width": 500
+				},
+				{
+					"@name": "image",
+					"url": "http://m.travelpn.com/images/chicago/hotel/0/009396/Bar_Lounge_F_1.jpg",
+					"update_date": "2011-06-28",
+					"type": "Large",
+					"height": 333,
+					"width": 500
+				},
+				{
+					"@name": "image",
+					"url": "http://m.travelpn.com/images/chicago/hotel/0/009396/Meeting_room_F_1.jpg",
+					"update_date": "2011-06-28",
+					"type": "Large",
+					"height": 333,
+					"width": 500
+				},
+				{
+					"@name": "image",
+					"url": "http://m.travelpn.com/images/chicago/hotel/0/009396/Business_center_F_1.jpg",
+					"update_date": "2011-06-28",
+					"type": "Large",
+					"height": 333,
+					"width": 500
+				},
+				{
+					"@name": "image",
+					"url": "http://m.travelpn.com/images/chicago/hotel/0/009396/Ballroom_F_1.jpg",
+					"update_date": "2011-06-28",
+					"type": "Large",
+					"height": 333,
+					"width": 500
+				},
+				{
+					"@name": "image",
+					"url": "http://m.travelpn.com/images/chicago/hotel/0/009396/Other_F_1.jpg",
+					"update_date": "2011-06-28",
+					"type": "Large",
+					"height": 316,
+					"width": 500
+				},
+				{
+					"@name": "image",
+					"url": "http://m.travelpn.com/images/chicago/hotel/0/009396/Exterior_F_2.jpg",
+					"update_date": "2011-06-28",
+					"type": "Large",
+					"height": 333,
+					"width": 500
+				},
+				{
+					"@name": "image",
+					"url": "http://m.travelpn.com/images/chicago/hotel/0/009396/Exterior_D_1.jpg",
+					"update_date": "2011-06-28",
+					"type": "Medium",
+					"height": 134,
+					"width": 200
+				},
+				{
+					"@name": "image",
+					"url": "http://m.travelpn.com/images/chicago/hotel/0/009396/Guest_room_F_2.jpg",
+					"update_date": "2011-06-28",
+					"type": "Large",
+					"height": 333,
+					"width": 500
+				},
+				{
+					"@name": "image",
+					"url": "http://m.travelpn.com/images/chicago/hotel/0/009396/Suite_F_2.jpg",
+					"update_date": "2011-06-28",
+					"type": "Large",
+					"height": 333,
+					"width": 500
+				},
+				{
+					"@name": "image",
+					"url": "http://m.travelpn.com/images/chicago/hotel/0/009396/Lobby_F_2.jpg",
+					"update_date": "2011-06-28",
+					"type": "Large",
+					"height": 332,
+					"width": 500
+				},
+				{
+					"@name": "image",
+					"url": "http://m.travelpn.com/images/chicago/hotel/0/009396/Exterior_B_1.jpg",
+					"update_date": "2011-06-28",
+					"type": "Thumbnail",
+					"height": 67,
+					"width": 100
+				},
+				{
+					"@name": "image",
+					"url": "http://m.travelpn.com/images/chicago/hotel/0/009396/Exterior_H_1.jpg",
+					"update_date": "2011-06-28",
+					"type": "ThumbnailLarge",
+					"height": 98,
+					"width": 130
+				}
+			]
+		},
+		"cancellable": false,
+		"confirmation_number": "abc-def-123",
+		"end_date": "2013-06-09T12:00:00"
+	},
+	"id": 368,
+	"type": "Hotel",
+	"note": "Bring favorite pillow",
+	"start_time": {
+		"tz_offset": -18000,
+		"time": "2013-06-01T15:00:00",
+		"tz_name": "America/Chicago",
+		"utc_time": "2013-06-01T20:00:00"
+	}
+}, "start_time": "2013-06-01T15:00:00", "active": true, "closest_image_web": "http://www.tripcase.com/pictures/loc/destinations/Chicago_4x3_sz125.jpg"}

@@ -1,0 +1,78 @@
+
+// ios style checkbox
+.checkbox-slider {
+	-webkit-appearance: none;
+	background: transparent;
+	margin: 10px auto;
+	padding: 0;
+	display: block;
+	width: 94px;
+	height: 27px;
+	position: relative;
+	@include border-radius(5px 0 0 5px);
+	border: none;
+
+	&:checked::after {
+		content: '';
+		margin: 0;
+		padding: 0;
+		width: 39px;
+		height: 25px;
+		@include backgroundGradientLinear(#fefefe, #c1c1c1);
+		border-radius: 5px;
+		box-shadow: inset 0 1px 0 #ebebeb;
+		position: absolute;
+		top: 0; left: 53px;
+		border: 1px solid #101010;
+	}
+
+	&:checked::before {
+		content: 'ON';
+		margin: 0;
+		padding: 0;
+		width: 57px;
+		height: 25px;
+		@include backgroundGradientLinear(#024578, #5885ab);
+		border-radius: 5px;
+		border: 1px solid #101010;
+		text-align: center;
+		color: #fff;
+		font: 700 14px sans-serif;
+		text-shadow: 0 1px 1px black;
+		line-height: 27px;
+		position: absolute;
+		top: 0; left: 0;
+	}
+
+	&::after {
+		content: '';
+		margin: 0;
+		padding: 0;
+		width: 39px;
+		height: 25px;
+		@include backgroundGradientLinear(#fefefe, #c1c1c1);
+		border-radius: 5px;
+		box-shadow: inset 0 1px 0 #ebebeb;
+		position: absolute;
+		top: 0; left: 0;
+		border: 1px solid #101010;
+	}
+
+	&::before {
+		content: 'OFF';
+		position: absolute;
+		top: 0; left: 35px;
+		width: 57px;
+		height: 25px;
+		text-align: center;
+		color: #fff;
+		font: 700 14px sans-serif;
+		text-shadow: 0 1px 1px black;
+		@include backgroundGradientMiddleStop(#cfcfcf, #efefef, #f9f9f9, #fefefe);
+		color: #7f7f7f;
+		text-shadow: none;
+		border: 1px solid #101010;
+		border-radius: 5px;
+		line-height: 27px;
+	}
+}

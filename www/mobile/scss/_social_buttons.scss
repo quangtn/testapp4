@@ -1,0 +1,54 @@
+$fb-blue: #415697;
+$fb-dark-blue: #334479;
+$fb-btn-start: lighten($fb-blue, 10%);
+$fb-btn-end: $fb-blue;
+$fb-btn-sec-start: lighten($fb-dark-blue, 10%);
+$fb-btn-sec-end: $fb-dark-blue;
+$fb-btn-border: #2d4070;
+$icon-size: 20px;
+
+#facebook {
+	@extend %tc-button;
+	@include background-image(linear-gradient($fb-btn-start, $fb-btn-end));
+	position: relative;
+	display: block;
+	overflow: hidden;
+	padding-left: 40px;
+	height: 44px;
+	border: 1px solid $fb-btn-border;
+	background-color: $fb-btn-end;
+	white-space: nowrap;
+	font-size: 15px;
+
+	#login & {
+		@include box-shadow(0 2px 5px #333, rgba(255, 255, 255, 0.29688) 0px 1px 0px 0px inset);
+		border: 1px solid $color-super-dark-blue-2;
+	}
+}
+
+#facebook:before {
+	@include background-size($icon-size $icon-size);
+	position: absolute;
+	top: 11px;
+	left: 14px;
+	margin: 0;
+	padding: 0;
+	width: $icon-size;
+	height: $icon-size;
+	background: url(../assets/images/btn_facebook.png) top left no-repeat;
+	content: "";
+}
+
+#facebook:active,
+#facebook:hover,
+#facebook:focus {
+	background-color: $fb-btn-sec-end;
+	@include background-image(linear-gradient($fb-btn-sec-start, $fb-btn-sec-end));
+}
+
+@include pixelDensity(1.5) {
+	#facebook:before {
+		background: url(../assets/images/btn_facebook_2x.png) top left no-repeat;
+		@include background-size($icon-size $icon-size);
+	}
+}

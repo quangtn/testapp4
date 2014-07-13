@@ -1,0 +1,124 @@
+#walk_through {
+	overflow: hidden;
+}
+.walk-through-page-indicator {
+	padding-top: 5px;
+}
+.walk-through-pages {
+	color: $color-white;
+	text-shadow: 0 -1px 0 black;
+	text-align: center;
+	width: 320px * 4;
+}
+.walk-through-page {
+	float: left;
+	width: 320px;
+}
+.walk-through-page-header {
+	font-size: $text-detail-large-size;
+	margin:10px 25px 5px;
+	font-weight: bold;
+
+	&.walk-through-landscape {
+		display: none;
+	}
+}
+.walk-through-page-header-line {
+	font-weight: bold;
+	margin-top: 5px;
+
+	&:first-of-type {
+		margin-top: 0;
+	}
+}
+.walk-through-page-caption {
+	font-size: $text-detail-small-size;
+	padding-left: 25px;
+	padding-right: 25px;
+
+	.page-0 & {
+		margin-top: 49px;
+		font-weight: bold;
+
+		&.walk-through-landscape {
+			margin-top: 0;
+		}
+	}
+}
+.walk-through-page-image {
+	margin: 10px auto 0;
+	background-repeat: no-repeat;
+
+	&.walk-through-tc-logo {
+		background-image: url("../assets/images/walkthru_app_logo.png");
+		width: 170px;
+		height: 130px;
+		margin-top: 20px;
+		margin-bottom: 15px;
+
+		&.walk-through-landscape {
+			margin-top: 10px;
+			margin-bottom: 10px;
+		}
+	}
+
+	&.walk-through-arrow {
+		display: inline-block;
+		margin: 0 0 0 5px;
+		background-image: url("../assets/images/walkthru_screen_swipe_arrow.png");
+		vertical-align: text-bottom;
+		width: 17px;
+		height: 15px;
+	}
+
+	.page-1 &, .page-2 &, .page-3 & {
+		width: 240px;
+		height: 397px;
+	}
+
+	.page-1 & {
+		background-image: url("../assets/images/walkthru_screen_my_trips.png");
+	}
+
+	.page-2 & {
+		background-image: url("../assets/images/walkthru_screen_side_menu.png");
+	}
+
+	.page-3 & {
+		background-image: url("../assets/images/walkthru_screen_action_view.png");
+	}
+
+
+	@include pixelDensity(1.5) {
+		&.walk-through-tc-logo {
+			background-size: 170px 130px;
+			background-image: url(../assets/images/walkthru_app_logo_2x.png);
+		}
+
+		&.walk-through-arrow {
+			background-size: 17px 15px;
+			background-image: url(../assets/images/walkthru_screen_swipe_arrow_2x.png);
+		}
+
+		.page-1 &, .page-2 &, .page-3 & {
+			background-size: 240px 397px;
+		}
+
+		.page-1 & {
+			background-image: url("../assets/images/walkthru_screen_my_trips_2x.png");
+		}
+
+		.page-2 & {
+			background-image: url("../assets/images/walkthru_screen_side_menu_2x.png");
+		}
+
+		.page-3 & {
+			background-image: url("../assets/images/walkthru_screen_action_view_2x.png");
+		}
+	}
+}
+.walk-through-toolbar {
+	.tc-button-grey {
+		margin-right: 3px;
+	}
+}

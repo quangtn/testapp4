@@ -1,0 +1,72 @@
+{{#with item}}
+{{#if end_info}}
+<div id="nav" class="nav"><div class="segmented-button-bar">
+	<ul class=".vehicle-location-segmented-bar">
+		<li class="vehicle-location-segmented-button active {{#if_equal location "start"}}selected{{/if_equal}}" id="pickup">
+			<p>{{ t "PickUp" }}</p>
+		</li>
+		<li class="vehicle-location-segmented-button active {{#if_equal location "end"}}selected{{/if_equal}}" id="dropoff">
+			<p>{{ t "DropOff" }}</p>
+		</li>
+	</ul>
+</div></div>
+{{/if}}
+<div class="trip-component trip-item-detail vehicle-detail">
+	<div class="vehicle-location">
+		<div class="vehicle-location-info">
+		{{#if label}}<p>{{label}}</p>{{/if}}
+		{{#each address_lines}}
+			<p>{{.}}</p>
+		{{/each}}
+		</div>
+		<div class="map map-drop-down-button" data-segment="{{ location }}">
+			<div class="button-icon btn_icon_map_25px"></div>
+		</div>
+	</div>
+	<ul class="vehicle-location-numbers">
+	{{#each phoneNumbers}}
+		<li>
+			<span class="location-number">{{phone number type}}</span>
+			<div class="phone-actionable phone-drop-down-button {{type}}">
+				<a href="tel:{{number}}" class="button-icon btn_icon_call_25px"></a>
+			</div>
+		</li>
+	{{/each}}
+	</ul>
+	<h2 class="component-subheader">{{t "HoursOfOperation"}}</h2>
+	<section>
+		{{#each operation_times}}
+			{{#if start_time}}
+				<p class="description">{{hours start_day end_day start_time end_time}}</p>
+			{{/if}}
+		{{else}}
+			<p class="description">{{t "NoDescriptionAvailable"}}</p>
+		{{/each}}
+	</section>
+	<h2 class="component-subheader">{{t "GeneralInformation"}}</h2>
+	<section>
+		<p class="description ellipsis">
+			{{#if generalInformation}}
+				{{{generalInformation}}} <a class="read-more">{{t "ReadMore"}}</a>
+			{{else}}
+				{{t "NoDescriptionAvailable"}}
+			{{/if}}
+		</p>
+	</section>
+	<h2 class="component-subheader">{{t "AirportShuttleInformation"}}</h2>
+	<section>
+		{{#each shuttle_details}}
+			<p class="description">{{{.}}}</p>
+		{{else}}
+			<p class="description">{{t "NoDescriptionAvailable"}}</p>
+		{{/each}}
+	</section>
+</div>
+{{/with}}
+
+
+
+
+
+
+

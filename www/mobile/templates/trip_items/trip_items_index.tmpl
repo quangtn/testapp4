@@ -1,0 +1,22 @@
+{{#unless hasItems}}
+<div id="empty-trip-message" class="standard-form-panel">
+	<div class="instruction-header-med">{{t "AddedNoItemsYet"}}</div>
+	<div class="instruction">
+		<p class="instruction-info">{{t "GetStartedAddingAnItem"}}</p>
+	</div>
+</div>
+{{/unless}}
+{{#each types}}
+<div class="list-item add group">
+	<div class="details">
+		<div class="item-title action {{className}}">
+			<div class="icon-type general-icon {{ icon }}"></div>
+			{{text}}
+			<div class="next btn_arrow button-icon"></div>
+			{{#if hasHelp}}
+				<div class="help-{{name}} icon_info_20px general-icon"></div>
+			{{/if}}
+		</div>
+	</div>
+</div>
+{{/each}}

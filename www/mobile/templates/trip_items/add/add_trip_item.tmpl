@@ -1,0 +1,166 @@
+<form class="add-trip-item standard-form-panel" action="#create-trip" id="create-trip-form" class="standard-form-panel">
+
+	{{!-- For Business --}}
+	{{#if showForBusinessField}}
+		<div class="input-group-checkbox {{#unless userCorporation}}is-disabled{{/unless}}">
+			<input class="input-group-checkbox__checkbox" type="checkbox"
+				id="selenium-for-business" name="for_business"
+				{{#if for_business}}checked{{/if}}
+				{{#unless userCorporation}}disabled{{/unless}} />
+			{{#unless userCorporation}}
+				<input type="hidden" name="for_business" value="on">
+			{{/unless}}
+			<div class="input-group-checkbox__main">
+				<div class="input-group-checkbox__label"><p>{{t "ForBusiness"}}</p></div>
+				<div class="input-group-checkbox__sublabel"><p>
+					{{#if for_business}}
+						{{t "ConnectedWith"}}
+					{{else}}
+						{{t "ConnectTo"}}
+					{{/if}}
+
+					{{#if itemCorporation}}
+						{{itemCorporation}}
+					{{else}}
+						{{userCorporation}}
+					{{/if}}
+				</p></div>
+			</div>
+			<div id="for-business-help" class="input-group-checkbox__right-button input-group-checkbox__nontoggle">
+				<div class="icon_info_20px general-icon"></div>
+			</div>
+		</div>
+	{{/if}}
+
+	{{!-- Name --}}
+	{{#if is_name_displayable}}
+		<div class="input-group">
+			<div class="label"><p>{{labels.name}}</p></div>
+			<div class="input-container">
+				<input  id="name" name="name" type="text" value="{{name}}" autocomplete="off" autocapitalize="off" autocorrect="off" />
+			</div>
+		</div>
+	{{/if}}
+    <h2 class="component-subheader">{{labels.start}}</h2>
+
+    {{!-- Start Location --}}
+	{{#if is_start_location_displayable}}
+	<div id="startLocationContainer" class="input-group {{#if start_location.name}} notes {{/if}}">
+		<div class="label"><div>{{t "Location"}}</div></div>
+		<div class="input-container thin actionable location">
+			<div class="input">
+				<div class="address">
+					{{#if start_location.displayable_name}}
+						<p class="item-sub-title">{{start_location.displayable_name}}</p>
+					{{/if}}
+					{{#each start_location.address_lines}}
+						<p class="item-sub-title">{{.}}</p>
+					{{/each}}
+				</div>
+			</div>
+			<input type="hidden" id="startLocation" name="startLocation" value="{{{start_location.name}}}" />
+		</div>
+		<div class="chevron-container"><div class="btn_arrow_dark button-icon"></div></div>
+	</div>
+	{{/if}}
+
+	{{!-- Start Date --}}
+	<div class="input-group">
+		<div class="label"><p>{{t "Date"}}</p></div>
+		<div class="input-container">
+			<input id="start_date" name="start_date" readonly="readonly" class="date" type="text" value="{{mediumLongDate start_date}}" autocomplete="off" autocapitalize="off" autocorrect="off" />
+		</div>
+	</div>
+
+	{{!-- Start Time --}}
+	<div class="input-group">
+		<div class="label"><p>{{t "Time"}}</p></div>
+		<div class="input-container"><input id="start_time" name="start_time" type="text" value="{{timeFromDateTime start_time}}" readonly autocomplete="off" autocapitalize="off" autocorrect="off" /></div>
+	</div>
+
+    <h2 class="component-subheader">{{labels.end}}</h2>
+	{{#if is_end_location_displayable}}
+
+		{{!-- End Location Toggle --}}
+		<div class="input-group-checkbox">
+			{{#if is_both_same_checked}}
+				<input id="bothSame" class="input-group-checkbox__checkbox" type="checkbox" checked="checked" />
+			{{else}}
+				<input id="bothSame" class="input-group-checkbox__checkbox" type="checkbox" />
+			{{/if}}
+			<div class="input-group-checkbox__label"><p>{{labels.same_as}}</p></div>
+		</div>
+
+		{{!-- Notes --}}
+		{{#if is_both_same_checked}}
+			<div style="display:none" id="endLocationContainer" class="input-group {{#if end_location.name}} notes {{/if}}">
+		{{else}}
+			<div id="endLocationContainer" class="input-group {{#if end_location.name}} notes {{/if}}">
+		{{/if}}
+
+			{{!-- End Location --}}
+			<div class="label"><p>Location</p></div>
+			<div class="input-container thin actionable location">
+				<div class="input">
+					<div class="address">
+						{{#if end_location.displayable_name}}
+							<p class="item-sub-title">{{end_location.displayable_name}}</p>
+						{{/if}}
+						{{#each end_location.address_lines}}
+							<p class="item-sub-title">{{.}}</p>
+						{{/each}}
+					</div>
+				</div>
+			<input type="hidden" id="endLocation" name="endLocation" value="{{{name}}}" />
+			</div>
+			<div class="chevron-container"><div class="btn_arrow_dark button-icon"></div></div>
+		</div>
+	{{/if}}
+
+	{{!-- End Date --}}
+	<div class="input-group">
+		<div class="label"><p>{{t "Date"}}</p></div>
+		<div class="input-container">
+			<input id="end_date" name="end_date" readonly="readonly" type="text" value="{{mediumLongDate end_date}}" autocomplete="off" autocapitalize="off" autocorrect="off" />
+		</div>
+	</div>
+
+	{{!-- End Time --}}
+	<div class="input-group">
+		<div class="label"><p>{{t "Time"}}</p></div>
+		<div class="input-container"><input id="end_time" name="end_time" type="text" value="{{timeFromDateTime end_time}}" readonly autocomplete="off" autocapitalize="off" autocorrect="off" /></div>
+	</div>
+
+	{{!-- Conf # --}}
+	<div class="input-group">
+		<div class="label"><p>{{t "ConfNum"}}</p></div>
+		<div class="input-container"><input id="confirmation_number" name="confirmation_number" type="text" placeholder="{{t "Optional"}}" value="{{confirmation_number}}" autocomplete="off" autocapitalize="off" autocorrect="off" /></div>
+	</div>
+
+	{{!-- Phone --}}
+	{{#if is_phone_number_displayable}}
+		{{#if phone_numbers}}
+		{{#each phone_numbers}}
+			<div class="input-group">
+				<div class="label"><p>{{t "Phone"}}</p></div>
+				<div class="input-container"><input id="phone_number" name="phone_number" type="text" placeholder="{{t "Optional"}}" value="{{number}}" autocomplete="off" autocapitalize="off" autocorrect="off" /></div>
+			</div>
+		{{/each}}
+		{{else}}
+			<div class="input-group">
+				<div class="label"><p>{{t "Phone"}}</p></div>
+				<div class="input-container"><input id="phone_number" name="phone_number" type="text" placeholder="{{t "Optional"}}" value="" autocomplete="off" autocapitalize="off" autocorrect="off" /></div>
+			</div>
+		{{/if}}
+	{{/if}}
+
+	{{!-- Notes --}}
+	<div class="input-group">
+		<div class="label"><p>{{t "Notes"}}</p></div>
+		<div class="input-container"><input id="note" name="note" type="text" placeholder="{{t "Optional"}}" value="{{note}}" autocomplete="off" autocapitalize="off" autocorrect="off" /></div>
+	</div>
+
+	<div class="actions">
+		<button class="submit"><span>{{t "Save"}}</span><span class="loader light">{{t "Loading"}}</span></button>
+	</div>
+</form>

@@ -1,0 +1,33 @@
+<div class="header">
+	<div class="primary-actions">
+	{{#if backAction}}
+		<button class="button back left"><span class="btn_icon_back_25px button-icon"></span></button>
+	{{/if}}
+	{{#each leftButtons}}
+		<button class="button left {{name}}">
+			<span class="{{iconClass}}"></span>
+		</button>
+	{{/each}}
+	</div>
+	<div class="titles">
+		{{#unless titleText}}
+		<span class="title logo_tripcase">&nbsp;</span>
+		{{/unless}}
+	{{#if titleText}}
+		{{#if isFollowingTrip}}
+			<span class="traveler-name {{#if icon}}with-{{icon}}-icon{{/if}}">{{{travelerName}}}</span>
+		{{/if}}
+		<span class="title {{#if icon}}with-{{icon}}-icon{{/if}}">{{{titleText}}}</span>
+		{{#if subtitleText}}<span class="sub-title">{{{subtitleText}}}</span>{{/if}}
+	{{/if}}
+	</div>
+	<div class="secondary-actions">
+	{{#each rightButtons}}
+		<button class="button right {{name}}">
+			{{#if text}}{{text}}{{/if}}
+			{{#if iconURL}}<span class="{{iconURL}}"></span>{{/if}}
+		</button>
+	{{/each}}
+	</div>
+</div>
+

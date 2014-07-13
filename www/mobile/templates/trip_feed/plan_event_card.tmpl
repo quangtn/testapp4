@@ -1,0 +1,49 @@
+<li class="card plan-event" data-trip-item-type="{{lowercase type}}">
+	<section class="plan-event-header">
+		{{#if hasClockTimer}}
+			<div class="cell first col-14 right">
+				<div class="status-label">
+					{{labelText}}
+				</div>
+			</div>
+			<div class="cell col-7 days-padding">
+				<div class="days-value-flipper">
+					<div class="days-value">{{timeValue}}</div>
+					<div class="days-label">{{timeLabel}}</div>
+					<div class="days-line"></div>
+				</div>
+			</div>
+		{{else}}
+			<div class="cell first col-26 center status-label">
+				{{labelText}}
+			</div>
+		{{/if}}
+	</section>
+
+	<section class="plan-event-destination">
+		<div class="destination-locale">
+			{{destination}}
+		</div>
+	</section>
+
+	<nav>
+		<ul class="card-toolbar clearfix">
+			<li id="trip-itinerary" class="itinerary">
+				<div class="button-icon btn_icon_itinerary_blue_25px"></div>
+				{{t "Timeline"}}
+			</li>
+			<li id="trip-add-item" class="add-item">
+				<div class="button-icon btn_icon_add_blue_25px"></div>
+				{{t "AddItem"}}
+			</li>
+			<li id="trip-weather" class="weather">
+				<div class="button-icon btn_icon_weather_blue_25px"></div>
+				{{t "Weather"}}
+			</li>
+			<li id="trip-share" class="share">
+				<div class="button-icon btn_icon_share_blue_25px"></div>
+				{{t "Share"}}
+			</li>
+		</ul>
+	</nav>
+</li>

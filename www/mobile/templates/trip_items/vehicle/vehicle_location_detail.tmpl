@@ -1,0 +1,42 @@
+<div class="trip-component trip-item-detail vehicle-detail">
+	{{#with item}}
+	<section>
+		<div>
+			<h2>{{{vendor_name}}}</h2>
+			<a class="action-button map"><div class="btn_icon_map_25px button-icon"></div></a>
+			<p class="label">{{{general_location}}}</p>
+			<p class="label">{{{address}}}</p>
+		</div>
+	</section>
+	<section>
+		<div>
+			{{#each phoneNumbers}}
+				<div class="phone">
+				  <a class="action-button call" href="tel:+{{number}}"><div class="btn_icon_call_25px button-icon"></div></a>
+					{{#if type}}
+						<div><label>{{number}}</label><label>&nbsp;({{type}})</label></div>
+					{{else}}
+						<div><label>{{number}}</label><label>&nbsp;({{t "Phone"}})</span></div>
+					{{/if}}
+				</div>
+			{{/each}}
+		</div>
+	</section>
+	<h2 class="component-subheader">{{t "HoursOfOperation"}}</h2>
+	<section>
+		{{#each operation_times}}
+			{{#if start_time}}
+				<div><label>{{start_day}} - {{end_day}}: {{time start_time}} - {{time end_time}}</label></div>
+			{{/if}}
+		{{/each}}
+	</section>
+	<h2 class="component-subheader">{{t "GeneralInformation"}}</h2>
+	<section>
+		<p class="label">{{{generalInformation}}}</p>
+	</section>	
+	<h2 class="component-subheader">{{t "AirportShuttleInformation"}}</h2>
+	<section>
+		<p class="label">{{{shuttleDetails}}}</p>
+	</section>
+	{{/with}}
+</div>

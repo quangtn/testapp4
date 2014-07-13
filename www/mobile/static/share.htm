@@ -1,0 +1,544 @@
+<html lang="en" style="min-height: 1080px; ">
+<head>
+<title>TripCase</title>
+<meta http-equiv="content-type" content="text/xhtml; charset=utf-8">
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="format-detection" content="telephone=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="viewport" id="vp" content="width=device-width,initial-scale=1.0,user-scalable=no,maximum-scale=1">
+<link href="css/combined.css" rel="stylesheet" type="text/css">
+<link href="css/templates.css" rel="stylesheet" type="text/css">
+<link href="css/share.css" rel="stylesheet" type="text/css">
+<link href="../css/combined.css" rel="stylesheet" type="text/css" />
+</head>
+<body style="min-height: 1080px; ">
+<div id="viewport" style="">
+	<div class="app-header" style="">
+		<div class="header "> <span class="title">Share</span> <span class="sub-title"></span>
+			<div class="primary-actions">
+				<button class="back btn_left button-icon">Back</button>
+			</div>
+			<div class="secondary-actions">
+				<!-- button class="button right weather-location"> Locations </button -->
+			</div>
+		</div>
+	</div>
+	<div id="app-page" style="min-height: 1080px; " class="with-header">
+		<div id="sidemenu-main-div-touch-disable-overlay"></div>
+		<div id="main">
+			<div>
+				<div class="content">
+					<div class="share-panel">
+						<form class="compact-form-panel">
+							<ul class="share-panel item-list">
+								<li>
+									<div class="item-content">
+										<p class="help-text">The following contacts will receive trip updates. For more information, select a specific contact.</p>
+									</div>
+								</li>
+								<li>
+									<label for="email">Add an Email</label>
+									<input id="email" name="email" type="email" value="" />
+									<button class="button-sm compact-submit">Add</button>
+								</li>
+							</ul>
+						</form>
+						<h2 class="component-subheader">Currently Notifying</h2>
+						<ul class="action-list">
+							<li>
+								<div class="item-content">george.clinton@parliamentfunkadelic.com</div>
+							</li>
+							<li>
+								<div class="item-content">somebody@domain.com</div>
+							</li>
+							<li>
+								<div class="item-content">random@anotherdomain.com</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Original -->
+<style>
+ul.item-list, ul.action-list {
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-box-align: start;
+	-webkit-box-pack: start;
+	margin: 0;
+	padding: 0;
+	position: relative;
+}
+
+ul.item-list li, ul.action-list li {
+	display: -webkit-box;
+	-webkit-box-sizing: border-box;
+	-webkit-box-orient: horizontal;
+	-webkit-box-align: center;
+	-webkit-box-pack: justify;
+	-webkit-box-flex: 1;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	min-height: 44px;
+	border-bottom: 1px solid #CCC;
+	background-color: white;
+	position: relative;
+}
+
+form ul.item-list li, form ul.action-list li {
+	-webkit-box-align: stretch;
+}
+
+ul.action-list li {
+	background: white url(../assets/images/btn_arrow.png) right center no-repeat;
+}
+
+ul.item-list li .item-icon, ul.action-list li .item-icon {
+	display: block;
+	margin: 0px 0px 0px 6px;
+	padding: 0;
+	width: 33px;
+	height: 33px;
+	-webkit-box-flex: 0;
+	position: relative;
+	background: red;
+}
+ul.item-list li .item-content, ul.item-list li .item-label, ul.action-list li .item-content, ul.action-list li .item-label {
+	font-size: 17px;
+	line-height: 20px;
+	font-weight: bold;
+}
+ul.item-list li .item-content, ul.action-list li .item-content {
+	display: block;
+	vertical-align: center;
+/*	-webkit-box-orient: vertical;
+	-webkit-box-align: start;
+	-webkit-box-pack: center;
+*/	-webkit-box-flex: 1;
+	-webkit-box-sizing: border-box;
+	margin: 8px 0px;
+	padding: 0px 8px 0px 8px;
+	position: relative;
+	white-space: normal;
+	overflow: hidden;
+}
+
+ul.item-list li .item-label, ul.action-list li .item-label {
+	display: block;
+/*	-webkit-box-orient: vertical;
+	-webkit-box-align: start;
+*/	-webkit-box-pack: center;
+	-webkit-box-flex: 1;
+	-webkit-box-sizing: border-box;
+	margin: 0px;
+	padding: 0px 8px;
+	height: 43px;
+	line-height: 43px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+ul.action-list li .item-content, ul.action-list li .item-label {
+	padding: 0px 30px 0px 15px;
+}
+
+.item-content .help-text {
+	padding: 7px 7px 7px 7px;
+	font-size: 13px;
+	line-height: 1.2em;
+	color: #666;
+}
+
+form ul.action-list li, form ul.item-list li {
+	background-color: white;
+	background-image: none;
+	padding: 0px;
+	position: relative;
+}
+
+form ul.action-list li label, form ul.item-list li label  {
+	display: -webkit-box;
+	display: -moz-box;
+	display: box;
+	margin: 0px;
+	padding: 0px 0px 0px 15px;
+	position: relative;
+	-webkit-box-orient: vertical;
+	-webkit-box-pack: center;
+	-webkit-box-align: start;
+	-webkit-box-flex: 0;
+	-webkit-box-flex-group: 1;
+	-webkit-box-sizing: border-box;
+	-moz-box-orient: vertical;
+	-moz-box-pack: center;
+	-moz-box-align: start;
+	-moz-box-flex: 0;
+	-moz-box-flex-group: 1;
+	-moz-box-sizing: border-box;
+	box-orient: vertical;
+	box-pack: center;
+	box-align: start;
+	box-flex: 0;
+	box-flex-group: 1;
+	box-sizing: border-box;
+	width: 70px;
+	background-color: rgb(235,235,235);
+	color: rgb(17,17,17);
+	font-size: 13px;
+	line-height: 15px;
+}
+
+form ul.action-list li input, form ul.item-list li input {
+	display: block;
+	margin: 0px;
+	padding: 0px 28px 0px 0px;
+	/*height: 100%;*/
+	text-indent: 8px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	font-size: 17px;
+	line-height: 43px;
+	line-height: 44px;
+	text-align: start;
+	color: black;
+	-webkit-box-flex: 1;
+	-moz-box-flex: 1;
+	box-flex: 1;
+	/*@include box-shadow( 0px 0px 0px rgb(0, 0, 0));*/
+	/*@include border-radius(0px);*/
+	-webkit-border-radius: 0px;
+	-webkit-box-shadow: none;
+	-webkit-box-sizing: border-box;
+	border-radius: 0px;
+	box-shadow: none;
+	border: none;
+	outline: none;
+	-webkit-appearance: none;
+	-webkit-border-image: none;
+	-webkit-box-shadow: none;
+	-webkit-rtl-ordering: logical;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	-webkit-user-select: text;
+}
+form ul.action-list li input {
+	background: white url(../assets/images/btn_arrow.png) right center no-repeat;
+}
+form ul.action-list li input:focus, form ul.item-list li input:focus {
+	/*@include box-shadow( 0px 0px 0px rgb(0, 0, 0));
+	@include border-radius(0px);*/
+	-webkit-border-radius: 0px;
+	-webkit-box-shadow: none;
+	border-radius: 0px;
+	box-shadow: none;
+	border: none;
+	outline: none;
+	-webkit-appearance: none;
+	-webkit-border-image: none;
+	-webkit-box-shadow: none;
+	-webkit-rtl-ordering: logical;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	-webkit-user-select: text;
+}
+
+form ul.item-list li input[type=text] ~ button.button-sm, form ul.item-list li input[type=email] ~ button.button-sm {
+	margin-left: -18px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+</style>
+<!-- In Use -->
+					<style>
+						
+.edit-trip-panel, .share-panel {
+	background-color:#fff;
+	-moz-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.75);
+	-webkit-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.75);
+}
+
+.button-sm {
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25), inset 0px 1px 0px rgba(255, 255, 255, 0.3);
+	font-size:12px;
+	font-weight:normal;
+}
+
+.button-sm-warning {
+	background: #bb0000;
+	background-image: linear-gradient(top, #bb0000 0%, #820000 100%);
+	background-image: -moz-linear-gradient(top, #bb0000 0%, #820000 100%);
+	background-image: -webkit-gradient(linear top, #bb0000 0%, #820000 100%);
+	background-image: -ms-linear-gradient(top, #bb0000 0%, #820000 100%);
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #bb0000), color-stop(1, #820000));
+	border: 1px solid #820000;
+	width:25px;
+	height:25px;
+	padding:2.5px 7.5px;
+ }
+ 
+ 
+.button-sm-warning:hover,
+.button-sm-warning:active,
+.button-lg-warning:hover,
+.button-lg-warning:active {
+	background: #820000;
+	background-image: linear-gradient(top, #820000 0%, #5a0000 100%);
+	background-image: -moz-linear-gradient(top, #820000 0%, #5a0000 100%);
+	background-image: -webkit-gradient(linear top, #820000 0%, #5a0000 100%);
+	background-image: -ms-linear-gradient(top, #820000 0%, #5a0000 100%);
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #820000), color-stop(1, #5a0000));
+	border: 1px solid #5a0000;
+}
+
+
+.compact-submit {
+	background: #64798C;
+	background-image: linear-gradient(top, #64798C 0%, #495766 100%);
+	background-image: -moz-linear-gradient(top, #64798C 0%, #495766 100%);
+	background-image: -webkit-gradient(linear top, #64798C 0%, #495766 100%);
+	background-image: -ms-linear-gradient(top, #64798C 0%, #495766 100%);
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #64798C), color-stop(1, #495766));
+	border: 1px solid #495766;
+	color: white;
+	height: 32px;
+	text-align:center;
+	text-shadow: 0 -1px 0 black;
+	width: 42px;
+	margin:10px;
+}
+
+.action-list li {
+	position:relative;
+	padding:13px 25px 13px 15px;
+	border-bottom:1px solid #CCC;
+	font-size:17px;
+	font-weight:bold;
+	word-wrap: break-word;
+	background: white url(https://swizzle.tripcase.com/touch2/mobile/assets/images/btn_arrow.png) right center no-repeat;
+}
+
+					</style>
+					<style type="text/css">
+						ul.item-list, ul.action-list {
+							display: -webkit-box;
+							-webkit-box-orient: vertical;
+							-webkit-box-align: start;
+							-webkit-box-pack: start;
+							display: -moz-box;
+							-moz-box-orient: vertical;
+							-moz-box-align: start;
+							-moz-box-pack: start;
+							display: box;
+							box-orient: vertical;
+							box-align: start;
+							box-pack: start;
+							margin: 0;
+							padding: 0;
+							position: relative;
+						}
+						
+						ul.item-list li, ul.action-list li {
+							display: -webkit-box;
+							-webkit-box-sizing: border-box;
+							-webkit-box-orient: horizontal;
+							-webkit-box-align: center;
+							-webkit-box-pack: justify;
+							-webkit-box-flex: 1;
+							display: -moz-box;
+							-moz-box-sizing: border-box;
+							-moz-box-orient: horizontal;
+							-moz-box-align: center;
+							-moz-box-pack: justify;
+							-moz-box-flex: 1;
+							display: box;
+							box-sizing: border-box;
+							box-orient: horizontal;
+							box-align: center;
+							box-pack: justify;
+							box-flex: 1;
+							margin: 0;
+							padding: 0;
+							width: 100%;
+							min-height: 44px;
+							border-bottom: 1px solid #CCC;
+							background-color: white;
+							position: relative;
+						}
+						
+						form ul.item-list li, form ul.action-list li {
+							-webkit-box-align: stretch;
+							-moz-box-align: stretch;
+							box-align: stretch;
+						}
+						
+						ul.action-list li {
+							background: white url(../assets/images/btn_arrow.png) right center no-repeat;
+						}
+						
+						ul.item-list li .item-icon, ul.action-list li .item-icon {
+							display: block;
+							margin: 0px 0px 0px 6px;
+							padding: 0;
+							width: 33px;
+							height: 33px;
+							-webkit-box-flex: 0;
+							-moz-box-flex: 0;
+							box-flex: 0;
+							position: relative;
+							background: red;
+						}
+						ul.item-list li .item-content, ul.item-list li .item-label, ul.action-list li .item-content, ul.action-list li .item-label {
+							font-size: 17px;
+							line-height: 20px;
+							font-weight: bold;
+						}
+						ul.item-list li .item-content, ul.action-list li .item-content {
+							display: block;
+							vertical-align: center;
+							-webkit-box-flex: 1;
+							-webkit-box-sizing: border-box;
+							-moz-box-flex: 1;
+							-moz-box-sizing: border-box;
+							box-flex: 1;
+							box-sizing: border-box;
+							margin: 8px 0px;
+							padding: 0px 8px 0px 8px;
+							position: relative;
+							white-space: normal;
+							overflow: hidden;
+						}
+						
+						ul.item-list li .item-label, ul.action-list li .item-label {
+							display: block;
+							-webkit-box-pack: center;
+							-webkit-box-flex: 1;
+							-webkit-box-sizing: border-box;
+							-moz-box-pack: center;
+							-moz-box-flex: 1;
+							-moz-box-sizing: border-box;
+							box-pack: center;
+							box-flex: 1;
+							box-sizing: border-box;
+							margin: 0px;
+							padding: 0px 8px;
+							height: 43px;
+							line-height: 43px;
+							overflow: hidden;
+							text-overflow: ellipsis;
+							white-space: nowrap;
+						}
+						
+						ul.action-list li .item-content, ul.action-list li .item-label {
+							padding: 0px 30px 0px 15px;
+						}
+						
+						.item-content .help-text {
+							padding: 7px 7px 7px 7px;
+							font-size: 13px;
+							line-height: 1.2em;
+							color: #666;
+						}
+						
+						form ul.action-list li, form ul.item-list li {
+							background-color: white;
+							background-image: none;
+							padding: 0px;
+							position: relative;
+						}
+						
+						form ul.action-list li label, form ul.item-list li label  {
+							display: -webkit-box;
+							display: -moz-box;
+							display: box;
+							margin: 0px;
+							padding: 0px 0px 0px 15px;
+							position: relative;
+							-webkit-box-orient: vertical;
+							-webkit-box-pack: center;
+							-webkit-box-align: start;
+							-webkit-box-flex: 0;
+							-webkit-box-flex-group: 1;
+							-webkit-box-sizing: border-box;
+							-moz-box-orient: vertical;
+							-moz-box-pack: center;
+							-moz-box-align: start;
+							-moz-box-flex: 0;
+							-moz-box-flex-group: 1;
+							-moz-box-sizing: border-box;
+							box-orient: vertical;
+							box-pack: center;
+							box-align: start;
+							box-flex: 0;
+							box-flex-group: 1;
+							box-sizing: border-box;
+							width: 70px;
+							background-color: rgb(235,235,235);
+							color: rgb(17,17,17);
+							font-size: 13px;
+							line-height: 15px;
+						}
+						
+						form ul.action-list li input, form ul.item-list li input {
+							display: block;
+							margin: 0px;
+							padding: 0px 28px 0px 0px;
+							text-indent: 8px;
+							white-space: nowrap;
+							overflow: hidden;
+							text-overflow: ellipsis;
+							font-size: 17px;
+							line-height: 43px;
+							line-height: 44px;
+							text-align: start;
+							color: black;
+							-webkit-box-flex: 1;
+							-moz-box-flex: 1;
+							box-flex: 1;
+							-webkit-border-radius: 0px;
+							-webkit-box-shadow: none;
+							-webkit-box-sizing: border-box;
+							border-radius: 0px;
+							box-shadow: none;
+							border: none;
+							outline: none;
+							-webkit-appearance: none;
+							-webkit-border-image: none;
+							-webkit-box-shadow: none;
+							-webkit-rtl-ordering: logical;
+							-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+							-webkit-user-select: text;
+						}
+						form ul.action-list li input {
+							background: white url(../assets/images/btn_arrow.png) right center no-repeat;
+						}
+						form ul.action-list li input:focus, form ul.item-list li input:focus {
+							@include box-shadow( 0px 0px 0px rgb(0, 0, 0));
+							@include border-radius(0px);
+							border-radius: 0px;
+							box-shadow: none;
+							border: none;
+							outline: none;
+							-webkit-appearance: none;
+							-webkit-border-image: none;
+							-webkit-box-shadow: none;
+							-webkit-rtl-ordering: logical;
+							-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+							-webkit-user-select: text;
+						}
+						
+						form ul.item-list li input[type=text] ~ button.button-sm, form ul.item-list li input[type=email] ~ button.button-sm {
+							margin-left: -18px;
+							margin-top: 5px;
+							margin-bottom: 5px;
+						}
+					</style>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<li class="card hotel-checkout event-detail" data-trip-item-id="{{id}}" data-location="{{ event_type }}" data-trip-item-type="{{lowercase type}}">
+	<div class="hotel-checkout-image"></div>
+	<section class="card-content">
+		<div class="cell first col-8">
+			<div class="label">
+				<span class="upper-case">
+					{{t "HotelCheckOut"}}
+				</span>
+			</div>
+		</div>
+		<div class="cell first col-8">
+			<div class="value">
+				<span class="small-caps">
+					{{timeFromDateTime end_date}}
+				</span>
+			</div>
+		</div>
+	</section>
+</li>

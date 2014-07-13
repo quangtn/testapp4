@@ -1,0 +1,90 @@
+%tc-button {
+	@include box-shadow(0px 1px 2px rgba(0, 0, 0, 0.25), inset 0px 1px 0px rgba(255, 255, 255, 0.3));
+	@include border-radius(5px);
+	color: white;
+	font-size: $text-detail-medium-size;
+	font-weight: bold;
+	padding: 5px;
+	text-shadow: 0 -1px 0 black;
+	width: 100%;
+}
+.tc-button-blue {
+	@extend %tc-button;
+
+	@include backgroundGradientLinear($accept-button-top-color, $accept-button-bottom-color);
+	border: 1px solid $color-super-dark-blue-2;
+
+	&:hover, &:active {
+		@include backgroundGradientLinear($accept-button-hover-top-color, $accept-button-hover-bottom-color);
+	}
+}
+.tc-button-red {
+	@extend %tc-button;
+
+	@include backgroundGradientLinear($warning-button-top-color, $warning-button-bottom-color);
+	border: 1px solid $color-dark-red;
+
+	&:hover, &:active {
+		@include backgroundGradientLinear($warning-button-hover-top-color, $warning-button-hover-bottom-color);
+	}
+}
+.tc-button-grey {
+	@extend %tc-button;
+
+	@include backgroundGradientLinear($gray-button-top-color, $gray-button-bottom-color);
+	border: 1px solid $color-medium-gray;
+	color: $dark-blue-link-color;
+	text-shadow: 0 1px 0 $color-white;
+
+	&:hover, &:active {
+		@include backgroundGradientLinear($gray-button-hover-top-color, $gray-button-hover-bottom-color);
+	}
+}
+.tc-button-green {
+	@extend %tc-button;
+
+	@include backgroundGradientLinear($green-button-top-color, $green-button-bottom-color);
+	border: 1px solid $green-button-border-call;
+
+	&:hover, &:active {
+		@include backgroundGradientLinear($green-button-hover-top-color, $green-button-hover-bottom-color);
+	}
+}
+.tc-button-on-dark-bg {
+	border: 1px solid $color-super-dark-blue-2;
+}
+.tc-button-rect-short {
+	width: 25 + 14 + 2px; // box + paddings + borders
+	height: 25 + 4 + 2px; // box + paddings + borders
+	padding: 2px 7px;
+}
+.tc-button-rect-long {
+	width: 140px;
+	padding: 12px
+}
+.tc-button-nav {
+	font-size: $text-detail-XXsmall-size;
+	font-weight: normal;
+	width: auto;
+	height: 32px;
+}
+
+.tc-button-form {
+	height: 44px;
+}
+.tc-button-form-label {
+	.load & {
+		// page load state
+		display: none;
+	}
+}
+.tc-button-form-loader {
+	.load & {
+		// page load state
+		height: 20px;
+		width: 20px;
+		display: inline-block;
+		margin: 0 auto;
+		text-indent: -9999px;
+	}
+}

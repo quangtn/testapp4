@@ -1,0 +1,342 @@
+
+body {
+	-webkit: {
+		user-select: none;
+		touch-callout: none;
+		tap-highlight-color: rgba(0, 0, 0, 0);
+	}
+	font: {
+		family: Helvetica, Arial;
+		size: 15px;
+	}
+	margin: 0;
+	padding: 0;
+	background: {
+		background-color: #495766;
+		color: transparent;
+	}
+}
+
+.horizontal-divider {
+	position: relative;
+	display: block;
+	overflow: hidden;
+	margin: 15px 25px;
+	height: 15px;
+}
+.horizontal-divider-dark-gray {
+	@extend .horizontal-divider;
+
+	.horizontal-divider-text {
+		color: $color-medium-dark-gray;
+	}
+
+	.horizontal-divider-dividers {
+		@include background-with-css2-fallback(linear-gradient(left, rgba($color-black,0) 0%, rgba($color-black,0.2) 43%, transparent 43%,transparent 57%, rgba($color-black,0.2) 57%, rgba($color-black,0) 100%), transparent);
+	}
+
+	// overrides
+	#sign-up-form & {
+		$horizontal-divider-spacing: 7px;
+		margin-top: $horizontal-divider-spacing;
+		margin-bottom: $horizontal-divider-spacing;
+	}
+}
+.horizontal-divider-dividers {
+	display: block;
+	margin: 7px auto 21px auto;
+	height: 1px;
+	border: none;
+	@include background-with-css2-fallback(linear-gradient(left, rgba($color-white,0) 0%, rgba($color-white,0.2) 43%, transparent 43%,transparent 57%, rgba($color-white,0.2) 57%, rgba($color-white,0) 100%), transparent);
+}
+.horizontal-divider-text {
+	position: absolute;
+	right: 50%;
+	left: 50%;
+	display: block;
+	margin: 0 -16px;
+	padding: 0;
+	width: 32px;
+	color: $color-white;
+	text-align: center;
+	font-weight: normal;
+	font-size: 17px;
+	font-family: sans-serif;
+	line-height: 12px;
+}
+.horizontal-divider-text-raised {
+	@extend .horizontal-divider-text;
+	text-shadow: 0 -1px 0 black;
+}
+
+#login {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	min-height: 475px;
+	text-align: center;
+	margin: 0;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-box-align: center;
+	-webkit-box-pack: start;
+	-webkit-box-sizing: border-box;
+	background-image: -webkit-radial-gradient(center 55px, circle contain, #64798c 0%, #64798c 22px, #252d34 520px, #252d34 100%);
+	padding-top: 25px;
+
+	h1 {
+		color: #fff;
+		margin: 0 .5em .5em;
+		font-size: 2em;
+		text-indent: -9999px;
+		height: 60px;
+		width: 85%;
+		max-width: 260px;
+		background: url(../assets/images/logo_tripcase_signin.png) no-repeat center center;
+		padding-bottom: 0;
+		-webkit-box-sizing: border-box;
+		-webkit-box-flex: 0;
+
+		@include pixelDensity(1.5) {
+			background-size: 220px 60px;
+			background-image: url(../assets/images/logo_tripcase_signin_2x.png);
+		}
+
+	}
+
+	.content {
+		display: -webkit-box;
+		-webkit-box-align: stretch;
+		-webkit-box-pack: justify;
+		-webkit-box-orient: vertical;
+		color: $content-background-color;
+		width: 85%;
+		max-width: 260px;
+		margin: 0 auto;
+		-webkit-box-flex: 1;
+
+		.fill {
+			display: -webkit-box;
+			-webkit-box-align: stretch;
+			-webkit-box-pack: justify;
+			-webkit-box-orient: vertical;
+			-webkit-box-flex: 1;
+			-webkit-box-sizing: border-box;
+		}
+
+		form {
+			display: -webkit-box;
+			-webkit-box-align: stretch;
+			-webkit-box-pack: justify;
+			-webkit-box-orient: vertical;
+			-webkit-box-sizing: border-box;
+			-webkit-box-flex: 1;
+
+			fieldset {
+				margin-bottom: 15px;
+			}
+
+			fieldset:last-of-type {
+				margin-bottom: 0;
+			}
+			fieldset:last-of-type a:last-child {
+				padding: 0;
+				margin: 0 auto;
+				height: 39px;
+				line-height: 24px;
+				vertical-align: top;
+			}
+		}
+
+		.input-container {
+			padding: 0;
+			margin: 0 0 1.0em;
+			overflow: hidden;
+			-webkit-background-clip: padding-box;
+		}
+
+		input[type=text], input[type=email], input[type=password], input[type=submit] {
+			@include border-radius(5px);
+			border: 1px solid #101010;
+			@include box-sizing(border-box);
+			font-size: 1.1em;
+			margin: 0;
+			padding: .75em;
+			width: 100%;
+			display: block;
+			-webkit-appearance: none;
+			@include box-shadow(inset 0px 1px 5px -2px #333333);
+		}
+
+		#username {
+			@include border-bottom-radius(0);
+			border-bottom: 0;
+		}
+		#password {
+			@include border-top-radius(0);
+			@include box-shadow(none);
+			border-top: 1px solid #ccc;
+		}
+
+		.sign-up-group {
+			margin: 0 0 0 0;
+			display: -webkit-box;
+			width: 100%;
+			-webkit-box-orient: horizontal;
+			-webkit-box-align: center;
+			-webkit-box-pack: center;
+			-webkit-box-sizing: border-box;
+
+			&:last-child {
+				padding-top: 1em;
+			}
+			&:first-child {
+				padding-bottom: 0.2em;
+				@media (min-height: 500px) {
+					padding-bottom: 0.35em;
+				}
+			}
+
+			// input[type=submit] {
+			button.submit {
+				@include border-radius(.3em);
+				@include backgroundGradientLinear(#fefefe, #c0c0c0);
+				@include box-shadow(0 2px 5px #333);
+				border: 1px solid #101010;
+				display: -webkit-box;
+				-webkit-appearance: none;
+				// -webkit-box-flex-group: 1;
+				width: 45%;
+				-webkit-box-flex: 1;
+				-webkit-box-orient: vertical;
+				-webkit-box-align: center;
+				-webkit-box-pack: center;
+				-webkit-box-sizing: border-box;
+
+				font-weight: bold;
+				color: #00427a;
+				// margin: 0 0 0.5em;
+				margin: 0 0 0.5em 0.4em;
+				padding: .7em;
+				text-shadow: 0 1px 0 #fff;
+				-webkit-background-clip: border-box;
+
+				.label {
+					position: relative;
+					top: 3px;
+				}
+			}
+
+			.sign-up-btn {
+				display: block;
+				font-size: 13px;
+				height: 31px;
+				-webkit-box-flex: 0;
+				-webkit-appearance: none;
+				-webkit-box-sizing: border-box;
+
+				@include border-radius(5px);
+				@include backgroundGradientLinear($accept-button-top-color, $accept-button-bottom-color);
+				box-shadow: 0 2px 5px #333, inset 0px 1px 0px rgba(255, 255, 255, 0.3);
+				border: 1px solid $color-super-dark-blue-2;
+
+				font-weight: bold;
+
+				margin: 0 0 0.5em 0;
+				// padding: 14px;
+				-webkit-background-clip: padding-box;
+				white-space: nowrap;
+
+				&:hover {
+					@include backgroundGradientLinear($accept-button-hover-top-color, $accept-button-hover-bottom-color);
+				}
+
+				&:active {
+					@include backgroundGradientLinear($accept-button-hover-top-color, $accept-button-hover-bottom-color);
+				}
+
+				color: white;
+				text-shadow: 0 -1px 0 black;
+				padding: 0px 10px;
+				text-align: center;
+			}
+		}
+
+		.forgot-terms-group {
+			overflow: hidden;
+			padding: 0.25em 0;
+			&:last-child {
+				padding-bottom: 1em;
+			}
+
+			ul {
+				list-style-type: none;
+				margin: 0;
+				padding: 0;
+				text-align: center;
+			}
+
+			li {
+				display: inline;
+				font-size: 0.8em;
+				text-decoration: underline;
+
+				.touch-box {
+					line-height: 2em;		// for bigger hit-target
+					padding-bottom: 5px;		// for bigger hit-target
+					padding-top: 5px;		// for bigger hit-target
+				}
+				&:hover {
+					cursor: pointer;
+				}
+			}
+
+			li:first-child {
+				// shows the "|" separator
+				border-right: 2px solid $accept-button-top-color;
+				padding-right: 5px;
+			}
+
+			li:last-child {
+				padding-left: 5px;
+			}
+		}
+
+	}
+}
+
+.view-full {
+	padding: 0px 10px 1.25em 10px;
+	display: block;
+	font-size: 0.8em;
+	color: #fff;
+	line-height: 2;
+}
+
+.wrapped .view-full {
+	display: none;
+}
+
+.build {
+	color: #ccc;
+	font-size: 12px;
+	margin: 10px 0 0;
+}
+
+.errors {
+	text-align: left;
+	background-color: #FFE3E3;
+	border: 1px solid #A13232;
+	color: #A13232;
+	padding: 1em;
+	line-height: 1.2em;
+	margin-bottom: 1em;
+}
+
+.hidden {
+	display: none;
+}

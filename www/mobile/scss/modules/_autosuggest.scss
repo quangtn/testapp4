@@ -1,0 +1,24 @@
+.autosuggest-wrapper {
+	overflow: auto;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+
+.autosuggest-popup {
+	border-top: 1px solid $color-medium-gray;
+}
+
+.autosuggest-list {
+	@extend .list-rows;
+	@include box-shadow(0 3px 10px rgba(0, 0, 0, 0.50));
+}
+
+.autosuggest-suggestion {
+	@extend .list-row-alt;
+	padding: 10px 12px;
+	height: $list-row-height-med;
+}
+.autosuggest-header {
+	@extend .list-row-header;
+}

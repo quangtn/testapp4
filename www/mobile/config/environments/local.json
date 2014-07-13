@@ -1,0 +1,12 @@
+{
+	"debug": true,
+	"timingSampleRate": 100,
+	"analyticsID": "UA-9927374-3",
+	"apiHost": "local.tripcase.com:3000",
+	"apiProtocol": "http://",
+	"pushAppId": "500838B7C399A4.66706561",
+	"pushAppProjectId": "964299913672",
+	"appName": "TripCase",
+	"assetPath": null,
+	"platforms": null
+}

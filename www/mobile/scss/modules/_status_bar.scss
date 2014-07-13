@@ -1,0 +1,60 @@
+// TODO: change "status-bar" class to semantic class reflecting "ios7" specific code
+.status-bar {
+	.header {
+		@include box-shadow(none);
+		background-color: none;
+	}
+
+	.app-header {
+		padding-top: $STATUS-BAR-PADDING;
+		box-shadow: 0 0 5px rgba(0, 0, 0, 0.5), inset 0 -1px 0 black;
+	}
+
+	#sidemenu-scroll-wrapper {
+		border-top: $STATUS-BAR-PADDING solid rgb(26, 32, 37);
+	}
+
+	.app-header {
+		background: #252d34;
+	}
+
+	#app-page {
+		padding-top: $STATUS-BAR-PADDING;
+
+		&.with-header {
+			padding-top: 43px + $STATUS-BAR-PADDING;
+		}
+
+		&.app-page--tall {
+			padding-top: $HEADER--HEIGHT-TALL + $STATUS-BAR-PADDING;
+		}
+	}
+
+	.overlay-wrapper {
+		top: $STATUS-BAR-PADDING;
+	}
+
+	.offline {
+		#offline {
+			text-shadow: none;
+		}
+
+		.app-header,
+		#sidemenu-scroll-wrapper {
+			padding-top: 0;
+			top: $OFFLINE-BAR-PADDING + $STATUS-BAR-PADDING;
+		}
+
+		#app-page {
+			padding-top: $OFFLINE-BAR-PADDING + $STATUS-BAR-PADDING;
+		}
+
+		#app-page.with-header {
+			padding-top: 43px + $OFFLINE-BAR-PADDING + $STATUS-BAR-PADDING;
+		}
+
+		#offline {
+			padding-top: 1px + $STATUS-BAR-PADDING;
+		}
+	}
+}

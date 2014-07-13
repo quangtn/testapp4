@@ -1,0 +1,51 @@
+$text-body-size: 13px;
+$text-detail-XXlarge-size: 40px;
+$text-detail-Xlarge-size: 28px;
+$text-detail-large-size: 20px;
+$text-detail-medium-size: 17px;
+$text-detail-small-size: 15px;
+$text-detail-Xsmall-size: 13px;
+$text-detail-XXsmall-size: 12px;
+
+
+.background-floating-text {
+	color: $color-white;
+	text-align: center;
+	padding: 15px;
+}
+
+.background-floating-link {
+	@extend .background-floating-text;
+	a {
+		color: inherit;
+	}
+}
+
+
+.tc-label {
+	font-weight: bold;
+}
+.tc-label-medium {
+	@extend .tc-label;
+	font-size: $text-detail-medium-size;
+}
+
+.tc-label-small {
+	@extend .tc-label;
+	font-size: $text-detail-small-size;
+}
+
+.tc-sublabel {
+	color: $color-medium-dark-gray;
+}
+
+
+.text-ellipsis {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.word-wrap-text {
+	word-wrap: break-word;
+}

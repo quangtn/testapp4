@@ -1,0 +1,335 @@
+input[type=text], input[type=email], input[type=password], input[type=submit],
+input[type=number], input[type=time], input[time=date], input[type=search] {
+	font-family: Helvetica, Arial, sans-serif;
+}
+
+::-webkit-input-placeholder {
+	font-weight: lighter;
+}
+
+.standard-form-panel {
+	.selection-group {
+		li {
+			border-bottom: 1px solid $form-border;
+			padding: 10px;
+		}
+	}
+
+	&.search {
+		@include border-radius(5px);
+		padding:5px 10px 5px 10px;
+		margin: 20px 30px 20px 30px;
+		input {
+			width:auto !important;
+		}
+	}
+
+	background-color: white;
+	color: $text-body-color;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: $text-body-size;
+	@include box-shadow(0 1px 10px rgba(0, 0, 0, 0.75));
+
+	.input-group {
+
+		&.notes {
+			height: 100%;
+			.label {
+				height: 66px;
+				p {
+					padding-top:30px;
+				}
+			}
+		}
+
+		background-color: white;
+		border-bottom: 1px solid $border-edge-color;
+		height: 43px;
+		width: 100%;
+
+		&.error {
+			border-bottom-color: $alert-color;
+			position: relative;
+
+			.label {
+				color: $alert-color;
+
+				&:after {
+					display: block;
+					content: "";
+					position: absolute;
+					top: 5px;
+					right: 5px;
+					width: 5px;
+					height: 35px;
+					background: $alert-color;
+				}
+			}
+		}
+
+		&.location {
+			height: 70px;
+			.input {
+				@include ellipsis()
+			}
+			.address {
+				font-size: 12px;
+			}
+		}
+
+	}
+
+
+	.input-group-top-border {
+		border-top: 1px solid $border-edge-color;
+	}
+
+	&.input-group-bottom-border {
+		border-bottom: 1px solid $border-edge-color;
+	}
+
+	.input-group-bottom-border {
+		border-bottom: 1px solid $border-edge-color;
+	}
+
+	.label {
+		background-color: $input-prompt-background;
+		float: left;
+		height: 100%;
+		width: 90px;
+		display: table;
+
+		p {
+			padding-left: 15px;
+			line-height: 1.2;
+			display: table-cell;
+			vertical-align: middle;
+		}
+
+		&.wide {
+			width: 123px;
+			p {
+				padding-top: 9px;
+				padding-right: 15px;
+			}
+		}
+	}
+
+	.input-container {
+		div.input {
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+		float: left;
+		font-size: $text-detail-large-size;
+		overflow: hidden;
+		padding: 0;
+		width: 220px;
+
+		strong {
+			font-weight: bold
+		}
+
+		&.thin {
+			width: 195px;
+		}
+
+		&.map-location-thin {
+			width: 170px;
+		}
+	}
+
+	.next-group {
+		float: right;
+		margin-top: 30px;
+		height: 13px;
+		width: 19px;
+	}
+
+	.input, input[type=time], input[type=date], input[type=text], input[type=email],
+		input[type=password], input[type=submit], input[type=number], input[type=search] {
+		border: 0;
+		display: block;
+		font-family: Helvetica, Arial, sans-serif;
+		font-size: $text-detail-medium-size;
+		margin: 2px 1px 1px 1px;
+		padding: 8px 0 8px 8px;
+		width: 100%;
+		-webkit-appearance: none;
+	}
+
+	input[type=submit] {
+		@include border-radius(5px);
+		@include backgroundGradientLinear($accept-button-top-color, $accept-button-bottom-color);
+		@include box-shadow(0 1px 2px #cfcfcf);
+
+		border: 1px solid $accept-button-bottom-color;
+		box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25), inset 0px 1px 0px rgba(255, 255, 255, 0.3);
+		color: white;
+		font-family: Helvetica, Arial, sans-serif;
+		font-size: $text-detail-medium-size;
+		font-weight: bold;
+		padding: 12px 0;
+		text-shadow: 0 -1px 0 black;
+
+		&.warning-button {
+			@include backgroundGradientLinear($warning-button-top-color, $warning-button-bottom-color);
+			border: 1px solid $warning-button-bottom-color;
+
+			&:hover {
+				@include backgroundGradientLinear($warning-button-hover-top-color, $warning-button-hover-bottom-color);
+			}
+
+			&:active {
+				@include backgroundGradientLinear($warning-button-hover-top-color, $warning-button-hover-bottom-color);
+			}
+		}
+
+		/* */
+		&.cancel-button {
+			@include grayButton;
+		}
+
+	}
+
+	.return-to-sign-in {
+		text-align: center;
+		padding-top: 15px;
+		color: $color-medium-gray;
+	}
+
+	.checkbox-slider {
+		&.signup-get-news {
+			float: right;
+			height: 25px;
+			margin-top: 8px;
+			margin-right: 10px;
+		}
+	}
+}
+
+.input-group-checkbox {
+	@include flexbox;
+	@include align-items(center);
+	@include box-sizing(border-box);
+	position: relative;
+	padding: 0 15px 0 52px;
+	height: 44px;
+	border-bottom: 1px solid $form-border;
+
+	&.is-disabled {
+		opacity: .5;
+	}
+}
+.input-group-checkbox__checkbox {
+	@extend .tc-checkbox;
+
+	margin: 0;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	width: 100%;
+	height: 100%;
+	background-position-x: 15px;
+}
+.input-group-checkbox__main {
+	@include flex-grow(1);
+	margin-left: 3px;
+}
+.input-group-checkbox__label {
+	font-size: $text-detail-small-size;
+}
+.input-group-checkbox__sublabel {
+	@extend .tc-sublabel;
+	font-size: $text-detail-Xsmall-size;
+}
+.input-group-checkbox__icon {
+	margin-left: -6px;
+}
+.input-group-checkbox__nontoggle {
+	position: relative;
+}
+.input-group-checkbox__right-button {
+	padding: 10px;
+	margin-right: -10px;
+}
+
+.form-group-top {
+	padding: 15px;
+	border-bottom: 1px solid $color-lighter-gray;
+
+	// overrides
+	#sign-up-form & {
+		padding-bottom: 0;
+	}
+}
+
+.full-screen-underlay {
+	background-color: black;
+	height: 100%;
+	left: 0;
+	opacity: 0.80;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 10;
+}
+
+.chevron-container {
+	@include flexbox;
+	@include justify-content(flex-start);
+	@include align-items(center);
+}
+
+/* Auto Suggest Input Form */
+form.auto-suggest {
+	display: -webkit-box;
+	-webkit-box-sizing: border-box;
+	-webkit-box-align: stretch;
+	-webkit-box-pack: justify;
+	width: 100%;
+	padding: 15px;
+	background: rgb(73, 87, 102) -webkit-gradient(linear, left top, left bottom, from(rgb(73, 87, 102)), to(rgb(50, 60, 70))) center center no-repeat;
+	input {
+		display: -webkit-box;
+		-webkit-box-flex: 1;
+		-webkit-box-align: center;
+		-webkit-box-pack: center;
+		-webkit-box-sizing: border-box;
+		-webkit-appearance: none;
+		margin: 0;
+		padding: 0 15px;
+		height: 40px;
+		border-radius: 5px;
+		box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.75);
+		font-size: 14px;
+		font-weight: normal;
+		border: 1px solid rgb(17, 17, 17);
+		// text-indent: 15px;
+		outline: none;
+		color: black;
+		line-height: 1;
+	}
+}
+
+.form-text {
+	font-size: $text-detail-small-size;
+	margin: 15px 0;
+
+	&:last-of-type {
+		margin-bottom: 0;
+	}
+}
+
+.form-text-centered {
+	@extend .form-text;
+	text-align: center;
+}
+
+.form-link {
+	color: $color-dark-blue-link;
+	text-decoration: underline;
+}

@@ -1,0 +1,100 @@
+
+@include spriting("img_itin_markers","itin-marker");
+
+#app-page {
+	box-sizing: border-box;
+	///@include backgroundRadialGradientWithImage("../assets/images/bkg_repeat.png", #64798C, #252D34, 50%, 15%);
+	background-color: $app-background-color;
+}
+
+.itinerary-page {
+	overflow: hidden;
+}
+
+.itinerary-container {
+	margin-left: 54px;
+	font-family: Arial, Helvetica, sans-serif;
+	padding-bottom: 20px;
+	padding-top: 10px;
+
+	.scroll-indicator {
+		z-index: 1;
+		position: fixed;
+		margin-left: -8px;
+		&.above {
+			top: 43px;
+		}
+		&.below {
+			bottom: 0px;
+		}
+
+		//TODO figure out how to move these when slide menu is expanded
+		&.sidemenu-slide-out {
+			&.above {
+				display: none;
+			}
+			&.below {
+				display: none;
+			}
+		}
+	}
+
+	.edge-runner {
+		background-color: rgba(239, 239, 239, 0.3);
+		box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.25);
+		position: absolute;
+		width: 4px;
+	}
+
+	.itinerary-day {
+		margin: 0 0 20px;
+	}
+
+	.itinerary-date {
+		color: $text-body-light-color-on-dark;
+		text-transform: uppercase;
+		font-size: 12px;
+		margin-left: 15px;
+	}
+
+	.itinerary-item {
+		position: relative;
+
+		.item-title {
+			line-height: 1.2;
+			word-wrap: break-word;
+		}
+		.item-sub-title {
+			font-size: 13px;
+			line-height: normal;
+		}
+
+		.itinerary-item-time {
+			color: $text-body-light-color-on-dark;
+			font-weight: bold;
+			font-size: 15px;
+			margin-left: -55px;
+			position: absolute;
+			text-align: right;
+			line-height: 1.2;
+			width: 3em;
+			padding: 10px 0 0;
+		}
+
+		.am-pm {
+			font-weight: normal;
+			display: block;
+			color: $text-body-light-color-on-dark;
+			font-size: 13px;
+			text-transform: uppercase;
+		}
+
+		.general-icon {
+			position: absolute;
+			left: 0;
+			top: 50%;
+			margin-top: -22.5px;
+		}
+
+	}
+}

@@ -1,0 +1,20 @@
+<ul class="list-panel">
+	{{#if isEmpty}}
+	<li class="empty">
+		<div class="title">{{emptyMessage}}</div>
+		{{#if isFollowingTrips}}
+			<p>{{t 'EncourageFriendsToShare'}}</p>
+		{{else}}
+			<p>{{t 'NoTripsInstruct'}} <a href="mailto:{{t 'TripsEmail'}}">{{t 'TripsEmail'}}</a></p>
+		{{/if}}
+	</li>
+	{{/if}}
+</ul>
+{{#if showPastFollowingTripsLoadButton}}
+<ul class="js-load-past-following-trips">
+	<li class="past-following-button">
+		<span>{{t 'ShowPastFollowingTrips'}}</span>
+		<div class="loader loader--inline"></div>
+	</li>
+</ul>
+{{/if}}

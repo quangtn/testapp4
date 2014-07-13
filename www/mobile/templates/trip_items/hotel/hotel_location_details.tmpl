@@ -1,0 +1,82 @@
+<div class="trip-component trip-item-detail vehicle-detail">
+	{{#if photos}}
+	<div class='swipe'>
+		<div class="swipe-wrap">
+			{{#each photos}}
+			<div><img src="{{url}}" width="{{getCarouselImageWidth width height}}" height="{{getCarouselImageHeight width height}}" alt=""></div>
+			{{/each}}
+		</div>
+		<div class="previous button-icon btn_circle_arrow_left"></div>
+		<div class="next button-icon btn_circle_arrow_right"></div>
+		<span class="position"><span id="of">1</span> {{t "Of"}} <span id="num">{{count photos}}</span></span>
+	</div>
+	{{/if}}
+	<section>
+		<div class="map map-drop-down-button" data-segment="start">
+			<div class="button-icon btn_icon_map_25px"></div>
+		</div>
+		<div>
+      {{#with start_location}}
+			<h2 class="title">{{{name}}}</h2>
+		{{#if label}}<p class="description">{{label}}</p>{{/if}}
+        {{#each address_lines}}
+            <p class="description">{{.}}</p>
+        {{/each}}
+      {{/with}}
+		</div>
+	</section>
+	{{#if phoneNumbers}}
+	<section class="phones">
+		{{#each phoneNumbers}}
+			<dl class="inline phone">
+				<dd>
+					<div class="phone-actionable phone-drop-down-button {{type}}">
+						<a href="tel:{{number}}" class="button-icon btn_icon_call_25px"></a>
+					</div>
+					<span class="phone-number description">{{phone number type}}</span>
+				</dd>
+			</dl>
+		{{/each}}
+	</section>
+	{{/if}}
+	<h2 class="component-subheader">{{t "GeneralInformation"}}</h2>
+	<section>
+		<p class="description ellipsis">
+			{{#if generalInformation}}
+				{{{generalInformation}}} <a class="read-more">{{t "ReadMore"}}</a>
+			{{else}}
+				{{t "NoDescriptionAvailable"}}
+			{{/if}}
+		</p>
+	</section>
+	<h2 class="component-subheader">{{t "PropertyAmenities"}}</h2>
+	<section>
+		{{#if property_amenities}}
+		<ul>
+			{{#each property_amenities}}
+			<li>{{.}}</li>
+			{{/each}}
+		</ul>
+		{{else}}
+		<p class="description">{{t "NoDescriptionAvailable"}}</p>
+		{{/if}}
+	</section>
+	<h2 class="component-subheader">{{t "RoomAmenities"}}</h2>
+	<section>
+		{{#if room_amenities}}
+		<ul>
+			{{#each room_amenities}}
+			<li>{{.}}</li>
+			{{/each}}
+		</ul>
+		{{else}}
+		<p class="description">{{t "NoDescriptionAvailable"}}</p>
+		{{/if}}
+	</section>
+
+
+</div>
+
+
+
+

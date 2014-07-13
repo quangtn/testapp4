@@ -1,0 +1,36 @@
+<div class="select-airport">
+	<h2>Choose your origination airport</h2>
+	<ul class="departure-airports">
+		{{#each_with_index flight_paths}}
+		{{#each departure_airport}}
+		<li class="{{#if selected}}selected{{/if}} selectable" data-airport-item-index="{{../index}}">
+			<div class="details">
+				<div class="airport-code">{{iata_code}}</div>
+				<div class="airport-city">{{name}}</div>
+			</div>
+		</li>
+		{{/each}}
+		{{/each_with_index}}
+	</ul>
+
+
+	<h2>Choose your destination airport</h2>
+	<ul class="arrival-airports">
+		{{#each flight_paths}}
+		{{#each_with_index arrival_airports}}
+		{{#if relevant}}
+		<li class="{{#if selected}}selected{{/if}} selectable" data-airport-item-index="{{index}}">
+			<div class="details">
+				<div class="airport-code">{{iata_code}}</div>
+				<div class="airport-city">{{name}}</div>
+			</div>
+		</li>
+		{{/if}}
+		{{/each_with_index}}
+		{{/each}}
+	</ul>
+	<div class="actions">
+		<button class="submit">{{t "Continue"}}</button>
+	</div>
+</div>
+

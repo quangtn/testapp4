@@ -1,0 +1,41 @@
+<form action="#sign-up-user" id="sign-up-form" class="standard-form-panel">
+	<div class="form-group-top">
+		<button type="button" id="facebook">{{t "SignUpWithFacebook"}}</button>
+		<div class="horizontal-divider-dark-gray">
+			<span class="horizontal-divider-text">{{t "or"}}</span>
+			<hr class="horizontal-divider-dividers">
+		</div>
+	</div>
+	<div id="first-name-group" class="input-group">
+		<div class="label"><p>{{t "FirstName"}}</p></div>
+		<div class="input-container"><input id="firstname" name="firstname" type="text" autocomplete="off" autocapitalize="off" autocorrect="off" /></div>
+	</div>
+
+	<div id="last-name-group" class="input-group">
+		<div class="label"><p>{{t "LastName"}}</p></div>
+		<div class="input-container"><input id="lastname" name="lastname" type="text" autocomplete="off" autocapitalize="off" autocorrect="off" /></div>
+	</div>
+
+	<div id="email-group" class="input-group">
+		<div class="label"><p>{{t "Email"}}</p></div>
+		<div class="input-container"><input id="email" name="email" type="text" autocomplete="off" autocapitalize="off" autocorrect="off" /></div>
+	</div>
+
+	<div id="password-group" class="input-group">
+		<div class="label"><p>{{t "Password"}}</p></div>
+		<div class="input-container"><input id="password" name="password" type="password" autocomplete="off" autocapitalize="off" autocorrect="off" /></div>
+	</div>
+
+	<div id="password-confirm-group" class="input-group">
+		<div class="label"><p>{{t "ConfirmPassword"}}</p></div>
+		<div class="input-container"><input id="passwordconfirm" name="passwordconfirm" type="password" autocomplete="off" autocapitalize="off" autocorrect="off" /></div>
+	</div>
+
+	<div class="actions">
+		<button class="submit"><span>{{t "Continue"}}</span><span class="loader light">{{t "Loading"}}</span></button>
+		<p class="return-to-sign-in">{{t "AlreadyHaveAccount"}} <a href="" id="return-to-sign-in-link">{{t "SignIn"}}</a></p>
+	</div>
+</form>
+
+<p id="terms-page" class="background-floating-link"><a href="#">{{t "LegalNotices"}}</a></p>
+

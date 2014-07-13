@@ -1,0 +1,35 @@
+<form action="#edit-contact" id="edit-contact-form" class="standard-form-panel">
+	<div class="input-group">
+		<div class="label"><p>{{t "FirstName"}}</p></div>
+		<div class="input-container">
+			<input {{#if 'first_name'}}value="{{first_name}}"{{/if}} id="firstname" name="firstname" type="text" autocomplete="off" autocapitalize="off" autocorrect="off"/>
+		</div>
+	</div>
+	<div class="input-group">
+		<div class="label"><p>{{t "LastName"}}</p></div>
+		<div class="input-container">
+			<input {{#if 'last_name'}}value="{{last_name}}"{{/if}} id="lastname" name="lastname" type="text" autocomplete="off" autocapitalize="off" autocorrect="off"/>
+		</div>
+	</div>
+	<div class="input-group">
+		<div class="label"><p>{{t "Email"}}</p></div>
+		<div class="input-container">
+			<input {{#if email}}value="{{email}}"{{/if}} id="email" name="email" type="text" autocomplete="off" autocapitalize="off" autocorrect="off"/>
+		</div>
+	</div>
+	<div class="input-group-checkbox">
+		<input type="checkbox" id="always-share" class="input-group-checkbox__checkbox" {{#if is_always_sharing}}checked="checked"{{/if}}>
+		<div class="input-group-checkbox__icon button-icon btn_icon_share_blue_25px"></div>
+		<p class="input-group-checkbox__label input-group-checkbox__main">{{t "AlwaysShare"}}</p>
+		<div id="always-share-help" class="input-group-checkbox__right-button input-group-checkbox__nontoggle">
+			<div class="icon_info_20px general-icon"></div>
+		</div>
+	</div>
+
+	<div class="actions">
+		<button id="save-contact" type="submit" class="tc-button-blue tc-button-form"><span class="tc-button-form-label">{{t "Save"}}</span><span class="tc-button-form-loader loader light">{{t "Loading"}}</span></button>
+		{{#if email}}
+			<p id="delete-contact" class="form-text-centered form-link">{{t "DeleteThisContact"}}</p>
+		{{/if}}
+	</div>
+</form>

@@ -1,0 +1,95 @@
+<li class="card" data-trip-item-id="{{id}}" data-location="{{event_type}}" data-trip-item-type="{{lowercase type}}">
+	<header class="card-header event-detail">
+		<div class="cell col-26">
+			<div class="general-icon {{icon}}"></div>
+			<h3>{{if_not_blank name "Untitled"}}</h3>
+		</div>
+	</header>
+
+	<section class="card-content event-detail">
+		<div class="cell first col-26">
+			<div class="label">
+				{{#isCarOrHotel className}}
+					{{#if_equal event_type "start"}}
+						{{labels.start}}
+					{{else}}
+						{{labels.end}}
+					{{/if_equal}}
+				{{else}}
+					{{t "Starts"}}
+				{{/isCarOrHotel}}
+			</div>
+			<div class="value">
+				{{#isCarOrHotel className}}
+					{{#if_equal event_type "start"}}
+						{{locationAddress start_location}}
+					{{else}}
+						{{#if end_location.general_location}}
+							{{locationAddress end_location}}
+						{{else}}
+							{{locationAddress start_location}}
+						{{/if}}
+					{{/if_equal}}
+				{{else}}
+					{{locationAddress start_location}}
+				{{/isCarOrHotel}}
+			</div>
+		</div>
+
+		<div class="cell first col-13">
+			<div class="primary">
+				<span class="small-caps">
+				{{#isCarOrHotel className}}
+					{{#if_equal event_type "start"}}
+						{{timeFromDateTime start_date}}
+					{{else}}
+						{{timeFromDateTime end_date}}
+					{{/if_equal}}
+				{{else}}
+					{{timeFromDateTime start_date}}
+				{{/isCarOrHotel}}
+				</span>
+			</div>
+		</div>
+
+		{{#if confirmation_number}}
+		<div class="cell col-8">
+			<div class="label">
+				{{t "ConfirmNum"}}
+			</div>
+			<div class="value">
+				{{confirmation_number}}
+			</div>
+		</div>
+		{{/if}}
+
+	</section>
+
+	<section class="card-content card-map" data-lat-lng="{{getStaticMapLatLng}}"
+		{{#if_equal type "Vehicle"}}
+			{{#if_equal event_type "end"}}
+				data-segment="end"
+			{{/if_equal}}
+		{{/if_equal}}
+	>
+		<div class="card-map-marker-shadow"></div>
+		<div class="card-map-marker"></div>
+	</section>
+
+	<ul class="card-toolbar clearfix">
+		<li class="call" data-trip-item-id="{{id}}">
+			<div class="button-icon btn_icon_call_blue_25px"></div>
+			{{t "Call"}}
+		</li>
+		<li class="directions" data-trip-item-id="{{id}}"
+		{{#if_equal type "Vehicle"}}
+			{{#if_equal event_type "end"}}
+				data-segment="end"
+			{{/if_equal}}
+		{{/if_equal}}
+		>
+			<div class="button-icon btn_icon_directions_blue_25px"></div>
+			{{t "Directions"}}
+		</li>
+	</ul>
+</li>

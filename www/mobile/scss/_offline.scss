@@ -1,0 +1,82 @@
+#offline {
+	background-color: #b00;
+	color: #fff;
+	display: none;
+	font-size: 10px;
+	padding: 1px;
+	left: 0;
+	position: fixed;
+	text-align: center;
+	text-transform: uppercase;
+	top: 0;
+	width: 100%;
+	z-index: 3;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.75);
+	box-sizing: border-box;
+	font-weight: bold;
+	border-bottom: 1px solid #000;
+}
+
+.no-connection {
+	display: none;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	background: #fff;
+	left: 0;
+	right: 0;
+	text-align: center;
+	padding: 150px 0 0;
+	color: #666;
+}
+
+.offline {
+	#offline {
+		display: block;
+	}
+
+	.app-header,
+	#sidemenu-scroll-wrapper {
+		top: $OFFLINE-BAR-PADDING;
+	}
+
+	.no-connection {
+	}
+
+	#app-page {
+		padding-top: $OFFLINE-BAR-PADDING;
+	}
+
+	#app-page.with-header {
+		padding-top: 43px + $OFFLINE-BAR-PADDING;
+	}
+
+	.card-toolbar .alternate-flights,
+	.card-toolbar .map,
+	.card-toolbar .weather,
+	.card-toolbar .share,
+	.card-toolbar .add-item,
+	.card-toolbar .directions {
+		opacity: .5;
+	}
+
+	.map.map-drop-down-button,
+	.vehicle-detail .vehicle-location .map.map-drop-down-button,
+	.seats.seats-button,
+	#weather-menu,
+	#alternate-flights-menu,
+	#share-menu,
+	#directions-menu,
+	#create-trip,
+	#manage-trips,
+	.trip-item-refresh,
+	.flight-refresh,
+	.trip-item-detail .swipe {
+		display: none;
+	}
+
+	// take up the same space, but not fire events when clicked
+	.header .secondary-actions {
+		visibility: hidden;
+	}
+}

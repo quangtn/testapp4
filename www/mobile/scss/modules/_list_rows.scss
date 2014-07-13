@@ -1,0 +1,126 @@
+
+// List Row Constants
+$list-row-prepended-gutter: 55px;
+$list-row-height-short: 25px;
+$list-row-height-med: 37px;
+$list-row-height-med-tall: 45px;
+$list-row-color: $color-white;
+$list-row-color-alt: $color-super-light-gray;
+
+
+// List Rows
+.list-rows {
+	@include box-shadow(0 1px 10px rgba(0, 0, 0, 0.75));
+
+	* {
+		// TODO@TRI: refactor line-height for the whole app
+		line-height: normal;
+	}
+
+	.empty {
+		background-color: $color-white;
+		padding: 12px 15px 12px 15px;
+	}
+}
+
+
+// List Row Base
+%list-row {
+	padding: $GUTTER;
+	background-color: $list-row-color;
+	font-size: $text-detail-small-size;
+	border-bottom: 1px solid $color-lighter-gray;
+
+	&:last-of-type {
+		border-bottom: 0;
+	}
+}
+%list-row-alt {
+	background-color: $list-row-color-alt;
+	border-bottom-color: $color-medium-gray;
+}
+
+
+// List Row - Generic
+.list-row {
+	@extend %list-row;
+	@extend %panel;
+}
+.list-row-flat {
+	@extend %list-row;
+	@extend %panel-flat;
+}
+.list-row-alt {
+	@extend .list-row;
+	@extend %list-row-alt;
+}
+.list-row-alt-flat {
+	@extend .list-row-flat;
+	@extend %list-row-alt;
+}
+
+
+// List Row Components
+.list-row-main {
+	@extend %panel-main;
+}
+.list-row-group {
+	@extend %panel-group;
+}
+.list-row-flat-group {
+	@extend %panel-flat-group;
+}
+.list-row-flat-icon {
+	margin: 0 7px;
+
+	&:first-child {
+		margin-left: 0;
+	}
+
+	&:last-child {
+		margin-right: 0;
+	}
+}
+.list-row-flat-checkbox {
+	margin-right: $GUTTER;
+}
+
+
+// List Row Modifiers
+.list-row-fixed-height-short {
+	height: $list-row-height-short;
+}
+.list-row-fixed-height-med {
+	height: $list-row-height-med;
+}
+.list-row-fixed-height-med-tall {
+	height: $list-row-height-med-tall;
+}
+
+
+// List Row - Subclasses
+.list-row-header {
+	@extend .list-row;
+	padding-top: 0;
+	padding-bottom: 0;
+	text-transform: uppercase;
+	background: $color-dark-blue;
+	color: $color-white;
+	height: $list-row-height-short;
+	font-size: $text-detail-XXsmall-size;
+}
+
+.list-row-linked {
+	@extend .list-row-flat;
+	padding-right: 0;
+}
+
+.list-row-success {
+	@extend .list-row-alt-flat;
+
+	color: $color-medium-dark-gray;
+
+	&:first-of-type {
+		border-bottom: 1px solid $border-edge-color;
+	}
+}

@@ -1,0 +1,36 @@
+{{#if messages}}
+	<ul class="trip-messages" data-timing-category="appload" data-timing-name="tripfeedmessages">
+		{{#each_with_index messages}}
+			<li class="trip-message" data-index="{{index}}">
+
+				<div class="trip-message__icon"><img src="{{icon_url}}"/></div>
+				<p class="trip-message__text">{{{text}}}</p>
+
+				{{#ifTripFeedMessageClickable}}
+					<div class="trip-message__next btn_arrow button-icon"></div>
+				{{/ifTripFeedMessageClickable}}
+
+			</li>
+		{{/each_with_index}}
+	</ul>
+{{/if}}
+
+{{#if isFetchingMessages}}
+	<ul class="trip-messages">
+		<li class="trip-message">
+			<div class="trip-message__icon trip-message__icon--skeleton"></div>
+			<p class="trip-message__text trip-message__text--skeleton"></p>
+			<p class="trip-message__text trip-message__text--skeleton"></p>
+		</li>
+		<li class="trip-message">
+			<div class="trip-message__icon trip-message__icon--skeleton"></div>
+			<p class="trip-message__text trip-message__text--skeleton"></p>
+			<p class="trip-message__text trip-message__text--skeleton"></p>
+		</li>
+		<li class="trip-message">
+			<div class="trip-message__icon trip-message__icon--skeleton"></div>
+			<p class="trip-message__text trip-message__text--skeleton"></p>
+			<p class="trip-message__text trip-message__text--skeleton"></p>
+		</li>
+	</ul>
+{{/if}}

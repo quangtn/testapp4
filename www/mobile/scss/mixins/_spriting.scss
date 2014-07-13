@@ -1,0 +1,139 @@
+
+
+@mixin spriting($image-set-dir, $selector, $default-image:false, $prefix:false) {
+	// Generates sprite map images for both standard and retina display
+	//   and the css selectors to use them
+	//
+	// params:
+	//		- $image-set-dir:	(string) directory of the image set to be sprited
+	// 		- $selector:		(string) selector prefix for the image icon set
+	//		- $default-image:	(string - optional) default image used for the icon set
+	//		- $prefix:			(boolean - optional) prepends $selector for each image selector
+	//
+	// dependencies:
+	// 		- Sass
+	//		- Sass::Script::Functions::rename_sprite
+	//		- Sass::Script::Functions::getImageNames
+	//		- Sass::Script::Functions::stripLeadingUnderscore
+	//
+	// caveats:
+	//		image filenames with a number as the first character must be prepended with an underscore
+	//			compass sprite functions do not accept number as the first char in a filename
+	//			the mixin will strip the underscore for the selector of the image in the sprite
+	//			ex. 3blindmice.png => _3blindmice.png
+	//
+	// example:
+	//		burger_icons/
+	//			whataburger.png
+	//			heart_attack_burger.png
+	//		SASS:: @include spriting("burger_icons", "burger");
+	//		HTML:: <div class="burger-icon whataburger"></div>   and   <div class="burger-icon heart_attack_burger"></div>
+	//
+	// example with $prefix:
+	//		burger_icons/
+	//			whataburger.png
+	//			heart_attack_burger.png
+	//		SASS:: @include spriting("burger_icons", "burger", $prefix:true);
+	//		HTML:: <div class="burger-icon burger-whataburger"></div>   and   <div class="burger-icon burger-heart_attack_burger"></div>
+
+
+	$image-names: getImageNames($image-set-dir);
+
+	// Set Paths
+	$sprite-map: sprite-map("assets/images/sprites/#{$image-set-dir}/*.png");
+	$sprite-map-retina: sprite-map("assets/images/sprites/#{$image-set-dir}_2x/*.png");
+
+	$sprite-target: "assets/images/#{$image-set-dir}.png";
+	$sprite-target-retina: "assets/images/#{$image-set-dir}_2x.png";
+
+
+	// Generate sprite maps
+	// 	compass 'sprite-url' function generates the sprite map image files
+	//	sprite maps will not be regenerated each time this is called
+	//	  as long as the originally compass generated sprite map is not deleted
+	$map: sprite-url($sprite-map);
+	$map-retina: sprite-url($sprite-map-retina);
+
+
+	// Move and rename sprite maps to targeted path
+	//  Renaming and relocation of sprite maps must be called
+	//	before referring to the sprite map in the targeted path
+	$sprite-rename: rename-sprite($sprite-map, $sprite-target);
+	$sprite-rename-retina: rename-sprite($sprite-map-retina, $sprite-target-retina);
+
+
+	// CSS for standard display
+	.#{$selector}-icon {
+		background-image: url("../" + $sprite-target);
+		background-repeat: no-repeat;
+
+		@if $default-image {
+			background-position: sprite-position($sprite-map, $default-image);
+		}
+	}
+
+	@each $name in $image-names {
+		// strip leading underscore for image filenames with a number as the first character,
+		//	so the image can be referred in the html without the leading underscore
+		$image-selector: strip_leading_underscore($name);
+
+		@if $prefix {
+			$image-selector: $selector + "-" + $image-selector;
+		}
+
+		.#{$image-selector}.#{$selector}-icon{
+			background-position: sprite-position($sprite-map, $name);
+			height: image-height(sprite-file($sprite-map, $name));
+			width: image-width(sprite-file($sprite-map, $name));
+		}
+	}
+
+
+	// CSS for retina display
+	@include pixelDensity(1.5) {
+		// (source) https://gist.github.com/2140082
+		// (source) https://gist.github.com/2878758
+
+		.#{$selector}-icon {
+			background-image: url("../" + $sprite-target-retina);
+			@include background-size(
+				image-width($sprite-target)
+				image-height($sprite-target)
+			);
+
+			@if $default-image {
+				@include sprite-position-retina($sprite-map, $sprite-map-retina, $default-image);
+			}
+		}
+
+		@each $name in $image-names {
+			// strip leading underscore for image filenames with a number as the first character,
+			//	so the image can be referred in the html without the leading underscore
+			$image-selector: strip_leading_underscore($name);
+
+			@if $prefix {
+				$image-selector: $selector + "-" + $image-selector;
+			}
+
+			.#{$image-selector}.#{$selector}-icon{
+				@include sprite-position-retina($sprite-map, $sprite-map-retina, $name);
+			}
+		}
+	}
+}
+
+
+
+@mixin sprite-position-retina($sprite-map, $sprite-map-retina, $image-name) {
+	// Determines the image position within the sprite map for retina devices
+	//  (source) https://gist.github.com/2140082
+	//
+	// sprite-map:			(compass::sprite-map) reference to sprite map
+	// spirte-map-retina: 	(compass::sprite-map) reference to sprite map for retina devices, returns 2x pixel position
+	// image-name:  		(string) image within the sprite map
+	$ypos: nth(sprite-position($sprite-map, $image-name), 2);
+	$retina_ypos: round(nth(sprite-position($sprite-map-retina, $image-name), 2) / 2);
+	@if ($ypos != $retina_ypos) {
+		background-position: 0 $retina_ypos;
+	}
+}

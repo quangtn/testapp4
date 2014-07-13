@@ -1,0 +1,372 @@
+
+@include spriting("airline_logos", "airline", $default-image:"generic_airline", $prefix:true);
+
+.select-airport, .airline-results, .country-results {
+	h2 {
+		@include backgroundGradientLinear($light-bar-top-color, $light-bar-bottom-color);
+		color: $content-background-color;
+		line-height: 2.5;
+		padding: 0 0 0 1em;
+		font-weight: normal;
+		text-shadow: 0 -1px 0 $color-black;
+	}
+
+	li {
+		// standard list item should be broken out into module
+		display: block;
+		background: $content-background-color;
+		border-bottom: 1px solid $border-edge-color;
+		overflow: hidden;
+	}
+
+	li.selected {
+		// TODO: get real colors. manually color picked :(
+		@include backgroundGradientLinear(#fff, #e3ebf2);
+	}
+
+	.details {
+		padding: 1em 1em 1em 4em;
+		overflow: hidden;
+	}
+
+	.selectable .details {
+		background: url(../assets/images/radio_btn.png) no-repeat 15px center;
+	}
+
+	.selected .details {
+		background-image: url(../assets/images/radio_btn_checked.png);
+	}
+
+	@include pixelDensity(1.5) {
+		.selectable .details {
+			@include background-size(
+				image-width('assets/images/radio_btn.png')
+				image-height('assets/images/radio_btn.png')
+			);
+			background-image: url('../assets/images/radio_btn_2x.png');
+		}
+
+		.selected .details {
+			background-image: url('../assets/images/radio_btn_checked_2x.png');
+		}
+	}
+
+	.airport-code, .country-code {
+		float: left;
+		width: 2em;
+		font-weight: bold;
+	}
+
+	.airport-city, .country-name {
+		padding-left: 5px;
+		float: left;
+	}
+
+	.airline, .country {
+		padding: 0;
+		> div, p {
+			line-height: 60px;
+		}
+
+	}
+}
+
+.airline-icon, .country-icon {
+	float: left;
+	margin: 15px;
+	width: 45px;
+	height: 30px;
+}
+
+.flight-information {
+	font-size: 15px;
+	background: $content-background-color-dark;
+
+	.airline {
+		text-transform: uppercase;
+		color: $text-body-light-color;
+		font-size: 12px;
+	}
+
+	.flight {
+		font-size: 18px;
+		font-weight: bold;
+	}
+
+	.airline-icon {
+		margin-top: 0;
+		margin-left: 0;
+		margin-bottom: 0;
+	}
+}
+
+.trip-component .flight-information.section {
+	padding: 10px 15px;
+	border-bottom: 0;
+	border-top: 1px solid $border-edge-color;
+}
+
+.trip-component {
+	background: $content-background-color;
+	.action-button {
+		position: absolute;
+		right: 10px;
+		border: 1px solid;
+		@include border-radius(6px);
+		@include box-shadow(0px 2px 5px #666, 0px 1px inset);
+		width: 36px;
+		height: 32px;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+
+	textarea {
+		width: 90%;
+		min-height: 50px;
+	}
+
+	section, .section {
+		padding: 15px;
+		border-bottom: 1px solid $border-edge-color;
+		overflow: hidden;
+		position: relative;
+	}
+
+	label, .label {
+		text-transform: uppercase;
+		font-size: 12px;
+		color: $text-body-light-color;
+		line-height: 15px;
+	}
+
+	.tags {
+		@extend %tags;
+		background-color: $content-background-color;
+		padding: 15px;
+		position: absolute;
+		right: 0;
+		bottom: 0;
+
+		[class*="business"] {
+			@extend %business-tag;
+			margin-bottom: 0;
+		}
+	}
+
+	.special-note {
+		color: $text-special-note-color;
+		font-size: 12px;
+		font-weight: bold;
+	}
+
+	.value.primary {
+		font-size: 20px;
+	}
+
+	.alert {
+		color: $alert-color;
+	}
+
+	.value.simple {
+		color: $text-body-light-color;
+		font-size: $text-detail-XXsmall-size;
+		font-weight: normal;
+		text-transform: none;
+	}
+
+    .not-entered {
+        text-transform: none;
+    }
+
+	span, .value {
+		font-weight: bold;
+	}
+
+	.value {
+		line-height: 1.2;
+	}
+
+	.secondary {
+		font-weight: normal;
+	}
+	.departure.section .destination .airport .value, .arrival.section .destination .airport .value {
+		display: inline-block;
+		width: 50px;
+		padding-right: 8px;
+	}
+
+	.destination {
+		padding: 0 0 15px;
+		overflow: hidden;
+
+	}
+	.date, .time, .half {
+		display: block;
+		float: left;
+		width: 50%;
+	}
+
+	dl {
+		margin: 0;
+	}
+	.flight-group-summary {
+		border-bottom:none;
+	}
+
+	.general-icon {
+		float: left;
+		margin-right: 20px;
+	}
+
+	.next {
+		float: right;
+		margin-right: 0;
+		margin-top: 0;
+		width: 19px;
+		height: 13px;
+	}
+}
+
+section.layover {
+	border-top: 1px solid black;
+	background: $layover-background-color;
+	box-shadow: inset 0 -1px 3px 0 $color-black;
+	color: $text-body-light-color-on-dark;
+}
+
+section.layover dd {
+	line-height: 1.2;
+}
+
+section.layover .label {
+	color: $color-light-gray;
+}
+
+section.layover .airport {
+	width: 70%;
+	float: left;
+}
+
+section.layover .duration {
+	width: 25%;
+	float: right;
+	text-align: right;
+}
+
+.flight.trip-component section {
+	padding: 15px;
+}
+
+.date-divider {
+	padding: 0 15px;
+	background: $color-super-dark-gray;
+	text-transform: uppercase;
+	color: $text-body-light-color-on-dark;
+	line-height: 25px;
+	height: 25px;
+	font-size: 12px;
+}
+
+.map.map-drop-down-button { margin-top: 0; margin-right: 0 }
+
+
+.label.inline {
+	display: inline;
+}
+
+.flight-group-summary dl { float: left; }
+.depart-summary { width: 45%; }
+.stop-summary { width: 25%; }
+.stop-summary .value {
+	font-size: 12px;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden
+
+}
+.travel-time-summary { float: right; width: 30%; text-align: right; }
+
+.flight-information { position: relative; }
+.flight-information .action-button.call { top: 15px; }
+
+.trip-component .inline .label {
+	width: 100px;
+	float: left;
+	line-height: 20px;
+
+}
+
+.trip-component .arrive-depart {
+	margin: 0 0 10px;
+}
+
+.trip-component .airport-name { font-weight: normal; }
+
+.trip-component .inline {
+	clear: both;
+}
+
+.search-component {
+	@include backgroundGradientLinear($search-panel-top-color, $search-panel-bottom-color);
+	padding: 15px;
+
+	.search-query {
+		border: 1px solid $border-input-color;
+		border-radius: 5px 0 0 5px;
+		box-shadow: inset 0px 2px 5px $shadow-color-darker;
+		font-size: 14px;
+		font-weight: normal;
+		height: 35px;
+		padding-left: 15px;
+		padding-bottom: 4px;
+		padding-top: 2px;
+		padding-right: 7px;
+		width: 220px;
+	}
+
+	.search-submit {
+		@include backgroundGradientLinear($search-button-top-color, $search-button-bottom-color);
+
+		border: 1px solid $border-input-color;
+		border-radius: 0 5px 5px 0;
+		height: 43px;
+		margin: 0 0 0 -5px;
+		position: absolute;
+		width: 40px;
+
+		span {
+			display: block;
+			margin: 0 auto;
+			overflow: hidden;
+			text-indent: -9999px;
+		}
+	}
+}
+
+.aircraft .inline {
+	clear: left;
+}
+
+.seats-button {
+	@include border-radius(5px);
+	@include backgroundGradientLinear($accept-button-top-color, $accept-button-bottom-color);
+
+	border: 1px solid $accept-button-bottom-color;
+	box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25), inset 0px 1px 0px rgba(255, 255, 255, 0.3);
+	color: white;
+	float: right;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: $text-detail-medium-size;
+	font-weight: bold;
+	height: 30px;
+	text-shadow: 0 -1px 0 black;
+	width: 40px;
+
+	&:hover, &:active {
+		@include backgroundGradientLinear($accept-button-hover-top-color, $accept-button-hover-bottom-color);
+	}
+}
+.seats-button .button-icon {
+	margin-left: 7px;
+	margin-top: 3px;
+}

@@ -1,0 +1,54 @@
+
+//taken from style guide
+.section-title {
+	font-size: 1.3077em;
+	color: white;
+	text-shadow: 0px -1px 0px rgba(0, 0, 0, .5);
+	font-weight: normal;
+}
+
+h1 {
+	font-size: 2.14em;
+	color: $text-body-color;
+	letter-spacing: -0.03em;
+	font-weight: normal;
+	padding-bottom: 0.5em;
+	line-height: 1em;
+}
+
+a.standard {
+	font-size: 1em;
+	line-height: 1em;
+	padding-bottom: 0.5em;
+	color: $text-body-link-color;
+	font-weight: normal;
+}
+
+.upper-case {
+	text-transform: uppercase;
+}
+
+.item-title {
+	font-size: 1em;
+	font-weight: bold;
+	h2 {
+		font-size: 17px;
+		font-weight: bold;
+	}
+}
+
+.item-sub-title {
+	@include ellipsis();
+	color: $text-body-light-color;
+	font-size: $text-detail-Xsmall-size;
+	line-height: normal;
+}
+
+.small-caps {
+	font-variant: small-caps;
+	text-transform: none;
+}
+
+.strikethrough {
+	text-decoration: line-through;
+}

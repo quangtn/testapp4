@@ -1,0 +1,120 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>TripCase</title>
+	<meta http-equiv="content-type" content="text/xhtml; charset=utf-8" />
+	<meta http-equiv="imagetoolbar" content="no" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<meta name="viewport" id="vp" content="width=device-width,initial-scale=1.0,user-scalable=no,maximum-scale=1" />
+	<link href="../css/combined.css" rel="stylesheet" type="text/css" />
+	<link href="style.css" rel="stylesheet" type="text/css" />
+	<script src="../libs/jquery/jquery.js"></script>
+	<style>
+		.airline-results ul.item-list li {
+			min-height: 60px;
+		}
+		.airline-results ul.item-list li .item-icon.airline-icon {
+			float: none;
+			margin-left: 12px;
+		}
+		abbr {
+			font-size: 15px;
+			font-weight: bold;
+			line-height: 1;
+			padding-left: 7px;
+			text-transform: uppercase;
+		}
+		abbr:after {
+			content: attr(title);
+			font-weight: normal;
+			display: inline-block;
+			padding-left: 15px;
+			text-transform: capitalize;
+		}
+		form.auto-suggest {
+			display: -webkit-box;
+			-webkit-box-sizing: border-box;
+			-webkit-box-align: stretch;
+			-webkit-box-pack: justify;
+			width: 100%;
+			padding: 15px;
+			background: rgb(73, 87, 102) -webkit-gradient(linear, left top, left bottom, from(rgb(73, 87, 102)), to(rgb(50, 60, 70))) center center no-repeat;
+		}
+		form.auto-suggest input {
+			display: -webkit-box;
+			-webkit-box-flex: 1;
+			-webkit-box-align: center;
+			-webkit-box-pack: center;
+			-webkit-box-sizing: border-box;
+			-webkit-appearance: none;
+			margin: 0;
+			padding: 0;
+			height: 40px;
+			border-radius: 5px;
+			box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.75);
+			font-size: 14px;
+			font-weight: normal;
+			border: 1px solid rgb(17, 17, 17);
+			text-indent: 15px;
+			outline: none;
+			color: black;
+			line-height: 1;
+		}
+	</style>
+</head>
+<body>
+	<div id="app-page">
+		<div id="main">
+			<div class="content">
+				<form class="auto-suggest">
+					<input type="text" id="search-term" placeholder="Airline name or code" autocomplete="off" autocapitalize="off" autocorrect="off">
+				</form>
+				<h2 class="component-subheader">Your Airlines</h2>
+				<ul id="YOUR" class="item-list">
+					<li>
+						<div class="item-icon airline-icon aa"></div>
+						<div class="item-content">
+							<abbr title="American Airlines">AA</abbr>
+						</div>
+					</li>
+					<li>
+						<div class="item-icon airline-icon us"></div>
+						<div class="item-content">
+							<abbr title="US Airways">US</abbr>
+						</div>
+					</li>
+				</ul>
+				<h2 class="component-subheader">All Airlines</h2>
+				<ul id="ALL" class="item-list">
+					<li>
+						<div class="item-icon airline-icon aa"></div>
+						<div class="item-content">
+							<abbr title="American Airlines">AA</abbr>
+						</div>
+					</li>
+					<li>
+						<div class="item-icon airline-icon dl"></div>
+						<div class="item-content">
+							<abbr title="Delta Airlines">DL</abbr>
+						</div>
+					</li>
+					<li>
+						<div class="item-icon airline-icon ua"></div>
+						<div class="item-content">
+							<abbr title="United Airlines">UA</abbr>
+						</div>
+					</li>
+					<li>
+						<div class="item-icon airline-icon us"></div>
+						<div class="item-content">
+							<abbr title="US Airways">US</abbr>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

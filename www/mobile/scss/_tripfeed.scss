@@ -1,0 +1,473 @@
+
+// *************************
+// TRIPFEED CARDS
+//
+// *************************
+
+$grid-width: 3.571%;
+
+#trip-cards {
+	overflow: hidden;
+	padding: 10px 0 10px 20px;
+}
+
+.carousel-header {
+	margin-top: 10px;
+	font-size: 12px;
+	color: #fff;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 1);
+	@include clearFixAfter();
+}
+
+.carousel-date {
+	float: left;
+	margin-left: 20px;
+	width: 50%;
+	text-transform: uppercase;
+}
+
+.carousel-index {
+	float: right;
+	margin-right: 20px;
+}
+
+.card {
+	float: left;
+	margin-right: 10px;
+	min-width: 280px;
+	background-color: $content-background-color;
+	@include border-radius(5px);
+	@include box-shadow(0 1px 10px rgba(0, 0, 0, 0.75));
+
+	.delayed, .canceled {
+		color: $alert-color;
+	}
+
+	.cell {
+		float: left;
+		margin-top: 5px;
+		margin-left: ($grid-width * 1);
+
+		.label {
+			text-transform: uppercase;
+			font-size: 12px;
+			color: $text-body-light-color;
+			line-height: 1;
+		}
+
+		.value {
+			height: 1.2em;
+			width: 100%;
+			line-height: 1.2em;
+			word-break: break-all;
+			@include ellipsis;
+			font-weight: bold;
+
+			.note {
+				font-weight: normal;
+			}
+		}
+
+		.value.alert {
+			color: $alert-color;
+		}
+
+		.primary {
+			font-size: 30px;
+			font-weight: bold;
+		}
+
+		.primary.canceled {
+			text-decoration: line-through;
+		}
+	}
+
+	.cell.first {
+		clear: left;
+	}
+
+	.cell.right {
+		text-align: right;
+	}
+
+	.cell.center {
+		text-align: center;
+	}
+
+	.cell.col-3 {
+		width: ($grid-width * 3);
+	}
+
+	.cell.col-7 {
+		width: ($grid-width * 7);
+	}
+
+	.cell.col-8 {
+		width: ($grid-width * 8);
+	}
+
+	.cell.col-12 {
+		width: ($grid-width * 12);
+	}
+
+	.cell.col-13 {
+		width: ($grid-width * 13);
+	}
+
+	.cell.col-14 {
+		width: ($grid-width * 14);
+	}
+
+	.cell.col-18 {
+		width: ($grid-width * 18);
+	}
+
+	.cell.col-26 {
+		width: ($grid-width * 26);
+	}
+
+	.cell.days-padding {
+		padding-left: 3%;
+	}
+
+	&.hotel-checkout {
+		position: relative;
+		min-width: 110px;
+		width: 110px;
+		background: none;
+		@include box-shadow(none);
+
+		.card-content {
+			border: none;
+			position: absolute;
+			left: 11px;
+			top: 157px;
+			text-align: center;
+		}
+
+		.label, .value {
+			width: 80px;
+		}
+	}
+
+	.hotel-checkout-image {
+		height: 280px;
+		width: 130px;
+		margin: -10px 0 -10px -10px;
+		background: url(../assets/images/hotel_checkout_card.png) no-repeat;
+
+		@include pixelDensity(1.5) {
+			background: url(../assets/images/hotel_checkout_card_2x.png) no-repeat;
+			@include background-size(130px 280px);
+		}
+	}
+
+	.plan-event-header {
+		@include backgroundGradientLinear(#101010, #323232);
+		@include clearFixAfter();
+
+		line-height: 42px;
+		font-size: 18px;
+
+		border-bottom: 1px solid $border-edge-color;
+		border-radius: 3px;
+		color: white;
+		font-weight: bold;
+		margin: 2px;
+		padding-bottom: 26px;
+		padding-top: 14px;
+
+		@include pixelDensity(1.5) {
+			// corrects the centering of days-value in high DPI displays
+			line-height: 41px;
+		}
+
+		.status-label, .days-label {
+			text-shadow: 0px 1px 0 black;
+		}
+
+		.status-label {
+			font-size: 18px;
+			padding: 18px 0 20px 0;
+		}
+
+		.days-value-flipper {
+			position: relative;
+			background: transparent url(../assets/images/flipper.png) center center no-repeat;
+			@include pixelDensity(1.5) {
+				background: url(../assets/images/flipper_2x.png) no-repeat;
+				@include background-size(80px 80px);
+			}
+
+			height: 80px;
+			width: 80px;
+		}
+
+		.days-value {
+			font-size: 48px;
+			letter-spacing: -1px;
+			padding-top: 19px;
+			text-align: center;
+		}
+
+		.days-label {
+			color: $color-medium-gray;
+			font-size: 12px;
+			padding-top: 3px;
+			text-align: center;
+			text-transform: uppercase;
+		}
+
+		.days-line {
+			background-color: #000000;
+			height: 1px;
+			left: 7px;
+			position: absolute;
+			top: 38px;
+			width: 66px;
+		}
+	}
+
+	.plan-event-destination {
+		border-bottom: 1px solid $border-edge-color;
+		color: $color-super-dark-gray;
+		font-size: 32px;
+		height: 80px;
+		text-align: center;
+
+		.destination-locale {
+			@include ellipsis;
+			line-height: 1.3;
+			padding: 18px 5px 0;
+			letter-spacing: -1px;
+		}
+	}
+}
+
+.card-header {
+	border-bottom: 1px solid $border-edge-color;
+	height: 48px;
+
+	.cell {
+		margin-top: 0;
+	}
+
+	.general-icon {
+		float: left;
+		margin: 0;
+		left: 4px;
+	}
+
+	.airline-icon {
+		margin: 9px 10px 0 0;
+	}
+
+	h3, .subtitle {
+		font-weight: bold;
+		line-height: 1.2em;
+		@include ellipsis;
+	}
+
+	h3 {
+		font-size: 16px;
+		padding: 14px 0 0 7px;
+
+		.flight & {
+			padding: 8px 0 0 0;
+		}
+	}
+
+	.subtitle {
+		font-size: 13px;
+		color: $text-body-light-color;
+		padding: 2px 0 7px 0;
+		margin-top: -3px;
+
+		.flight & {
+			padding: 2px 0 7px 0;
+		}
+	}
+
+	.status-indicator {
+		float: right;
+		text-transform: uppercase;
+
+		&:after {
+			content: "·";
+			color: transparent;
+			width: 10px;
+			height: 10px;
+			border-radius: 50%;
+			display: inline-block;
+		}
+	}
+
+	.status-indicator.on-time {
+		color: $text-success-color;
+
+		&:after {
+			background-color: $text-success-color;
+		}
+	}
+
+	.status-indicator.delayed:after, .status-indicator.canceled:after {
+		background-color: $alert-color;
+	}
+}
+
+.card-content {
+	border-bottom: 1px solid $border-edge-color;
+	height: 77px;
+	padding-top: 3px;
+}
+
+.card-toolbar {
+
+	li {
+		float: left;
+		width: 50%;
+		margin-left: -1px;
+		padding: 5px 0 6px;
+		font-size: 12px;
+		font-weight: bold;
+		color: #047;
+		text-align: center;
+		border-left: 1px solid $border-edge-color;
+		@include backgroundGradientLinear(white, #ebebeb);
+
+		.card.flight &, .card.plan-event & {
+			width: 25%;
+		}
+	}
+
+	li:first-child {
+		border: 0;
+		margin: 0;
+		@include border-bottom-left-radius(5px);
+	}
+
+	li:last-child {
+		@include border-bottom-right-radius(5px);
+	}
+
+	div {
+		margin: 0 auto 1px;
+	}
+}
+
+// Card Map
+.card-map {
+	height: 80px;
+	padding: 0;
+	position: relative;
+	background-color: #F0EDE4;
+	background-repeat: no-repeat;
+	background-position-x: 50%;
+
+	@include pixelDensity(1.5) {
+		@include background-size(640px 118px);
+		height: 80px;
+
+		&.card-content {
+			margin: 0;
+		}
+	}
+}
+.card-map-marker, .card-map-marker-shadow{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+}
+.card-map-marker {
+	$imagePath: "assets/images/map_marker_blue.png";
+	$imagePath_2x: "assets/images/map_marker_blue_2x.png";
+	$imageWidth: image-width($imagePath);
+	$imageHeight: image-height($imagePath);
+
+	background-image: url("../" + $imagePath);
+	width: $imageWidth;
+	height: $imageHeight;
+	margin-left: -$imageWidth / 2;
+	margin-top: -$imageHeight / 2;
+
+	@include pixelDensity(1.5) {
+		@include background-size($imageWidth $imageHeight);
+		background-image: url("../" + $imagePath_2x);
+	}
+}
+.card-map-marker-shadow {
+	$imagePath: "assets/images/map_marker_blue_shadow.png";
+	$imagePath_2x: "assets/images/map_marker_blue_shadow_2x.png";
+	$imageWidth: image-width($imagePath);
+	$imageHeight: image-height($imagePath);
+
+	background-image: url("../" + $imagePath);
+	width: $imageWidth;
+	height: $imageHeight;
+	margin-left: -12px;
+	margin-top: 2px;
+
+	@include pixelDensity(1.5) {
+		@include background-size($imageWidth $imageHeight);
+		background-image:url("../" + $imagePath_2x);
+	}
+}
+.card-map-image {
+	height: 100%;
+	width: 100%;
+}
+
+
+// *************************
+// TRIPFEED MESSAGES
+//
+// *************************
+.trip-messages {
+	@include box-shadow(0 1px 10px $shadow-color-darker);
+	@include clearFixAfter();
+	background-color: $content-background-color;
+}
+.trip-message {
+	border-bottom: 1px solid $border-edge-color;
+	min-height: 50px;
+	padding-bottom: 10px;
+	padding-left: 70px;
+	padding-right: 30px;
+	padding-top: 10px;
+	position: relative;
+}
+.trip-message__icon--skeleton, .trip-message__text--skeleton {
+	background-color: #ccc;
+}
+.trip-message__icon {
+	left: 10px;
+	position: absolute;
+	top: 10px;
+	width: 50px;
+
+	img {
+		display: block;
+		margin: 0 auto;
+		max-height: 50px;
+		max-width: 50px;
+	}
+}
+.trip-message__icon--skeleton {
+	height: 50px;
+	width: 50px;
+}
+.trip-message__text {
+	color: $text-body-color;
+	font-size: $text-detail-small-size;
+	line-height: 1.3em;
+}
+.trip-message__text--skeleton {
+	height: 12px;
+	margin-bottom: 5px;
+}
+.trip-message__next {
+	margin-top: -6.5px;
+	position: absolute;
+	right: 0;
+	top: 50%;
+}

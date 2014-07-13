@@ -1,0 +1,17 @@
+<form action="#map-directions" id="map-directions-form" class="icon-action-list map-directions">
+	<ul id="pick-location-group" class="action-list">
+		<li id="start-group">
+			<label for="start">{{t "StartPoint"}}</label>
+			<input id="start" name="start" type="text" value="{{startName}}" />
+		</li>
+		<li id="end-group">
+			<label for="end">{{t "EndPoint"}}</label>
+			<input id="end" name="end" type="text" value="{{if_not_blank endName "Untitled"}}" />
+		</li>
+	</ul>
+
+	<div class="actions">
+		<button class="submit"><span>{{t "GetDirections"}}</span><span class="loader light">{{t "Loading"}}</span></button>
+	</div>
+
+</form>

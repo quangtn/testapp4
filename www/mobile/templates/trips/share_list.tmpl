@@ -1,0 +1,45 @@
+<div class="share-list">
+	<form class="standard-form-panel">
+		<ul class="item-list">
+			<li>
+				<label for="email">{{t "AddEmail"}}</label>
+				<input id="email" name="email" type="email" placeholder="{{t "ShareContactSearch"}}" autocomplete="off" autocapitalize="off" autocorrect="off" />
+				<button class="button-sm compact-submit">{{t "Add"}}</button>
+			</li>
+		</ul>
+	</form>
+	<div id="suggested-contacts"></div>
+
+	<h2 class="component-subheader">{{t "CurrentlyNotifying"}}</h2>
+	<div class="list-loader">
+			<div class="list-item">
+				<div class="details">
+						<a class="item-title action no-icon"><span class="loader">
+						</span></a>
+				</div>
+			</div>
+	</div>
+{{#if .}}
+	<ul class="item-list list">
+		<li>
+			<div class="item-content">
+				<p class="help-text">{{t "EditShare"}}</p>
+			</div>
+		</li>
+	{{#each .}}
+		<li>
+			<div class="item-content" id={{id}}>{{email}}</div>
+		</li>
+	{{/each}}
+	</ul>
+{{else}}
+	<ul class="item-list list">
+		<li>
+			<div class="item-content">
+				<p class="help-text">{{t "NoContacts"}}</p>
+			</div>
+		</li>
+	</ul>
+{{/if}}
+
+</div>

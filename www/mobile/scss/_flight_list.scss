@@ -1,0 +1,37 @@
+
+.flight-list-item-group {
+	background-color: $content-background-color;
+	border-bottom: 1px solid $border-edge-color;
+	float: left;
+	padding-top: 5px;
+	width: 100%;
+
+	.airline-icon {
+		margin: 10px;
+	}
+
+	.title-group {
+		float: left;
+		padding-bottom: 10px;
+		padding-top: 7px;
+		width: 226px;
+
+		.title {
+			@include ellipsis();
+			font-size: $text-detail-small-size;
+			font-weight: bold;
+   	}
+
+   	.sub-title {
+			color: $item-list-subtitle;
+			font-size: $text-detail-Xsmall-size;
+   	}
+	}
+
+	.next {
+		float: right;
+		margin-top: 17px;
+		height: 13px;
+		width: 19px;
+	}
+}

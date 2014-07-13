@@ -1,0 +1,31 @@
+<form action="#login" id="login-form">
+<fieldset>
+	<div class="input-container">
+		<label for="username" class="hidden">Username</label>
+		<input id="username" name="username" type="email" placeholder="{{t "Email"}}" value="{{email}}" autocomplete="off" autocapitalize="off" autocorrect="off" />
+		<label for="password" class="hidden">Password</label>
+		<input id="password" name="password" type="password" placeholder="{{t "Password"}}" value="{{password}}" autocomplete="off" autocapitalize="off" autocorrect="off" />
+	</div>
+	<button class="submit"><span class="label">{{t "SignIn"}}</span><span class="loader">{{t "Loading"}}</span></button>
+	<div class="horizontal-divider">
+		<span class="horizontal-divider-text-raised">or</span>
+		<hr class="horizontal-divider-dividers">
+	</div>
+	<button type="button" id="facebook">{{t "SignInWithFacebook"}}</button>
+</fieldset>
+<fieldset>
+	<div class="sign-up-group">
+		<button class="sign-up-btn" id="sign-up" type="button">{{t "SignUp"}}</button>
+	</div>
+	<div class="forgot-terms-group">
+		<ul>
+			<li id="forgot-password"><span class="touch-box">{{t "ForgotPassword"}}</span></li>
+			<li id="terms-conds"><span class="touch-box">{{t "LegalNotices"}}</span></li>
+		</ul>
+	</div>
+	{{#unless fullScreen}}
+	<a class="view-full" href="/login?site_pref=full">{{t "ViewFullSite"}}</a>
+	{{/unless}}
+</fieldset>
+</form>
+<!-- <div class="build"></div> -->

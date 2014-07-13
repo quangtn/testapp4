@@ -1,0 +1,387 @@
+@import '_common_text.scss';
+
+.trip_items.standard-form-panel.error-popup {
+	top: 40px
+}
+
+.display-box {
+	padding: 10px 15px 10px 15px;
+	@include flexbox;
+	@include align-items(center);
+	@include justify-content(center);
+	.lower {
+		margin-top: 30px;
+	}
+	.right-align {
+		text-align: right;
+	}
+	.flex-1 {
+		@include flex(1)
+	}
+	.flex-2 {
+		@include flex(2)
+	}
+	.flex-3 {
+		@include flex(3)
+	}
+	.flex-4 {
+		@include flex(4)
+	}
+	.flex-5 {
+		@include flex(5)
+	}
+	.flex-6 {
+		@include flex(6)
+	}
+	.flex-7 {
+		@include flex(7)
+	}
+	.flex-8 {
+		@include flex(8)
+	}
+	.flex-9 {
+		@include flex(9)
+	}
+	.flex-10 {
+		@include flex(10)
+	}
+}
+
+.list-item {
+	background-color: #fff;
+	border-bottom: 1px solid silver;
+
+	&.clearfix {
+		@include clearFixAfter();
+	}
+
+	.next {
+		float: right;
+		height: 13px;
+		width: 19px;
+		margin-top: 2px;
+	}
+
+	.preview-icon-group {
+		background-color: $content-background-color-dark;
+		background-position: center;
+		background-size: auto 100%;
+		float: left;
+		height: 65px;
+		margin-bottom: 5px;
+		margin-left: 5px;
+		margin-right: 10px;
+		margin-top: 5px;
+		overflow: hidden;
+		width: 65px;
+	}
+
+	.address-group {
+		float: left;
+		padding-top: 15px;
+		width: fluidPercent(180px, 320px);
+
+		.title {
+			@include ellipsis();
+			font-size: $text-detail-small-size;
+			font-weight: bold;
+			line-height: normal;
+   	}
+
+		p {
+			line-height: normal;
+		}
+	}
+
+	.next-group {
+		float: right;
+		padding-top: 17px;
+		text-align: right;
+
+		.next {
+			margin-bottom: 5px;
+		}
+
+		.btn_arrow {
+			// override from
+			margin-top: 0px !important;
+			margin-bottom: 4px !important;
+			position: relative !important;
+			top: 0 !important;
+		}
+
+		.item-sub-title {
+			padding-right: 10px;
+			line-height: 1.2;
+
+			&.special-first {
+				clear: both;
+				color: $text-body-color;
+				line-height: normal;
+			}
+		}
+	}
+
+}
+
+.list-item.actionable {
+
+	&.nudgeable {
+		background-color: #f0f0f0;
+		box-shadow: inset 0 0px 3px $shadow-color-lighter;
+		position: relative;
+
+		.details .action {
+			padding-left: 0px;
+		}
+
+		h2 {
+			font-weight: bold;
+			margin-right: 35px;
+			margin-left: 35px;
+			padding-left: 40px;
+		}
+
+		.icon_add_32px {
+			left: 22px;
+			top: 50%;
+			margin-top: -16px;
+		}
+	}
+
+	position: relative;
+
+	&.chevron-lift {
+		background-position-y: 25%;
+		.btn_arrow {
+			top: 20%;
+			margin: 0;
+		}
+	}
+	.btn_arrow, .icon_alert_small {
+		position: absolute;
+		right: 0;
+		top: 50%;
+		left: initial;
+		margin-top: -6.5px;
+	}
+	.icon_alert_small {
+		padding-right: 10px;
+		margin-top: -10px
+	}
+}
+
+.list-item .details {
+
+	.item-title {
+		font-size: $text-detail-medium-size;
+		font-weight: bold;
+		padding: 12px 0px 12px 15px;
+
+		h2 {
+			font-weight: bold;
+		}
+		&.two-liner {
+			min-height:32px;
+			.icon-type {
+				top: 10px;
+				left: 12px;
+			}
+		}
+	}
+
+	.action {
+		padding-left: 65px;
+		position: relative;
+
+		&.no-icon {
+			display: block;
+			padding-left: 15px;
+		}
+
+		.general-icon {
+			position: absolute;
+		}
+
+		.icon-type {
+			left: 0;
+			top: 0;
+		}
+
+		.help-import {
+			right: 40px;
+			top: 50%;
+			margin-top: -10px;
+		}
+
+		.main-title {
+			@include ellipsis();
+			font-weight: bold;
+			width: 225px;
+			line-height: normal;
+		}
+	}
+}
+
+.trip-item-detail {
+	.phone-list {
+		padding: 0;
+	}
+	.phone-item {
+		color: #111;
+		font-size: 17px;
+		padding: 8px 10px 8px 15px;
+		border-bottom: 1px solid silver;
+	}
+
+	.phone-item-empty {
+		padding: 10px;
+		color: #666;
+		font-size: 13px;
+		border-bottom: 1px solid silver;
+		list-style: none;
+	}
+
+
+	p.first {
+		width: 85%;
+	}
+	.phones .phone-drop-down-button {
+		margin-top: -8px;
+	}
+	.phone {
+		min-height: 32px;
+		margin: 0 0 5px;
+		.label {
+			float:none;
+			text-transform: none;
+		}
+	}
+	.action-button {
+		margin-top: -5px;
+
+		&.map {
+			border-color: #8696A5 #8696A5 #4F5D6B #4F5D6B;
+			@include backgroundGradientLinear(#63788A, #4A5867);
+		}
+		&.call {
+			border-color: #496B23;
+			@include backgroundGradientLinear(#658f34, #496B23);
+		}
+
+		div {
+			margin-left: 6px;
+			margin-top: 4px;
+		}
+	}
+	.date, .time {
+		float: left;
+		width: 50%;
+	}
+
+	.phone-number {
+		text-decoration: none;
+		font-weight: normal;
+	}
+
+	.end-segment, .start-segment {
+		margin: 0 0 10px;
+
+		p {
+			line-height: 1.3;
+		}
+	}
+
+	.detail-menu-icon {
+		position: absolute;
+		top: 50%;
+		margin-top: -23px;
+		left: 4px;
+	}
+
+	.detail-menu-item {
+		position: relative;
+		padding: 13px 25px 13px 55px;
+		border-bottom: 1px solid #CCC;
+		font-size: 17px;
+		font-weight: bold;
+	}
+
+	.detail-menu-next {
+		position: absolute;
+		right: 0;
+		top: 50%;
+		margin-top: -6.5px;
+	}
+
+	.wm {
+		padding: 15px 0;
+		background: $app-background-color url(../assets/images/worldmate_logo.png) center center no-repeat;
+		width: 100%;
+		height: image-height('assets/images/worldmate_logo.png');
+	}
+	@include pixelDensity(1.5) {
+		.wm {
+			@include background-size(image-width('assets/images/worldmate_logo.png') image-height('assets/images/worldmate_logo.png'));
+			background-image: url('../assets/images/worldmate_logo_2x.png');
+		}
+	}
+}
+
+
+.standard-form-panel.add-trip-item {
+	.input-group {
+		@include flexbox;
+		@include justify-content(center);
+		@include align-items(stretch);
+		min-height:43px;
+		border-bottom-color: $form-border;
+		border-bottom-style: solid;
+		border-bottom-width: 1px;
+		border-width: 1px;
+		height:initial;
+		label, .label {
+			height:initial;
+			float:initial;
+			text-transform: none;
+			@include flexbox;
+			@include justify-content(flex-start);
+			@include align-items(center);
+			text-align:left;
+			padding-left: 15px;
+			width: 90px;
+			p {
+				padding-left:initial;
+				vertical-align:initial;
+				width: 60px;
+			}
+		}
+		.input-container {
+			//addresses IOS border styling bug
+			&.list-item.actionable {
+				border-bottom: none;
+				border-top: none;
+				input {
+					width: 90%;
+				}
+			}
+			float: none;
+			@include flex(1)
+		}
+	}
+}
+
+// *************************
+// Car Rental Company Page
+//	* extended the classes instead of using the selectors to ensure semantic markup
+//	* TODO@TRI: perhaps generalize style in a base class
+// *************************
+.vehicle-location-segmented-bar {
+	@extend .mytrips-summary-segmented-bar;
+
+}
+
+.vehicle-location-segmented-button {
+	@extend .mytrips-summary-segmented-button;
+
+}

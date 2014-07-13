@@ -1,0 +1,13 @@
+<ul class="contacts list-rows">
+{{#if isEmpty}}
+	<li class="list-row">{{t "ImportContactsEmpty"}}</li>
+{{else}}
+	<li class="searchbox">
+		<input type="text" id="search-contact" class="searchbox-input" placeholder="{{t "ContactsListFilterText"}}" autocomplete="off" autocapitalize="off" autocorrect="off">
+	</li>
+	<li id="suggested-contacts"></li>
+	<div id="import-toolbar" class="actions fixed-toolbar">
+		<button class="submit"><span>{{t "ImportContact"}}</span><span class="loader light">{{t "Loading"}}</span></button>
+	</div>
+{{/if}}
+</ul>

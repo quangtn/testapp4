@@ -1,0 +1,61 @@
+{{#if days}}
+<div class="itinerary-container">
+	{{#each days}}
+	<div class="itinerary-day">
+		<p class="itinerary-date">{{dayMonthDateYear value}}</p>
+		<div class="itinerary-items">
+			{{#each events}}
+			<div class="itinerary-item" data-trip-item-id="{{id}}" data-location="{{ event_type }}">
+
+				<div class="bubble-icon--{{ type }}"></div>
+				<div class="bubble {{type}}">
+					<div class="bubble-details">
+
+						{{#unless_equal type "Air"}}
+							<div class="bubble-head">
+								<time datetime="{{start_time}}">{{eventHead}}</time>
+							</div>
+						{{/unless_equal}}
+
+						<div class="bubble-tags">
+							{{#if for_business}}
+							<div class="bubble-tag--business for-business">{{t "Business"}}</div>
+							{{/if}}
+							{{#if airStatusMessage}}
+							<div class="bubble-tag--flight {{airStatusClass}}">{{airStatusMessage}}</div>
+							{{/if}}
+						</div>
+
+						<div class="bubble-text">
+							<h2 class="bubble-title">{{masthead}}</h2>
+							<p class="bubble-sub-title">{{subhead}}</p>
+						</div>
+
+						{{> FlightSchedule}}
+
+						{{#if note}}
+						<div class="bubble-note">
+							<p><em>{{t "Note"}}</em>{{note}}</p>
+						</div>
+						{{/if}}
+					</div>
+					<div class="bubble-marker"></div>
+				</div>
+			</div>
+			{{/each}}
+		</div>
+	</div>
+	{{/each}}
+</div>
+{{else}}
+<ul class="list-rows">
+	<li class="list-row">
+		<p class="tc-label-medium">{{t "FollowerTimeLineEmptyTitle"}}</p>
+		{{#if tripCanShare}}
+			<p class="tc-sublabel">{{t "ManuallyFollowedTimelineEmptyDescription"}}</p>
+		{{else}}
+			<p class="tc-sublabel">{{t "FollowerTimeLineEmptyDescription"}}</p>
+		{{/if}}
+	</li>
+</ul>
+{{/if}}

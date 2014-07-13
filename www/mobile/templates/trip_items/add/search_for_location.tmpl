@@ -1,0 +1,45 @@
+<form class="standard-form-panel add-trip-item" action="" >
+	{{#if is_manual_add}}
+	<div class="input-group">
+		<div class="label"><p>{{t "Venue"}}<br />{{t "Name"}}</p></div>
+		<div class="input-container">
+			<input type="text" autocomplete="off" id="name" name="name"  value="{{label}}" placeholder="{{t "Optional"}}" autocorrect="off" />
+		</div>
+	</div>
+	{{/if}}
+	<div class="input-group">
+		<div class="label"><p>{{t "Street"}}</p></div>
+		<div class="input-container">
+			<input type="text" placeholder="optional" autocomplete="off" id="street" name="street"  value="{{street}}" autocorrect="off" />
+		</div>
+	</div>
+	<div class="input-group">
+		<div class="label"><p>{{t "City"}}</p></div>
+		<div class="input-container">
+			<input type="text" placeholder="optional" autocomplete="off" id="city" name="city"  value="{{city}}" autocorrect="off" />
+		</div>
+	</div>
+	<div class="input-group">
+		<div class="label"><p>{{t "State"}}</p></div>
+		<div class="input-container">
+			<input type="text" placeholder="optional" autocomplete="off" id="state" name="state" value="{{state}}" autocorrect="off" />
+		</div>
+	</div>
+	<div class="input-group">
+		<div class="label"><p>{{t "Postal"}}<br />{{t "Code"}}</p></div>
+		<div class="input-container">
+			<input placeholder="optional" type="text" autocomplete="off" id="postal" name="postal" value="{{postal}}"  autocorrect="off"/>
+		</div>
+	</div>
+	<div class="input-group">
+		<div class="label"><p>{{t "Country"}}</p></div>
+		<div class="input-container list-item actionable">
+			<input type="text" autocomplete="off" id="country" name="country" value="{{countryName}}" autocorrect="off" />
+			<div class="button-icon btn_arrow"></div>
+		</div>
+	</div>
+	<div class="actions">
+		<button class="submit"><span>{{t "Continue"}}</span><span class="loader light">{{t "Loading"}}</span></button>
+	</div>
+</form>
+

@@ -1,0 +1,39 @@
+<div class="legal-terms">
+{{#unless prompt}}
+	<form id="termsNav" name="termsNav" class="view-toggle three">
+		<label>
+			<input type="radio" name="termsPage" value="termsConditions" checked="checked">
+			<span>{{t "TermsConditions"}}</span>
+		</label>
+		<label>
+			<input type="radio" name="termsPage" value="privacy">
+			<span>{{t "PrivacyPolicy"}}</span>
+		</label>
+		<label>
+			<input type="radio" name="termsPage" value="cookies">
+			<span>{{t "CookiesPolicy"}}</span>
+		</label>
+	</form>
+{{/unless}}
+	<div class="terms-page{{#if prompt}} accept{{/if}}" id="termsConditions" >
+		{{> TermsConditions}}
+	</div>
+{{#unless prompt}}
+	<div class="terms-page" id="privacy" >
+		{{> PrivacyPolicy}}
+	</div>
+	<div class="terms-page" id="cookies">
+		{{> CookiesPolicy}}
+	</div>
+{{/unless}}
+</div>
+{{#if prompt}}
+	<div class="button-group standard-form-panel display-box">
+		<div class="accept flex-9">
+			<input id="accept-terms" type="submit" value="{{t 'Accept'}}" class="submit submit-button" />
+		</div>
+		<div class="deny flex-7">
+			<input id="deny-terms" type="submit" value="{{t 'Deny'}}" class="submit cancel-button" />
+		</div>
+	</div>
+{{/if}}

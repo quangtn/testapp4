@@ -1,0 +1,70 @@
+<form action="#create-trip" id="create-trip-form" class="standard-form-panel">
+
+	{{#if showForBusinessField}}
+		<div class="input-group-checkbox {{#unless userCorporation}}is-disabled{{/unless}}">
+			<input class="input-group-checkbox__checkbox" type="checkbox"
+				id="selenium-for-business" name="for_business"
+				{{#if for_business}}checked{{/if}}
+				{{#unless userCorporation}}disabled{{/unless}} />
+			{{#unless userCorporation}}
+				<input type="hidden" name="for_business" value="on">
+			{{/unless}}
+			<div class="input-group-checkbox__main">
+				<div class="input-group-checkbox__label"><p>{{t "ForBusiness"}}</p></div>
+				<div class="input-group-checkbox__sublabel"><p>
+					{{#if for_business}}
+						{{t "ConnectedWith"}}
+					{{else}}
+						{{t "ConnectTo"}}
+					{{/if}}
+
+					{{#if itemCorporation}}
+						{{itemCorporation}}
+					{{else}}
+						{{userCorporation}}
+					{{/if}}
+				</p></div>
+			</div>
+			<div id="for-business-help" class="input-group-checkbox__right-button input-group-checkbox__nontoggle">
+				<div class="icon_info_20px general-icon"></div>
+			</div>
+		</div>
+	{{/if}}
+
+	<div class="input-group airlineCodeDisplay">
+		<div class="label"><p>{{t "Airline"}}</p></div>
+		<div class="input-container actionable">
+			<div class="input">
+				<strong>{{airlineCode}}</strong>
+				{{airlineName}}
+			</div>
+			<input id="airlineCode" name="airlineCode" type="hidden" value="{{airlineCode}}" autocomplete="off" autocapitalize="off" autocorrect="off" />
+		</div>
+	</div>
+
+	<div class="input-group">
+		<div class="label"><p>{{t "FlightNum"}}</p></div>
+		<div class="input-container"><input id="flightNumber" name="flightNumber" type="number" min="1" max="9999" pattern="[0-9]*" value="{{flightNumber}}" autocomplete="off" autocapitalize="off" autocorrect="off" /></div>
+	</div>
+
+	<div class="input-group" id="departureDateGroup">
+		<div class="label"><p>{{ t "Departs"}}</p></div>
+		<div class="input-container"><input id="departureDate" name="departureDate" type="text" value="{{mediumLongDate departureDate}}" readonly="true" class="auto-ka"/></div>
+	</div>
+
+	<div class="input-group">
+		<div class="label"><p>{{t "ConfNum"}}</p></div>
+		<div class="input-container"><input id="confirmationNumber" name="confirmationNumber" type="text" placeholder="{{t "Optional"}}"  value="{{confirmationNumber}}" autocomplete="off" autocapitalize="off" autocorrect="off" /></div>
+	</div>
+
+	<div class="input-group">
+		<div class="label"><p>{{t "Notes"}}</p></div>
+		<div class="input-container"><input id="note" name="note" type="text" placeholder="{{t "Optional"}}" value="{{note}}" autocomplete="off" autocapitalize="off" autocorrect="off" /></div>
+	</div>
+
+	<div class="actions">
+		<button class="submit"><span>{{t "Continue"}}</span><span class="loader light">{{t "Loading"}}</span></button>
+	</div>
+
+
+</form>

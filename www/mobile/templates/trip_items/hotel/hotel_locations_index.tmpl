@@ -1,0 +1,63 @@
+<div class="list-loader">
+		<div class="list-item">
+			<div class="details">
+					<a class="item-title action no-icon"><span class="loader">
+					</span></a>
+			</div>
+		</div>
+</div>
+<div class="list">
+{{#if locations.unsynced}}
+	<!-- loading -->
+{{else}}
+	{{#unless locations}}
+			<div class="list-item">
+				<div class="details">
+					<div class="item-title action">
+						<p>{{t "SearchResultsZero"}}</p>
+					</div>
+				</div>
+			</div>
+	{{else}}
+	{{#each_with_index locations}}
+		<div data-index="{{index}}" data-property_id="{{property_id}}" class="list-item actionable clearfix">
+
+			<div class="preview-icon-group" style="background-image: url('{{hotelLocationPreviewUrl}}');"></div>
+
+			<div class="address-group">
+				<p class="title">{{name}}</p>
+				{{#each address_lines}}
+					<p class="item-sub-title">{{.}}</p>
+				{{/each}}
+			</div>
+
+			<div class="next-group">
+				<div class="next btn_arrow button-icon"></div>
+				<p class="item-sub-title special-first">{{search_distance_mi}}</p>
+				<p class="item-sub-title">{{t "MilesAway"}}</p>
+			</div>
+		</div>
+		{{#if_is_nudgeable index=index length=../locations.length}}
+		<div class="nudgeable list-item actionable" >
+			<div class="details">
+				<div class="item-title action">
+					<div class="general-icon icon_add_32px"></div>
+				   <h2>{{t "HotelManualPrompt"}}</h2>
+				</div>
+				<div class="button-icon btn_arrow"></div>
+			</div>
+		</div>
+		{{/if_is_nudgeable}}
+	{{/each_with_index}}
+	{{/unless}}
+	<div class="nudgeable list-item actionable" >
+		<div class="details">
+			<div class="item-title action">
+				<div class="general-icon icon_add_32px"></div>
+				 <h2>{{t "HotelManualPrompt"}}</h2>
+			</div>
+			<div class="button-icon btn_arrow"></div>
+		</div>
+	</div>
+{{/if}}
+</div>

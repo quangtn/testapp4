@@ -1,0 +1,68 @@
+
+.standard-form-panel {
+	// NOTE: intended appearing inside a typical "form" panel page
+	// SEE: forms.scss for definition of .standard-form-panel
+
+	$popup-border-radius: 8px;
+	$popup-width: 280px;
+
+	&.error-popup {
+		@include border-radius($popup-border-radius);
+		@include horizontalCentering($popup-width);
+		top: 135px;
+		width: $popup-width;
+		z-index: 20;
+
+		.error-title-group {
+			overflow: hidden;
+			border-bottom: 1px solid $border-edge-color;
+			padding: 10px;
+
+			.general-icon {
+				float: left;
+				margin-right: 3px;
+			}
+
+			.message {
+				color: $text-error-header-color;
+				float: left;
+				font-size: $text-detail-medium-size;
+				p {
+					font-weight: bold;
+					padding-left: 3px;
+					padding-top: 3px;
+				}
+			}
+		}
+
+		.error-message-group {
+			color: $text-error-message-color;
+			font-size: $text-detail-small-size;
+			padding: 10px;
+			.info {
+				margin-top:8px;
+			}
+			li a {
+				color: $color-light-blue-link;
+				text-decoration: none;
+
+				&:link, &:visited {
+					color: $color-light-blue-link;
+				}
+
+				&:hover, &:active {
+					color: $color-dark-blue-link;
+				}
+			}
+			li + li {
+				margin-top: 5px;
+			}
+		}
+
+		.button-group {
+			padding-bottom: 10px;
+			padding-left: 10px;
+			padding-right: 10px;
+		}
+	}
+}

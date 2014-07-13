@@ -1,0 +1,24 @@
+
+
+{{#if unsynced}}
+	<!-- please enter a search term -->
+{{else}}
+	{{#unless items}}
+	<li>
+		<div class="details">
+			<p>{{t "SearchResultsZero"}}</p>
+		</div>
+	</li>
+	{{/unless}}
+
+	{{#each_with_index items}}
+	<li>
+		<div class="details country" data-index="{{index}}">
+			<span class="country-icon {{lowercase iata_code}}"></span>
+			<div class="country_code">{{iata_code}}</div>
+			<div class="country_name">{{name}}</div>
+		</div>
+	</li>
+	{{/each_with_index}}
+{{/if}}
+

@@ -1,0 +1,39 @@
+<div class="share-preferences share-panel">
+	<form action="#save-share" id="save-share-form">
+		<ul class="item-list">
+			<li class="deletable">
+				<div class="item-content">{{email}}</div>
+				<div class="small btn warning delete-link" id="delete">
+					<div class="button-icon btn_icon_delete_25px"></div>
+				</div>
+			</li>
+			<li class="checkable">
+				<input type="checkbox" name="itinerary_shared" data-id="itinerary" {{#if itinerary_shared}}checked {{/if}}/>
+				<div class="item-content">
+					{{t "ShareItinerary"}}
+					<p class="subtext">{{t "ShareItineraryDetails"}}</p>
+				</div>
+			</li>
+		</ul>
+		<h2 class="component-subheader">{{t "ArrivalUpdates"}}</h2>
+		<ul class="item-list">
+			<li>
+			{{#if shareItems}}
+				<p class="help-text">{{t "ShareUpdates"}}</p>
+			{{else}}
+				<p class="help-text">{{t "OnlyAvailableForFutureFlights"}}</p>
+			{{/if}}
+			</li>
+			{{#each shareItems}}
+			<li class="checkable">
+				<input type="checkbox" name="arrival-item" data-id="{{id}}" {{#if shared}}checked {{/if}}/>
+				<div class="item-content">
+					<span class="airport-name">{{arrival_airport_code}} - {{arrival_city}}</span>
+					<p class="airport-details">{{airline_code}} {{flight_number}}, {{dateMonth
+						scheduled_arrival}}, {{yearFull scheduled_arrival}}</p>
+				</div>
+			</li>
+			{{/each}}
+		</ul>
+	</form>
+</div>

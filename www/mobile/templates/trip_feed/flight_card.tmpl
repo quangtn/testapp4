@@ -1,0 +1,118 @@
+<li class="card flight" data-trip-item-id="{{id}}" data-location="{{event_type}}" data-trip-item-type="{{lowercase type}}">
+	<header class="card-header event-detail">
+		<div class="cell col-26">
+			<div class="airline-icon airline-{{lowercase airline_code}}"></div>
+			<h3>{{ airline }}</h3>
+			<p class="subtitle">
+				<span>{{ airline_code }} {{ flight_number }}</span>
+
+				{{#ifShowStatusIndicator scheduled_departure}}
+				<span class="status-indicator {{statusIndicatorClass cancelled departure_status}}">
+					{{statusIndicatorText cancelled departure_status}}
+				</span>
+				{{/ifShowStatusIndicator}}
+			</p>
+		</div>
+	</header>
+
+	<section class="card-content event-detail">
+		<div class="cell first col-18">
+			<div class="label">{{t "Departs"}}</div>
+			<div class="value">
+				{{departure_airport_code}} <span class="note">{{departure_airport_city}}</span>
+			</div>
+		</div>
+
+		<div class="cell right col-7">
+			<div class="label">
+				{{t "TermGate"}}
+			</div>
+			<div class="value {{alertClassIf departure_terminal_or_gate_change}}">
+				{{get_terminal_and_gate departure_terminal departure_gate}}
+			</div>
+		</div>
+
+		<div class="cell first col-13">
+			<div class="primary {{departureTimeClass cancelled scheduled_departure estimated_departure}}">
+				<span class="small-caps">{{timeFromDateTime estimated_departure}}</span>
+			</div>
+		</div>
+
+		{{#if seat_number}}
+		<div class="cell col-3">
+			<div class="label">
+				{{t "Seat"}}
+			</div>
+			<div class="value">
+				{{seat_number}}
+			</div>
+		</div>
+		{{else}}
+		<div class="cell col-3"></div>
+		{{/if}}
+
+		{{#if confirmation_number}}
+		<div class="cell right col-8">
+			<div class="label">
+				{{t "ConfirmNum"}}
+			</div>
+			<div class="value">
+				{{confirmation_number}}
+			</div>
+		</div>
+		{{/if}}
+
+	</section>
+
+	<section class="card-content event-detail">
+		<div class="cell first col-18">
+			<div class="label">{{t "Arrives"}}</div>
+			<div class="value">
+				{{arrival_airport_code}} <span class="note">{{arrival_airport_city}}</span>
+			</div>
+		</div>
+
+		<div class="cell right col-7">
+			<div class="label">
+				{{t "TermGate"}}
+			</div>
+			<div class="value {{alertClassIf arrival_terminal_or_gate_change}}">
+				{{get_terminal_and_gate arrival_terminal arrival_gate}}
+			</div>
+		</div>
+
+		<div class="cell first col-13">
+			<div class="primary {{arrivalTimeClass cancelled scheduled_arrival estimated_arrival}}">
+				<span class="small-caps">{{timeFromDateTime estimated_arrival}}</span>
+			</div>
+		</div>
+
+		<div class="cell right col-12">
+			<div class="label">
+				{{t "Baggage"}}
+			</div>
+			<div class="value {{alertClassIf baggage_claim_change}}">
+				{{if_not_blank baggage_claim "TBD"}}
+			</div>
+		</div>
+	</section>
+
+	<ul class="card-toolbar clearfix">
+		<li class="call" data-trip-item-id="{{id}}">
+			<div class="button-icon btn_icon_call_blue_25px"></div>
+			{{t "Call"}}
+		</li>
+		<li class="directions" data-trip-item-id="{{id}}">
+			<div class="button-icon btn_icon_directions_blue_25px"></div>
+			{{t "Directions"}}
+		</li>
+		<li class="weather" data-trip-item-id="{{id}}">
+			<div class="button-icon btn_icon_weather_blue_25px"></div>
+			{{t "Weather"}}
+		</li>
+		<li class="alternate-flights" data-trip-item-id="{{id}}">
+			<div class="button-icon btn_icon_alt_flights_blue_25px"></div>
+			{{t "AltFlightsShort"}}
+		</li>
+	</ul>
+</li>

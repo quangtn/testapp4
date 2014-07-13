@@ -1,0 +1,36 @@
+{{#if_equal type "Air"}}
+<div class="bubble-content">
+	<table class="flight-schedule">
+		<tbody>
+
+		<tr class="departure">
+			<th class="schedule-header" colspan="2">{{startAction}}</th>
+			<th class="schedule-header">{{t "TermGate"}}</th>
+		</tr>
+		<tr class="departure">
+			<td class="time {{departureTimeClass cancelled scheduled_departure estimated_departure}}">
+				{{timeFromDateTime estimated_departure}}
+			</td>
+			<td class="airport-code">{{departure_airport_code}}</td>
+			<td class="term-gate {{alertClassIf departure_terminal_or_gate_change}}">{{get_terminal_and_gate
+				departure_terminal departure_gate}}
+			</td>
+		</tr>
+		<tr class="arrival">
+			<th class="schedule-header" colspan="2">Arrives</th>
+			<th class="schedule-header">{{t "TermGate"}}</th>
+		</tr>
+		<tr class="arrival">
+			<td class="time {{arrivalTimeClass cancelled scheduled_arrival estimated_arrival}}">{{timeFromDateTime
+				estimated_arrival}}
+			</td>
+			<td class="airport-code">{{arrival_airport_code}}</td>
+			<td class="term-gate {{alertClassIf arrival_terminal_or_gate_change}}">{{get_terminal_and_gate
+				arrival_terminal arrival_gate}}
+			</td>
+		</tr>
+
+		</tbody>
+	</table>
+</div>
+{{/if_equal}}

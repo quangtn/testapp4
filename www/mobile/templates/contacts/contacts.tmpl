@@ -1,0 +1,24 @@
+{{#if isEmpty}}
+	<li class="list-row-linked" id="empty-import">
+		<div class="list-row-main">
+			<p class="tc-label-medium">{{t "ContactsEmptyTitle"}}</p>
+			<p class="tc-sublabel">{{t "ContactsEmptyDescription"}}</p>
+		</div>
+		<div class="button-icon btn_arrow"></div>
+	</li>
+{{else}}
+	{{#each .}}
+	<li class="contact list-row-linked list-row-fixed-height-med" data-id="{{id}}">
+		<div class="list-row-main">
+			<p class="tc-label-medium text-ellipsis">{{mainLabel}}</p>
+			{{#if subLabel}}
+			<p class="tc-sublabel text-ellipsis">{{subLabel}}</p>
+			{{/if}}
+		</div>
+		{{#if is_always_sharing}}
+			<div class="list-row-flat-icon general-icon icon_share_sm_gray"></div>
+		{{/if}}
+		<div class="list-row-flat-icon button-icon btn_arrow"></div>
+	</li>
+	{{/each}}
+{{/if}}

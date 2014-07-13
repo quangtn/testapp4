@@ -1,0 +1,64 @@
+// TAG DEFAULT CONFIG
+// Height & Width
+$tag-height: 18px !default;
+$tag-line-height: $tag-height !default;
+$tag-flex: 1 !default;
+
+// Colors
+$flight-tag-delayed-bg-color: $color-medium-red;
+$flight-tag-canceled-bg-color: $color-medium-red;
+$flight-tag-early-bg-color: $color-light-green;
+$business-tag-bg-color: $color-light-blue;
+
+%tag {
+	display: block;
+	-webkit-box-flex: $tag-flex;
+	box-flex: $tag-flex;
+	@include box-sizing(border-box);
+	height: $tag-height;
+	padding: 0 6px;
+	margin: 0 4px 6px 4px;
+	border-radius: 2px;
+	background-color: $tag-bg-color;
+	color: $tag-color;
+	font-size: 12px;
+	line-height: $tag-height;
+	&:first-child { margin-left: 0; }
+	&:last-child { margin-right: 0; }
+	&:only-child { display: inline-block; }
+}
+
+%tags {
+	display: -webkit-box;
+	display: box;
+	-webkit-box-align: start;
+	-webkit-box-pack: start;
+	-webkit-box-orient: horizontal;
+	-webkit-box-lines: single;
+	@include box-sizing(border-box);
+	position: relative;
+
+	& > [class*="tag"] {
+		@extend %tag;
+	}
+
+}
+
+%flight-tag {
+	background-color: $flight-tag-bg-color;
+	color: $flight-tag-color;
+	text-transform: uppercase;
+	@include ellipsis();
+
+	&.early { background-color: $flight-tag-early-bg-color; }
+	&.delayed { background-color: $flight-tag-delayed-bg-color; }
+	&.canceled { background-color: $flight-tag-canceled-bg-color; }
+}
+
+%business-tag {
+	background-color: $business-tag-bg-color;
+	color: $business-tag-color;
+	text-transform: capitalize;
+	-webkit-box-flex: 0;
+	box-flex: 0;
+}

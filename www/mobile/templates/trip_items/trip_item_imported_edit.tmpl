@@ -1,0 +1,47 @@
+<form action="#edit-flight" id="edit-flight-form" class="standard-form-panel">
+
+	<div class="instruction">
+		<p class="instruction-info">{{t "EditLinkedBooking"}}</p>
+	</div>
+
+	{{#if showForBusinessField}}
+		<div class="input-group-checkbox {{#unless userCorporation}}is-disabled{{/unless}}">
+			<input class="input-group-checkbox__checkbox" type="checkbox"
+				id="selenium-for-business" name="for_business"
+				{{#if for_business}}checked{{/if}}
+				{{#unless userCorporation}}disabled{{/unless}} />
+			{{#unless userCorporation}}
+				<input type="hidden" name="for_business" value="on">
+			{{/unless}}
+			<div class="input-group-checkbox__main">
+				<div class="input-group-checkbox__label"><p>{{t "ForBusiness"}}</p></div>
+				<div class="input-group-checkbox__sublabel"><p>
+					{{#if for_business}}
+						{{t "ConnectedWith"}}
+					{{else}}
+						{{t "ConnectTo"}}
+					{{/if}}
+
+					{{#if itemCorporation}}
+						{{itemCorporation}}
+					{{else}}
+						{{userCorporation}}
+					{{/if}}
+				</p></div>
+			</div>
+			<div id="for-business-help" class="input-group-checkbox__right-button input-group-checkbox__nontoggle">
+				<div class="icon_info_20px general-icon"></div>
+			</div>
+		</div>
+	{{/if}}
+
+	<div id="notes-group" class="input-group">
+		<div class="label"><p>{{t "Notes"}}</p></div>
+		<div class="input-container"><input id="note" name="note" type="text" placeholder="{{t "Optional"}}" value="{{note}}"/></div>
+	</div>
+
+	<div class="actions">
+		<button class="submit"><span>{{t "Continue"}}</span><span class="loader light">{{t "Loading"}}</span></button>
+	</div>
+
+</form>

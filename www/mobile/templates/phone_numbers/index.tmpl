@@ -1,0 +1,16 @@
+{{#each trip_items }}
+<div class="list-item add actionable" data-id="{{ id }}">
+	<div class="details">
+		<div class="item-title action">
+			<div class="general-icon {{ icon }}"></div>
+			{{ item_title }}
+			<p class="caption"> {{ caption }} </p>
+		</div>
+		<div class="button-icon btn_arrow"></div>
+	</div>
+</div>
+{{else}}
+<ul class="phone-list">
+	<li class="phone-item-empty"><p class="caption"> {{t "NoPhoneTrip"}} </p></li>
+</ul>
+{{/each }}

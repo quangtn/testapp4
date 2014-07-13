@@ -1,0 +1,28 @@
+{{! TODO@TRI: HTML structure & selectors are dependent on trip_items_index, for the sake of pseudo-DRY }}
+<div class="list-item trip-item"><div class="details">
+	<div class="item-title">
+		{{ title }}
+	</div>
+</div></div>
+
+<ul class="phone-list">
+{{#each phone_numbers}}
+<li class="phone-item">
+	<dl class="inline phone">
+		{{#if type}}
+			<dt class="label">{{type}}</dt>
+		{{else}}
+			<dt class="label">{{t "Main"}}</dt>
+		{{/if}}
+		<dd class="value">
+			<div class="phone-actionable phone-drop-down-button {{type}}">
+				<a href="tel:{{number}}" class="button-icon btn_icon_call_25px"></a>
+			</div>
+			<span>{{number}}</span>
+		</dd>
+	</dl>
+</li>
+{{else}}
+<li class="phone-item-empty"><p class="caption"> {{t "NoPhone"}} </p></li>
+{{/each }}
+</ul>

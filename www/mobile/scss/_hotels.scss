@@ -1,0 +1,142 @@
+@import '_common_text.scss';
+
+input-group.notes {
+	height: 86px;
+}
+
+.rating {
+	text-indent: -9999px;
+	overflow: hidden;
+	text-align: left;
+	display: block;
+	margin: 0 auto;
+}
+
+.hotel-detail {
+	div.list-item.first {
+		border-top: none;
+	}
+
+	.list-item.add .details .action {
+		position:relative; display:block;
+
+		.general-icon { position:absolute; left:0; top:0; }
+	}
+}
+
+.trip-component ul {
+	color: $text-body-light-color;
+	list-style: square;
+	padding: 0 0 0 1em;
+	font-size: 12px;
+	line-height: 18px;
+}
+
+.trip-component .description {
+	font-size: 12px;
+	line-height: 1.5;
+	color: $text-body-light-color;
+}
+
+.trip-component h2.title {
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.trip-component .phones {
+	padding-bottom: 0;
+}
+
+.trip-component li {
+	line-height: 18px;
+}
+
+
+// hotel location detail
+
+.ellipsis.collapsed { max-height: 180px; overflow: hidden; }
+.ellipsis .read-more { color: $text-body-link-color; padding: 10px; }
+
+.swipe {
+  overflow: hidden;
+  visibility: hidden;
+  position: relative;
+}
+.swipe-wrap {
+  overflow: hidden;
+  position: relative;
+	background: black;
+}
+.swipe-wrap div {
+  float:left;
+  width:100%;
+  position: relative;
+}
+
+.swipe-wrap img {
+	margin: 0 auto;
+	display: block;
+}
+
+.swipe .button-icon {
+	$button-height:41px;
+	position:absolute;
+	top: 50%;
+	margin-top:-($button-height/2);
+
+	&.previous { left:0; }
+	&.next { right:0; }
+}
+
+.swipe .position {
+	display: block;
+	margin: 0 0 0 -30px;
+	padding: 5px 0;
+	width: 60px;
+	position: absolute;
+	text-align: center;
+	bottom: 0;
+	left: 50%;
+	background: black;
+	color: white;
+	font-weight: normal;
+	font-size: 13px;
+}
+
+.swipe .position span { font-weight: normal; }
+
+
+.star-icon {
+	background-image: url("../assets/images/star_icons.png");
+	background-repeat: no-repeat;
+	height: 13px;
+	width: 66px;
+}
+
+@include pixelDensity(1.5) {
+  .star-icon {
+    background-image: url("../assets/images/star_icons_2x.png");
+    -webkit-background-size: 130px 13px;
+    -moz-background-size: 130px 13px;
+    -o-background-size: 130px 13px;
+    background-size: 130px 13px; } }
+
+.stars_1.star-icon {
+	background-position: -52px 0 ;
+}
+
+.stars_2.star-icon {
+	background-position: -39px 0 ;
+}
+
+.stars_3.star-icon {
+	background-position: -26px 0 ;
+}
+
+.stars_4.star-icon {
+	background-position: -13px 0 ;
+}
+
+.stars_5.star-icon {
+	background-position: 0 0 ;
+}

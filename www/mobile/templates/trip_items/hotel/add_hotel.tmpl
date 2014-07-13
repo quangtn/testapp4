@@ -1,0 +1,98 @@
+<form action="#create-trip" id="create-trip-form" class="add-trip-item standard-form-panel">
+
+	{{#if showForBusinessField}}
+		<div class="input-group-checkbox {{#unless userCorporation}}is-disabled{{/unless}}">
+			<input class="input-group-checkbox__checkbox" type="checkbox"
+				id="selenium-for-business" name="for_business"
+				{{#if for_business}}checked{{/if}}
+				{{#unless userCorporation}}disabled{{/unless}} />
+			{{#unless userCorporation}}
+				<input type="hidden" name="for_business" value="on">
+			{{/unless}}
+			<div class="input-group-checkbox__main">
+				<div class="input-group-checkbox__label"><p>{{t "ForBusiness"}}</p></div>
+				<div class="input-group-checkbox__sublabel"><p>
+					{{#if for_business}}
+						{{t "ConnectedWith"}}
+					{{else}}
+						{{t "ConnectTo"}}
+					{{/if}}
+
+					{{#if itemCorporation}}
+						{{itemCorporation}}
+					{{else}}
+						{{userCorporation}}
+					{{/if}}
+				</p></div>
+			</div>
+			<div id="for-business-help" class="input-group-checkbox__right-button input-group-checkbox__nontoggle">
+				<div class="icon_info_20px general-icon"></div>
+			</div>
+		</div>
+	{{/if}}
+
+	<h2 class="component-subheader">{{t "CheckIn"}}</h2>
+
+	{{#unless isBeingEdited}}
+	<div class="input-group {{#if name}}notes{{/if}}">
+		<div class="label"><p>{{t "Location"}}</p></div>
+		<div class="input-container thin actionable location">
+			<div class="input">
+				{{name}}
+				<div class="address">
+					{{#each address_lines}}
+						<p class="item-sub-title">{{.}}</p>
+					{{/each}}
+				</div>
+			</div>
+
+			<input id="property_id" name="property_id" type="hidden" value="{{property_id}}" autocomplete="off" autocapitalize="off" autocorrect="off" />
+
+		</div>
+		<div class="chevron-container"><div class="btn_arrow_dark button-icon"></div></div>
+	</div>
+	{{/unless}}
+
+	<div class="input-group" id="checkinDateGroup">
+		<div class="label"><p>{{t "Date"}}</p></div>
+		<div class="input-container"><input id="start_date" name="start_date" type="text" value="{{mediumLongDate start_date}}" readonly autocomplete="off" autocapitalize="off" autocorrect="off" /></div>
+	</div>
+
+	<div class="input-group">
+		<div class="label"><p>{{t "Time"}}</p></div>
+		<div class="input-container"><input id="start_time" name="start_time" type="text" value="{{timeFromDateTime start_time}}" readonly autocomplete="off" autocapitalize="off" autocorrect="off" /></div>
+	</div>
+
+	<h2 class="component-subheader">{{t "CheckOut"}}</h2>
+	<div class="input-group" id="checkoutDateGroup">
+		<div class="label"><p>{{t "Date"}}</p></div>
+		<div class="input-container"><input id="end_date" name="end_date" type="text" value="{{mediumLongDate end_date}}" readonly autocomplete="off" autocapitalize="off" autocorrect="off" /></div>
+	</div>
+
+	<div class="input-group">
+		<div class="label"><p>{{t "Time"}}</p></div>
+		<div class="input-container"><input id="end_time" name="end_time" type="text" value="{{timeFromDateTime end_time}}" readonly autocomplete="off" autocapitalize="off" autocorrect="off" /></div>
+	</div>
+
+	<div class="input-group">
+		<div class="label"><p>{{t "ConfNum"}}</p></div>
+		<div class="input-container"><input id="confirmation_number" name="confirmation_number" type="text" placeholder="{{t "Optional"}}" value="{{confirmation_number}}" autocomplete="off" autocapitalize="off" autocorrect="off" /></div>
+	</div>
+
+	{{#if isManualAdd}}
+	<div class="input-group">
+		<div class="label"><p>{{t "Phone"}}</p></div>
+		<div class="input-container"><input id="phone_number" name="phone_number" type="text" placeholder="{{t "Optional"}}" value="{{phone_number}}" autocomplete="off" autocapitalize="off" autocorrect="off" /></div>
+	</div>
+	{{/if}}
+
+	<div class="input-group">
+		<div class="label"><p>{{t "Notes"}}</p></div>
+		<div class="input-container"><input id="note" name="note" type="text" placeholder="{{t "Optional"}}" value="{{note}}" autocomplete="off" autocapitalize="off" autocorrect="off" /></div>
+	</div>
+
+	<div class="actions">
+		<button class="submit"><span>{{t "Save"}}</span><span class="loader light">{{t "Loading"}}</span></button>
+	</div>
+
+</form>

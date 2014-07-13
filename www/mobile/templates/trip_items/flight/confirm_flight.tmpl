@@ -1,0 +1,48 @@
+<div class="trip-component">
+	<div class="flight-information section">
+		<span class="airline-icon airline-{{lowercase airlineCode}}"></span>
+		<div class="airline">{{airlineName}}</div>
+
+		<div class="flight">{{airlineCode}} {{flightNumber}}</div>
+	</div>
+
+	<div class="departure section">
+		<div class="destination">
+			<div class="label">{{t "Depart"}}</div>
+			<div class="airport">
+				<span class="value">{{departureAirport}}</span>
+				<span class="secondary">{{departureCityName}}</span>
+			</div>
+		</div>
+		<div class="date">
+			<div class="label">{{t "Date"}}</div>
+			<div class="value">{{year departureDateTime}}</div>
+		</div>
+		<div class="time">
+			<div class="label">{{t "LocalTime"}}</div>
+			<div class="value">{{timeFromDateTime departureDateTime}}</div>
+		</div>
+	</div>
+
+	<div class="arrival section">
+		<div class="destination">
+			<div class="label">{{t "Arrive"}}</div>
+			<div class="airport">
+				<span class="value">{{arrivalAirport}}</span>
+				<span class="secondary">{{arrivalCityName}}</span>
+			</div>
+		</div>
+		<div class="date">
+			<div class="label">{{t "Date"}}</div>
+			<div class="value">{{year arrivalDateTime}}</div>
+		</div>
+		<div class="time">
+			<div class="label">{{t "LocalTime"}}</div>
+			<div class="value">{{timeFromDateTime arrivalDateTime}}</div>
+		</div>
+	</div>
+
+	<div class="actions">
+		<button class="submit"><span>{{t "Save"}}</span><span class="loader light">{{t "Loading"}}</span></button>
+	</div>
+</div>

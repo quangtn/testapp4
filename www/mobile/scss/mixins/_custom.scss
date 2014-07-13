@@ -1,0 +1,52 @@
+@mixin backgroundGradientMiddleStop($topColor, $topMidColor, $botMidColor, $botColor){
+	// http://www.colorzilla.com/gradient-editor/
+	@include background-image(linear-gradient(
+		top,
+		$topColor 0%,
+		$topMidColor 50%,
+		$botMidColor 51%,
+		$botColor 100%
+	));
+}
+
+@mixin backgroundGradientLinear($topColor, $bottomColor){
+	// http://www.colorzilla.com/gradient-editor/
+	@include background-image(linear-gradient(
+		top,
+		$topColor 0%,
+		$bottomColor 100%
+	));
+}
+
+@function fluidPercent($target-px, $context-px) {
+    @return percentage($target-px / $context-px);
+}
+
+@mixin horizontalCentering($width) {
+	left: 50%;	// provides horizontal centering with margin-left offset
+	margin-left: $width / -2;	// half of the fixed-width
+	position: fixed;
+}
+
+@mixin clearFixAfter() {
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
+
+@mixin pixelDensity($density) {
+	// ref: http://css-tricks.com/snippets/css/retina-display-media-query/
+
+	@if $density == 1.5 {
+		@media (-webkit-min-device-pixel-ratio:1.5), (-o-min-device-pixel-ratio:3/2), (min-device-pixel-ratio:1.5) {
+			@content;
+		}
+
+	} @else if $density == 2 {
+		@media (-webkit-min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2/1), (min-device-pixel-ratio: 2) {
+			@content;
+		}
+	}
+}

@@ -1,0 +1,63 @@
+						<div class="alt-flights">
+							<ul class="item-list">
+								<li>
+									<div class="item-content">
+										<span class="original-flight">{{original.departure_city}} ({{original.departure_airport}}) - {{original.arrival_city}} ({{original.arrival_airport}})</span>
+										<p class="item-subtext">{{original.airline_code}} {{original.flight_number}}, {{monDayYear original.scheduled_departure}}</p>
+									</div>
+								</li>
+							</ul>
+							<form id="airlineSelection" class="view-toggle">
+								<label>
+									<input type="radio" name="flightList" id="originalAirline" value="originalAirline" checked="checked" />
+									<span>{{t "OriginalAirline"}}</span>
+								</label>
+								<label>
+									<input type="radio" name="flightList" id="allAirlines" value="allAirlines" />
+									<span>{{t "AllAirlines"}}</span>
+								</label>
+							</form>
+						{{#if flightInfo}}
+							<ul class="action-list" id="flightList">
+							{{#each flightInfo}}
+								<li data-id="{{id}}">
+									<div class="item-icon airline-icon airline-{{lowercase airline_code}}"></div>
+									<div class="item-content">
+										<!-- <span class="airline">{{airline}}</span> -->
+										<table class="flight-detail">
+											<thead>
+												<tr>
+													<th colspan="2" class="airline">{{airline}}</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr class="airport">
+													<td>{{departure_airport}}</td>	<td>{{arrival_airport}}</td>
+												</tr>
+												<tr class="time">
+													<td>{{timeFromDateTime scheduled_departure}}</td>	<td>{{timeFromDateTime scheduled_arrival}}</td>
+												</tr>
+											</tbody>
+											<tfoot>
+												<tr>
+													<td colspan="2" class="item-subtext-l">{{flightStops number_of_stops}}</td>
+												</tr>
+											</tfoot>
+										</table>
+										<!-- <span class="item-subtext-l">{{flightStops number_of_stops}}</span> -->
+									</div>
+								</li>
+							{{/each}}
+							</ul>
+						{{else}}
+							<div id="empty-flights-message">
+								<ul class="item-list">
+									<li>
+										<div class="item-content">
+											<p class="item-help-text">{{t "NoAlternateFlights"}}</p>
+										</div>
+									</li>
+								</ul>
+							</div>
+						{{/if}}
+						</div>

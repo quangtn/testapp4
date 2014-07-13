@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" style="min-height: 460px; ">
+<head>
+	<title>TripCase</title>
+	<link rel="shortcut icon" href="assets/icons/app_icon_48.png">
+	<link href="../css/combined.css" rel="stylesheet" type="text/css">
+	<style>
+		.legal-terms .terms-page {
+			display: none;
+			margin: 0;
+			padding: 0;
+			min-height: 350px;
+			position: relative;
+		}
+		.legal-terms .terms-page:target {
+			display: block;
+		}
+	</style>
+	<script>
+		function changePage(event) {
+			window.location.hash = this.value;
+			if (event.target.type === "radio") {
+				window.location.hash = event.target.value;
+			}
+		}
+	
+		function init() {
+			window.location.hash = '';
+			var termsNav = document.getElementById("termsNav");
+			termsNav.addEventListener("click", changePage);
+			// var radios = document.getElementsByName('termsPage');
+			// for (var radio in radios) {
+				// radio.onClick("click", changePage);
+			// }
+		}
+		document.addEventListener("DOMContentLoaded", init);
+	</script>
+</head>
+<body class style>
+	<div id="viewport">
+		<div class="app-header">
+			<div class="header">
+				<span class="title">Terms</span>
+				<span class="sub-title"></span>
+				<div class="primary-actions">
+					<button class="back btn_left button-icon">Back</button>
+				</div>
+				<div class="secondary-actions"></div>
+			</div>
+		</div>
+		<div id="offline">offline</div>
+		<div id="app-page" style="min-height: 460px; " class="width-header">
+			<div id="simple">
+				<div class="content">
+					<div>
+						<div class="legal-terms" style="padding-top: 43px;">
+							<form id="termsNav" name="termsNav" class="view-toggle three">
+								<label>
+									<input type="radio" name="termsPage" value="termsConditions" checked="checked" />
+									<span>Terms of Use</span>
+								</label>
+								<label>
+									<input type="radio" name="termsPage" value="privacy" />
+									<span>Privacy Policy</span>
+								</label>
+								<label>
+									<input type="radio" name="termsPage" value="cookies" />
+									<span>Cookies Policy</span>
+								</label>
+							</form>
+							<div id="termsConditions" class="terms-page" style="min-height: 350px; background-color: rgba(0,255,255,0.35);">
+								
+							</div>
+							<div id="privacy" class="terms-page" style="min-height: 350px; background-color: rgba(255,0,255,0.35);">
+								
+							</div>
+							<div id="cookies" class="terms-page" style="min-height: 350px; background-color: rgba(255,255,0,0.35);">
+								
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
